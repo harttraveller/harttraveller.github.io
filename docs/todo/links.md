@@ -11,9 +11,12 @@
   <img alt="Reddit" src="https://img.shields.io/static/v1?style=for-the-badge&message=Reddit&color=FF4500&logo=Reddit&logoColor=FFFFFF&label=" style="clip-path: inset(0px 0px 0px 0px round 10px);">
 </a>
 
-  - hackerrank
-  - researchgate
-  - leetcode
-  - kaggle
-  - dolthub
-  - arxiv
+- hackerrank
+- researchgate
+- leetcode
+- kaggle
+- dolthub
+- arxiv
+- ko-fi
+- github sponsors
+- reddit
