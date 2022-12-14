@@ -21,7 +21,7 @@ hide:
   <a href="https://github.com/harttraveller" target="_blank">
   <img alt="GitHub" src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=181717&logo=GitHub&logoColor=FFFFFF&label=" style="clip-path: inset(0px 0px 0px 0px round 10px);">
 </a>
-<a href="https://stochasticintelligence.com/blog/index" target="_blank">
+<a href="https://stochasticintelligence.com/blog/home" target="_blank">
   <img alt="Blog" src="assets/blog_button.png" style="clip-path: inset(0px 0px 0px 0px round 10px);" width="76px">
 </a>
 <a href="https://www.discordapp.com/users/699342901334769744" target="_blank">
