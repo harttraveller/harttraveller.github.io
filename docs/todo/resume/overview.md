@@ -1,1 +1,2 @@
-I am [cognitive science](https://en.wikipedia.org/wiki/Cognitive_science) student at [RPI](https://rpi.edu/about/). Outside of school, I work at an aerospace and defense contractor doing research and development in [ML](https://en.wikipedia.org/wiki/Machine_learning), [NLP](https://en.wikipedia.org/wiki/Natural_language_processing), and [ontology](https://en.wikipedia.org/wiki/Ontology) based [systems engineering](https://en.wikipedia.org/wiki/Systems_engineering). At the moment, my main project involves starting an open source intelligence [organization](https://www.github.com/cephalon-intelligence), however I also enjoy writing, programming, and playing piano.
+
+Professional resume.
