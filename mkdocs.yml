@@ -25,7 +25,8 @@ markdown_extensions:
 
 nav:
     - Home: "index.md"
+    - Portfolio:
+          - Overview: "pages/portfolio/overview.md"
     - Resume:
-          - Resume Overview: "pages/resume/overview.md"
-          - Bio: "pages/other/bio.md"
+          - Overview: "pages/resume/overview.md"
     - Contact: "contact.md"
