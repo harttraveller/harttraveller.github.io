@@ -25,21 +25,7 @@ markdown_extensions:
 
 nav:
     - Home: "index.md"
-    #   - Company:
-    #       - Overview: "pages/company/overview.md"
-    - Projects:
-          - Projects Overview: "pages/projects/overview.md"
-          # - Personal:
-          # - Collaborative:
-          # - Contribution:
-          # - School:
-    # - Research:
-    #       - Overview: "pages/research/overview.md"
-    - Organizations:
-          - Organizations Overview: "pages/organizations/overview.md"
-    # - Music:
-    #       - Music Overview: "pages/music/overview.md"
-    # - Resume:
-    #       - Resume Overview: "pages/resume/overview.md"
-    #       - Bio: "pages/other/bio.md"
+    - Resume:
+          - Resume Overview: "pages/resume/overview.md"
+          - Bio: "pages/other/bio.md"
     - Contact: "contact.md"
