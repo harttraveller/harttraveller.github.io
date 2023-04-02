@@ -5,7 +5,7 @@ hide:
 
 # Resume
 
-If you submit the form below, I will follow up with a copy of my resume as soon as possible.
+Thanks for your interest! I'll try to follow up with a copy of my resume as soon as possible.
 
 <form action="https://submit-form.com/LpM5pUw8">
   <input
