@@ -295,3 +295,15 @@ input[aria-label="Search"] {
 .md-footer-meta__inner:hover {
     opacity: 1;
 }
+
+.lm-Widget.p-Widget.jupyter-widgets-disconnected.ipysigma-widget {
+    border: 0px !important;
+}
+
+.ipysigma-download-controls {
+    display: none !important;
+}
+
+.ipysigma-fullscreen-button.ipysigma-button.ipysigma-svg-icon {
+    display: none !important;
+}
