@@ -1,8 +1,35 @@
 ---
 hide:
 - navigation
+- toc
 ---
+
+<style>
+    body {
+        background-image: url("./assets/site/index.jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+
+<br>
+<br>
+<br>
+<br>
 
 # Home
 
-Thanks for visiting my portfolio site. I'm currently pretty busy with work, but will update this site at some point in the near future.
+<!--
+Projects explanation
+- post
+- category
+- tag
+
+
+Resume
+Contact
+Links
+
+ -->
