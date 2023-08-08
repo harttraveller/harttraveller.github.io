@@ -8,9 +8,9 @@ plugins:
 - embed_file
 - mkdocs-jupyter
 - tags:
-    tags_file: tags.md
+    tags_file: projects/tags.md
 - blog:
-    blog_dir: work
+    blog_dir: projects
     post_url_date_format: yyyy/MM/dd
     post_date_format: long
     draft_if_future_date: true
@@ -97,6 +97,6 @@ nav:
   - Recommendations: resume/recommendations.md
   - Documents: resume/documents.md
   - Contact: resume/contact.md
-- Work:
-  - Index: work/index.md
-- Tags: tags.md
+- Projects:
+  - Index: projects/index.md
+  - Tags: projectstags.md

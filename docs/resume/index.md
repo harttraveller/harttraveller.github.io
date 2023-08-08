@@ -1,13 +1,20 @@
 # Resume
 
-Resume covering work experience, education, notable projects, organizations, community involvement, etc.
+This is the resume section of the website. This page is an abridged version with career relevant information, however the other subsections provide more information, and go into further detail.
 
-<!-- TODO: make button -->
-[Download: PDF]()
+<!-- TODO: make button, PDF download, contact -->
+<!-- [Download: PDF]() -->
 
-## Contact
 
-## Experience
+<!-- ??? note "Section Highlighting"
+    The information in the highlighted sections on this page is not contained on this page, but rather on the subsection pages. Highlighted sections are "page embeds" rendered by "pointers" to other pages.
+
+    This is done using the [mkdocs embed file plugin](https://github.com/ObsidianPublisher/mkdocs-embed_file-plugin), which is built for users of [obsidian](https://www.obsidian.md) - a piece of software I would highly recommend.
+ -->
+
+## [[experience|Experience]]
+
+
 
 
 ## Education
