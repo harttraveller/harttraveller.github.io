@@ -1,7 +1,9 @@
 <style>
-    .md-sidebar__inner {
+@media (min-width: 76.1875em) {
+    .md-sidebar.md-sidebar--primary .md-sidebar__scrollwrap .md-sidebar__inner {
         display: none;
     }
+}
 </style>
 
 # Tags

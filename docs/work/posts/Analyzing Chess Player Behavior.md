@@ -7,7 +7,7 @@ tags:
     - analysis
     - chess
     - psychology
-    - data-science
+    - data_science
     - python
 ---
 

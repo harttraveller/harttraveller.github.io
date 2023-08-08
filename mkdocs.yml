@@ -85,9 +85,18 @@ markdown_extensions:
 
 nav:
 - Resume:
-  - Overview: resume/index.md
+  - Abridged: resume/index.md
   - Experience: resume/experience.md
   - Education: resume/education.md
+  - Projects: resume/projects.md
+  - Research: resume/research.md
+  - Skillset: resume/skills.md
+  - Interests: resume/interests.md
+  - Links: resume/links.md
+  - Awards: resume/awards.md
+  - Recommendations: resume/recommendations.md
+  - Documents: resume/documents.md
+  - Contact: resume/contact.md
 - Work:
   - Index: work/index.md
 - Tags: tags.md
