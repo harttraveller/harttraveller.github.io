@@ -22,6 +22,9 @@ jobs:
         restore-keys: |
           mkdocs-material-
     # - run: apt-get install pngquant
+    - run: pip install mkdocs-roamlinks-plugin
+    - run: pip install mkdocs-embed-file-plugins
+    # - run: pip install mkdocs-jupyter
     - run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
     - run: mkdocs gh-deploy --force
 env:

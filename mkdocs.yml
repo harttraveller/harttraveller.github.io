@@ -6,7 +6,7 @@ plugins:
 - search
 - roamlinks
 - embed_file
-- mkdocs-jupyter
+# - mkdocs-jupyter
 - tags:
     tags_file: projects/tags.md
 - blog:
