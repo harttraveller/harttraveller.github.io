@@ -1,12 +1,31 @@
 site_name: Hart Traveller
+# repo_name: harttraveller.github.io
+# repo_url: https://github.com/harttraveller/harttraveller.github.io
 
 plugins:
 - search
+- roamlinks
+- embed_file
+- mkdocs-jupyter
+- tags:
+    tags_file: projects/tags.md
+- blog:
+    blog_dir: projects
+    post_url_date_format: yyyy/MM/dd
+    post_date_format: long
+    draft_if_future_date: true
+    categories_name: Type
+    archive_name: Year
+
 
 theme:
   name: material
-  logo: assets/profile.png
-  favicon: assets/profile.png
+  font:
+    text: Inter
+    code: Ubuntu Mono
+  custom_dir: docs/overrides
+  logo: assets/site/profile.png
+  favicon: assets/site/profile.png
   icon:
     repo: fontawesome/brands/github
   palette:
@@ -14,27 +33,45 @@ theme:
     primary: black
     accent: orange
   features:
-    - header.autohide
-    - navigation.instant
-    - navigation.tracking
-    - content.code.copy
-    - navigation.tabs
-    - navigation.footer
+  - navigation.instant
+  - navigation.tracking
+  - content.code.copy
+  - navigation.tabs
+  - navigation.tabs.sticky
+  - navigation.footer
 
 extra:
   generator: false
+  social:
+  - icon: fontawesome/brands/github
+    link: https://www.github.com/harttraveller
+  - icon: fontawesome/brands/gitlab
+    link: https://www.gitlab.com/harttraveller
+  - icon: fontawesome/brands/linkedin
+    link: https://www.linkedin.com/in/harttraveller/
+  - icon: fontawesome/solid/envelope
+    link: https://forms.gle/tazKaRH6pNENsCJK8
 
 extra_css:
 - stylesheets/extra.css
 
+extra_javascript:
+- "javascripts/extra.js"
+
 markdown_extensions:
+- attr_list
 - md_in_html
 - admonition
-- attr_list
+- footnotes
 - pymdownx.details
 - pymdownx.inlinehilite
 - pymdownx.snippets
 - pymdownx.superfences
+# - pymdownx.critic
+- pymdownx.caret
+# - pymdownx.keys
+# - pymdownx.mark
+- pymdownx.tilde
 - pymdownx.highlight:
     anchor_linenums: true
     use_pygments: true
@@ -42,10 +79,24 @@ markdown_extensions:
     custom_checkbox: true
 - pymdownx.tabbed:
     alternate_style: true
+- pymdownx.emoji:
+    emoji_index: !!python/name:materialx.emoji.twemoji
+    emoji_generator: !!python/name:materialx.emoji.to_svg
 
 nav:
-- Home: "index.md"
-# - Projects: "projects.md"
-- Resume: "resume.md"
-# - Links: "links.md"
-- Contact: "contact.md"
+- Resume:
+  - Abridged: resume/index.md
+    # - Experience: resume/experience.md
+    # - Education: resume/education.md
+    # - Projects: resume/projects.md
+    # - Research: resume/research.md
+    # - Skillset: resume/skillset.md
+    # - Interests: resume/interests.md # TODO: move to profile section
+    # - Links: resume/links.md # TODO: move to profile section
+    # - Awards: resume/awards.md
+    # - Recommendations: resume/recommendations.md # TODO: include as links in experience section
+    # - Documents: resume/documents.md # TODO: include transcripts in experience section
+    # - Contact: resume/contact.md
+- Projects:
+  - Index: projects/index.md
+  - Tags: projects/tags.md

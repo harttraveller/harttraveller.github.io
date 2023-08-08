@@ -1,36 +1,91 @@
-@import url('https://fonts.googleapis.com/css?family=Inter');
-
-body {
-    --md-text-font-family: "Inter";
-    --md-code-bg-color: #111319 !important;
-    --md-primary-fg-color: #111319 !important;
-}
-
-:root>* {
-    --md-code-hl-string-color: #37d278;
-    --md-code-hl-name-color: rgb(237, 154, 149);
-    --md-code-hl-operator-color: rgb(124, 213, 233);
-    --md-code-hl-punctuation-color: white;
-    --md-code-hl-comment-color: rgb(163, 163, 163);
-    --md-code-hl-generic-color: rgb(214, 123, 222);
-    --md-code-hl-variable-color: rgb(237, 178, 77);
-}
-
-p,
-ol,
-ul {
-    text-align: justify;
-    line-height: 1.28em;
-    font-size: 14px;
+body,
+html {
+    background: black;
 }
 
 
+/* * Search */
 
-
-a {
-    transition: ease 0.3s !important;
+/* ? increase search result spacing */
+.md-search-result__article.md-typeset {
+    padding-top: 10px;
 }
 
+/* ? Change search result count background color when search active */
+.md-search-result__meta {
+    background-color: rgb(7, 25, 47);
+}
+
+/* ? Change search result background color */
+.md-search-result__list {
+    background-color: rgb(7, 25, 47);
+}
+
+/* ? set the global search wrap bg-color */
+.md-search__scrollwrap {
+    background-color: rgb(7, 25, 47);
+}
+
+/* ? set search box input bg-color */
+input[aria-label="Search"] {
+    background-color: rgb(7, 25, 47);
+}
+
+/* ? set background color behind search form */
+.md-search__form {
+    background-color: rgb(7, 25, 47) !important;
+}
+
+/* ? round border radius - partial, doesn't actually round but avoids issue with light rounded background*/
+.md-search__form {
+    border-radius: 8px;
+}
+
+.md-search__input {
+    border-radius: 8px;
+}
+
+
+/* * Search > Full width window */
+
+/* ? moves search result icon up*/
+:not(.md-header--shadow) [dir=ltr] .md-search-result__icon {
+    top: 9px;
+}
+
+/* ? curve bottom borders of search result */
+:not(.md-header--shadow) .md-search__output {
+    /* ! note that this bg-color doesn't seem to do anything, but I'm leaving it in case it does */
+    background-color: #0c1429;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/* ? move search right on full width page*/
+/* ! commented as repo_url at top was moved to social icon at bottom */
+/* :not(.md-header--shadow) .md-search {
+    position: relative;
+    left: 200px;
+} */
+/* ? align slightly left */
+:not(.md-header--shadow) .md-search {
+    position: relative;
+    right: 12px;
+}
+
+/* ? remove box shadow on opened search and curve top corners */
+[data-md-toggle=search]:checked~.md-header .md-search__form {
+    box-shadow: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.md-search {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+/* Headings */
 
 h1,
 h2,
@@ -38,42 +93,663 @@ h3,
 h4,
 h5,
 h6 {
-    line-height: 0em !important;
-    padding-bottom: 0.32em;
-    padding-top: 0.32em;
+    /* padding-bottom: 0.3em; */
+    /* padding-top: 0.3em; */
+    text-transform: none !important;
 }
 
 h1 {
-    color: white !important;
+    color: #ffffff !important;
     font-weight: bold !important;
     margin: 0.32em 0em 0.8em 0em !important;
-    /* position: relative; */
+    position: relative;
 }
 
 h2 {
-    color: #ffcba0;
+    color: #73a1c7 !important;
 }
 
 h3 {
-    color: #ffb67b;
+    color: #5688b1 !important;
 }
 
 h4 {
-    color: #ffa04d;
+    color: #37668d !important;
 }
 
 h5 {
-    color: #FF842B !important;
+    color: #195c92 !important;
     text-transform: none !important;
 }
 
 h6 {
-    color: #FF4932 !important;
+    color: #005eab !important;
 }
 
+/* --- */
+
+.md-footer,
+.md-footer__inner.md-grid,
+.md-footer-meta.md-typeset {
+    background-color: transparent !important;
+}
+
+.md-footer__inner.md-grid {
+    display: none;
+}
+
+.md-header {
+    top: 6px;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.md-grid {
+    max-width: 96%;
+}
+
+p,
+ol,
+ul {
+    text-align: justify;
+    line-height: 1.4em;
+    font-size: 16px;
+}
+
+
+@media (min-width: 76.1875em) {
+
+    /* .md-main__inner .md-sidebar.md-sidebar--primary {
+        display: none;
+    } */
+    .md-main__inner.md-grid {
+        margin-top: -7em;
+    }
+}
+
+@media (max-width: 76.1875em) {
+    .md-main__inner.md-grid {
+        margin-top: 0em;
+    }
+
+    .md-sidebar.md-sidebar--primary {
+        transition: 0.3s ease !important;
+    }
+
+    .md-tabs__list {
+        display: none;
+    }
+
+    .md-nav--primary .md-nav__title[for="__drawer"] {
+        color: transparent;
+    }
+
+    .md-nav--primary .md-nav__title .md-nav__button.md-logo img[alt="logo"] {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+
+    .md-nav--primary .md-nav__title #text {
+        display: none !important;
+    }
+
+    .md-sidebar.md-sidebar--primary .md-sidebar__scrollwrap {
+        border-right: 1px solid grey;
+    }
+
+    .md-nav__list {
+        background-color: black !important;
+    }
+
+    .md-nav__title {
+        background-color: black !important;
+    }
+
+    .md-header__button.md-icon[for="__search"] {
+        position: absolute;
+        right: 1em;
+        top: 0em;
+    }
+
+}
+
+.gsc-left-header {
+    display: none !important;
+}
+
+.md-tabs {
+    background-color: transparent !important;
+}
+
+.header-logo {
+    position: absolute;
+    left: 0.2em;
+    top: -0.1em;
+    z-index: 1000000;
+}
+
+
+.md-tabs__list {
+    margin-left: -0.4em !important;
+    background-color: transparent !important;
+}
+
+.md-tabs__link {
+    padding: 8px 16px 8px 16px;
+    margin-left: 0em;
+    margin-right: -1em;
+    top: -0.8em;
+    position: relative;
+    transition: 0.3s ease !important;
+    border-radius: 8px;
+    color: white;
+    opacity: 1 !important;
+    background: rgb(10, 34, 62);
+}
+
+.md-tabs__link:hover {
+    transition: 0.3s ease;
+    background: #083d9f;
+}
+
+.md-tabs__link.md-tabs__link--active {
+    background: #7f0707;
+    transition: 0.3s ease;
+}
+
+.md-tabs__item {
+    transition: all 0.3s ease !important;
+}
+
+.md-content__inner {
+    transition: all 0.3s ease !important;
+}
+
+/* ? remove box shadow on opened search and curve top corners */
+[data-md-toggle=search]:checked~.md-header .md-search__form {
+    box-shadow: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.md-nav__link,
+.md-nav__title {
+    background-color: black !important;
+    box-shadow: none !important;
+}
+
+.md-sidebar__inner.md-post .md-tags {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.md-tag {
+    border: 1px solid white;
+    padding: 4px 4px 4px 4px;
+    border-radius: 6px;
+    line-height: 30px;
+    font-size: 14px;
+    transition: 0.3s ease !important;
+}
+
+.md-tag:hover {
+    background-color: white;
+    color: black;
+}
+
+img {
+    border-radius: 5px;
+}
+
+
+/* * embed files */
+html {
+    --link-svg: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-circle"><circle cx="12" cy="12" r="10"/><path d="m10 8 4 4-4 4"/></svg>')
+}
+
+.fas.fa-link {
+    /* float: right; */
+    background: var(--link-svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: right;
+    /* display: inline-block; */
+    height: 20px;
+    width: 20px;
+}
+
+.link_citation {
+    top: -10px;
+    right: -10px;
+    position: relative;
+}
+
+.link_citation:hover {
+    filter: invert(49%) sepia(100%) saturate(368%) hue-rotate(78deg) brightness(95%) contrast(98%);
+}
+
+.md-header--shadow {
+    box-shadow: none;
+}
+
+[data-md-color-primary=black] .md-header {
+    background: transparent;
+}
+
+/*
+.fas.fa-link {
+    background: var(--link-svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: right;
+    height: 20px;
+    width: 20px;
+}
+
+.link_citation {
+    top: -10px;
+    right: -10px;
+    position: relative;
+}
+
+.link_citation:hover {
+    filter: invert(49%) sepia(100%) saturate(368%) hue-rotate(78deg) brightness(95%) contrast(98%);
+}
+
+.citation :not(.link_citation) {
+    position: relative;
+    top: -25px;
+}
+
+.fas.fa-link::before {
+    content: var(--link-svg);
+    background-size: cover;
+    background-color: transparent;
+    padding: 3px;
+    display: block;
+    transform: scale(0.8);
+    transition: ease 0.3s;
+}
+
+*/
+.citation {
+    background-color: rgb(16, 31, 46);
+    padding: 16px 16px 16px 16px;
+    border-radius: 6px;
+}
+
+/* TODO: headings in citations - top margin */
+
+.citation h2 {
+    margin-top: 0.3em;
+}
+
+
+a {
+    transition: ease 0.3s !important;
+}
+
+.md-clipboard {
+    color: grey !important;
+    transition: ease 0.3s !important;
+}
+
+.md-clipboard:hover {
+    color: rgb(237, 178, 77) !important;
+    transition: ease 0.3s !important;
+}
+
+/* ! Haven't reviewed, pulled from old sites */
+
+/* .highlight span.filename {
+    background-color: #191c45;
+    font-weight: bold;
+    font-size: 14px;
+    color: rgb(150, 187, 255) !important;
+    border-bottom: 0px;
+    border-radius: 8px;
+    margin-bottom: 4px;
+} */
+
+/* [dir=ltr] .md-dialog {
+    right: .8rem;
+    background-color: darkgreen;
+    border-radius: 8px;
+    transition: 0.3s ease !important;
+} */
+
+
+/* ? embedded page styles */
+
+
+/* .home-message {
+    position: absolute;
+    bottom: 20px;
+} */
+
+/* .home-page-button {
+    font-weight: bold;
+    border: 1px solid white;
+    padding: 10px;
+    margin-right: 16px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+} */
+
+
+/* .home-page-button:hover {
+    border: 1px solid rgb(0, 88, 175);
+    background-color: rgb(0, 88, 175);
+} */
+
+
+
+/* .md-header--shadow {
+    box-shadow: none;
+} */
+
+/* [data-md-color-primary=black] .md-header {
+    background: transparent;
+} */
+
+
+
+details {
+    border: none !important;
+}
+
+.md-header__button.md-logo {
+    /* left: -32px; */
+    /* z-index: 100000; */
+    filter: brightness(0.8) !important;
+    transition: 0.5s !important;
+    border: 1px solid transparent;
+    border-radius: 100px;
+    padding: 0;
+    margin-left: 1em;
+}
+
+.md-header__button.md-logo:hover {
+    filter: brightness(1.5) !important;
+    border: 1px solid white;
+}
+
+/* ? Remove redundant section header on left primary nav bar*/
+
+/* .md-nav__item.md-nav__item--active.md-nav__item--nested .md-nav__link[tabindex="0"] {
+    display: none;
+} */
+
+/* ? move up main content */
+
+
+
+/* ? adjust notebook cell edge */
+
+/* .jp-CodeMirrorEditor.jp-Editor.jp-InputArea-editor,
+.CodeMirror.cm-s-jupyter {
+    border-radius: 6px !important;
+} */
+
+/* ? move logo left and change size */
+
+/* .md-header__button.md-logo {
+    background: transparent;
+} */
+
+/* .md-header__button.md-logo img {
+    position: relative;
+    left: -3vw;
+    top: -0vw;
+    width: 2.3vw;
+    height: 2.3vw;
+} */
+
+
+/* ? adjust site name position in full width and low width mode*/
+/* @media (min-width: 76rem) {
+    .md-header__ellipsis {
+        display: none
+    }
+
+    .md-tabs {
+        display: block;
+        margin-top: -54px;
+        position: relative;
+        margin-left: 0px;
+        left: 60px;
+        z-index: 10;
+        background: transparent !important;
+    }
+
+    .md-tabs .md-grid {
+        margin-left: -15px;
+    }
+
+    .md-search {
+        position: relative;
+        z-index: 11;
+    }
+} */
+
+/* @media (max-width: 76rem) {
+    .md-header__ellipsis {
+        margin-left: -20px;
+    }
+
+    .md-tabs {
+        display: none;
+    }
+} */
+
+/* ? primary sidebar bg color */
+
+.md-sidebar.md-sidebar--primary {
+    background-color: black;
+}
+
+/* move up title in low width mode and remove semi-redundant section title*/
+
+/* @media (max-width: 76rem) {
+    .md-nav__title {
+        margin-top: -44px;
+    }
+
+    .md-nav__title[for="__nav_1"] {
+        display: none;
+    }
+
+    .md-nav.md-nav--primary.md-nav--lifted {
+        border-right: 1px solid grey;
+    }
+
+} */
+
+
+
+
+/* ? adjust popout tabs button position (low width mode) */
+
+/* .md-header__button.md-icon svg {
+    margin-left: -40px;
+} */
+
+
+
+/* * shrinking page */
+
+/* ? modify card content shrunk page */
+/* @media (max-width: 80rem) {
+    .nt-card-text {
+        display: none;
+    }
+} */
+
+/* ? modify font size and remove logo on shrunk page */
+/* @media (max-width: 60rem) {
+    .nt-card-content {
+        padding: 6px;
+    }
+
+    .nt-card-title {
+        font-size: 14px;
+    }
+
+    .homepage-logo {
+        display: none;
+    }
+} */
+
+/* * copyright */
+
+/* ? move to right side */
+
+/* .md-copyright {
+    position: absolute;
+    right: 10px;
+} */
+
+/* ? web link */
+
+/* .copyright-web-link {
+    color: rgb(80, 167, 244) !important;
+}
+
+.copyright-web-link:hover {
+    color: rgb(235, 174, 61) !important;
+} */
+
+/* * primary sidebar */
+
+/* ? adjust a little for alignment */
+
+/* .md-sidebar.md-sidebar--primary .md-sidebar__scrollwrap {
+    margin-top: 20px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+} */
+
+/* --- */
+
+/* body {
+    --md-text-font-family: "Inter";
+    --md-code-bg-color: #020409 !important;
+    --md-primary-fg-color: #020409 !important;
+    --md-mermaid-label-bg-color: black !important;
+} */
+
+/* :root>* {
+    --md-code-hl-string-color: #37d278;
+    --md-code-hl-name-color: rgb(237, 154, 149);
+    --md-code-hl-operator-color: rgb(124, 213, 233);
+    --md-code-hl-punctuation-color: white;
+    --md-code-hl-comment-color: rgb(163, 163, 163);
+    --md-code-hl-generic-color: rgb(214, 123, 222);
+    --md-code-hl-variable-color: rgb(237, 178, 77);
+} */
+
+
+/* .md-source__icon.md-icon {
+    position: relative;
+    left: 176px;
+}
+
+.md-source__repository {
+    display: none;
+}
+
+.nt-cards.nt-grid {
+    position: relative;
+    z-index: 100;
+
+}
+
+.nt-card {
+    box-shadow: none !important;
+    border-radius: 8px;
+    background: rgb(7, 25, 47);
+    transition: ease-in-out 0.3s !important;
+}
+
+.nt-card:hover {
+    background: rgb(0, 39, 86);
+
+} */
+
+
+
+
+/* .swagger-ui p,
+.swagger-ui td,
+.swagger-ui span:not(.url),
+.swagger-ui div {
+    color: white !important;
+}
+
+.swagger-ui button {
+    color: green !important;
+    transition: 0.3s ease !important;
+
+}
+
+.swagger-ui button:hover {
+    color: greenyellow !important;
+} */
+
+/* .opblock-section-header {
+    background: black !important;
+} */
+
+/* td {
+    color: white !important;
+}
+
+span {
+    color: white !important;
+}
+
+div {
+    color: white !important;
+} */
+
+/* .nt-card-text {
+    text-align: left !important;
+}
+
+.mermaid {
+    text-align: center;
+    position: relative;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+pre code {
+    background: #110624 !important;
+    border-radius: 8px !important;
+} */
+
+/*
+
+.md-nav a:hover {
+    color: orange !important;
+}
+
+.md-typeset .blog-post-extra {
+    display: none;
+} */
+
+
+/*
 .md-content ul,
 ol {
     line-height: 1.2em;
+}
+
+.md-content {
+    top: 10px;
+    position: relative;
 }
 
 .task-list-indicator {
@@ -87,16 +763,7 @@ ol {
 }
 
 
-.md-nav__link,
-.md-nav__title {
-    background-color: black !important;
-    box-shadow: none !important;
-}
 
-
-.md-footer__inner.md-grid {
-    display: none;
-}
 
 .md-footer-meta.md-typeset {
     background-color: black;
@@ -107,114 +774,54 @@ ol {
     position: relative;
 }
 
-.md-clipboard {
-    color: grey !important;
-    transition: ease 0.3s !important;
+
+
+
+.md-tabs__list {
+    text-align: left;
+    transition: all 0.3s ease !important;
 }
 
-.md-clipboard:hover {
-    color: rgb(237, 178, 77) !important;
-    transition: ease 0.3s !important;
-}
 
 
 .md-tabs__link {
-    padding: 6px 10px 6px 10px;
-    border: 1px solid rgba(80, 80, 255, 0.6);
-    transition: 1s;
-    border-radius: 6px;
-    color: #6C91D5;
-}
-
-.md-tabs__link:hover {
-    color: #6C91D5;
-    border: 1px solid #6C91D5;
-    transition: 0.3s;
-}
-
-.md-tabs__link.md-tabs__link--active {
-    color: #FF9103;
-    border: 1px solid #FF9103;
-    transition: 0.3s;
-}
+    transition: all 0.3s ease !important;
+} */
 
 
 
-[data-md-toggle=search]:checked~.md-header .md-search__form {
-    background-color: #111319 !important;
-}
 
-.md-search-result__meta {
-    background-color: #111319 !important;
-}
 
-.md-search-result__list {
-    background-color: #111319 !important;
+/* When window width is reduced (low width mode: --lifted class ext)*/
 
-}
+/* Don't display logo or repo link (wierd formatting) */
 
-.md-header__title {
+/* .md-nav.md-nav--primary.md-nav--lifted .md-nav__source {
     display: none;
 }
 
+.md-nav.md-nav--primary.md-nav--lifted .md-nav__button.md-logo {
+    display: none;
+}
+ */
 
-.contact-submit {
-    background-color: #111319;
-    border: 1px transparent solid;
-    transition: ease 0.3s !important;
+
+
+/*
+.md-typeset code {
+    background-color: transparent;
+    color: lightgreen;
 }
 
-.contact-submit:hover {
-    border: 1px white solid;
-    color: orange;
-}
-
-img {
-    border-radius: 5px;
-}
-
-input[aria-label="Search"] {
-    background-color: #111319;
-}
-
-.md-search__output {
-    background-color: #111319 !important;
-    border-bottom-left-radius: 8px !important;
-    border-bottom-right-radius: 8px !important;
+[dir=ltr] .md-typeset .admonition-title:before,
+[dir=ltr] .md-typeset summary:before {
+    top: .4rem;
 }
 
 
-.md-search__scrollwrap {
-    background-color: #111319;
 
-}
 
-.md-search__form {
-    background-color: black !important;
-    border-top-left-radius: 8px !important;
-    border-top-right-radius: 8px !important;
 
-}
-
-.md-search__input {
-    border-radius: 8px;
-}
-
-.md-tag {
-    border-radius: 8px !important;
-    background-color: blue !important;
-    color: white !important;
-}
-
-.md-tag:hover {
-    background-color: orange !important;
-    color: black !important;
-}
-
-[dir=ltr] .md-search__input {
-    padding-left: 2.2rem;
-    padding-bottom: 0.2rem;
-}
 
 .ext-link-button {
     background-color: blue !important;
@@ -222,88 +829,59 @@ input[aria-label="Search"] {
     padding: 10px
 }
 
-.md-main__inner.md-grid {
-    margin-top: 0px;
-}
-
-
-
-.md-search__inner {
-    left: -38px;
-    position: relative;
-}
 
 .md-header {
-    padding-top: 16px;
-}
+    padding-top: 4px;
+} */
 
 
-.md-header__button.md-logo {
-    left: -32px;
-    filter: brightness(0.8) !important;
-    z-index: 100000;
-}
-
-.md-header__button.md-logo:hover {
-    opacity: 1 !important;
-    filter: brightness(1.2) !important;
-    transition: 0.5s;
-}
-
-.md-header__button.md-logo img,
-.md-header__button.md-logo svg {
-    width: 1.2rem;
-    height: 1.2rem;
-}
-
-.md-header__source {
-    position: relative;
-    margin-right: 0px !important;
-    margin-left: auto !important;
-}
-
-.md-tabs__item {
-    padding-left: 0;
-}
-
-[dir=ltr] .md-tabs__list {
-    margin-left: 0.7rem !important;
-}
-
-.submit-form-button {
-    background-color: black;
-    border: 1px solid green;
-    color: white;
-    border-radius: 4px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    padding-left: 10px;
-    padding-right: 10px;
+/* .md-footer-meta__inner {
+    opacity: 0.9;
     transition: 0.5s !important;
-}
+} */
 
-.submit-form-button:hover {
-    background-color: green;
-}
-
-
-.md-footer-meta__inner {
-    opacity: 0.3;
-    transition: 0.5s !important;
-}
-
+/*
 .md-footer-meta__inner:hover {
     opacity: 1;
-}
+} */
 
-.lm-Widget.p-Widget.jupyter-widgets-disconnected.ipysigma-widget {
-    border: 0px !important;
-}
+/* .md-header__source {
+        position: relative;
+        margin-right: 0px !important;
+        margin-left: auto !important;
+    } */
 
-.ipysigma-download-controls {
-    display: none !important;
-}
+/* .md-tabs__item {
+        padding-left: 0;
+    }
 
-.ipysigma-fullscreen-button.ipysigma-button.ipysigma-svg-icon {
-    display: none !important;
-}
+    [dir=ltr] .md-tabs__list {
+        margin-left: 0.7rem !important;
+    } */
+
+
+/* .md-content__inner.md-typeset {
+    margin-top: -44px !important;
+} */
+
+/* .md-content__inner.md-typeset h1 {
+    display: none;
+} */
+
+/* [dir=ltr] .md-header__title {
+    margin-left: 0rem;
+} */
+
+
+
+/* .md-header__title {
+    color: transparent;
+} */
+
+
+
+
+
+/* .md-nav--lifted>.md-nav__list>.md-nav__item--active>.md-nav__link:not(.md-nav__link--index) {
+    display: none;
+} */
