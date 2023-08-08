@@ -12,6 +12,9 @@ hide:
         background-repeat: no-repeat;
         background-size: cover;
     }
+    h1 {
+        display: none;
+    }
 </style>
 
 <br>

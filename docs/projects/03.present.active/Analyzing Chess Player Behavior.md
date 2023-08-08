@@ -3,12 +3,12 @@ date: 2023-08-31
 comments: true
 categories:
     - "Article"
-tags:
-    - analysis
-    - chess
-    - psychology
-    - data_science
-    - python
+# tags:
+#     - analysis
+#     - chess
+#     - psychology
+#     - data_science
+#     - python
 ---
 
 # Analyzing Chess Player Behavior

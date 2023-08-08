@@ -1,13 +1,15 @@
-<style>
+<!-- <style>
 @media (min-width: 76.1875em) {
     .md-sidebar.md-sidebar--primary .md-sidebar__scrollwrap .md-sidebar__inner {
         display: none;
     }
 }
-</style>
+</style> -->
 
 # Tags
 
-An index of tags is listed below. Note that whereas the types are not duplicative, the tags may be, as a single page may have multiple tags.
+!!! warning "This website is currently under construction, please check back later."
+
+<!-- Types and tags may be duplicative, as a given project or page may have multiple tags or by classified under multiple types. -->
 
 [TAGS]
