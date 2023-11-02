@@ -7,6 +7,30 @@ repo_url: https://github.com/harttraveller/harttraveller.github.io
 nav:
 - index.md
 
+theme:
+  name: material
+  favicon: icon.png
+  logo: icon.png
+  logo_url: "/"
+  logo_tooltip: ""
+  custom_dir: main/site
+  icon:
+    annotation: material/plus-circle
+  font:
+    text: Inter
+    code: Ubuntu Mono
+  palette:
+    scheme: slate
+    primary: black
+    accent: orange
+  features:
+  - search.suggest
+  - content.code.copy
+  - content.code.annotate
+  - navigation.tracking
+  - navigation.footer
+  - navigation.tabs
+  - navigation.tabs.sticky
 
 plugins:
 - search
@@ -22,51 +46,6 @@ plugins:
 #     draft_if_future_date: true
 #     categories_name: Type
 #     archive_name: Year
-
-
-theme:
-  name: material
-  font:
-    text: Inter
-    code: Ubuntu Mono
-  custom_dir: site/file/static/custom
-  logo: file/assets/profile.png
-  favicon: assets/site/profile.png
-  icon:
-    repo: fontawesome/brands/github
-  palette:
-    scheme: slate
-    primary: black
-    accent: orange
-  features:
-  - navigation.instant
-  - navigation.tracking
-  - content.code.copy
-  - navigation.tabs
-  - navigation.tabs.sticky
-  - navigation.footer
-
-extra:
-  generator: false
-  quicklinks:
-  - name: GitHub
-    info: GitHub
-    icon: lucide/github
-    link: https://github.com/harttraveller
-    # - name: GitLab
-    #   info: GitLab Profile
-    #   icon: lucide/gitlab
-    #   link: https://www.gitlab.com/harttraveller
-    # - name: LinkedIn Profile
-    #   info: LinkedIn
-    #   icon: lucide/linkedin
-    #   link: https://www.linkedin.com/in/harttraveller/
-
-extra_css:
-- stylesheets/extra.css
-
-extra_javascript:
-- "javascripts/extra.js"
 
 markdown_extensions:
 - attr_list
@@ -104,3 +83,40 @@ markdown_extensions:
     - name: mermaid
       class: mermaid
       format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra:
+  generator: false
+  quicklinks:
+  - name: GitHub
+    info: GitHub
+    icon: lucide/github
+    link: https://github.com/harttraveller
+    # - name: GitLab
+    #   info: GitLab Profile
+    #   icon: lucide/gitlab
+    #   link: https://www.gitlab.com/harttraveller
+    # - name: LinkedIn Profile
+    #   info: LinkedIn
+    #   icon: lucide/linkedin
+    #   link: https://www.linkedin.com/in/harttraveller/
+
+extra_css:
+- static/styles/global.admonition.css
+- static/styles/global.notebook.css
+- static/styles/global.theme.css
+- static/styles/max.theme.css
+- static/styles/med.theme.css
+- static/styles/min.theme.css
+- static/styles/testing.css
+
+extra_javascript:
+- static/script/quicklink.js
+- static/script/search.js
+- static/script/mathjax.js
+- https://polyfill.io/v3/polyfill.min.js?features=es6
+- https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+# - static/script/tabs.js
+# - static/script/video.js
+# - static/script/video-test.js
+
+
