@@ -9,7 +9,7 @@ maintainers = ["Hart Traveller <hexes.town.0y@icloud.com>"]
 
 [tool.poetry.dependencies]
 python = ">=3.11"
-mkdocs-material-insiders = { git = "https://github.com/squidfunk/mkdocs-material-insiders.git", branch = "master" }
+mkdocs-material = { git = "https://github.com/squidfunk/mkdocs-material-insiders.git", branch = "master" }
 mkdocs-glightbox = "^0.3.4"
 mkdocs-roamlinks-plugin = "^0.3.2"
 # mkdocs-click = "^0.8.1"
