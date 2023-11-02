@@ -1,0 +1,18 @@
+<div class="md-quick">
+    {% for quicklink in config.extra.quicklinks %}
+    {% set rel = "noopener noreferrer" %}
+    {% set title = quicklink.name %}
+    {% if not title and "//" in quicklink.link %}
+    {% set _, url = quicklink.link.split("//") %}
+    {% set title = url.split("/")[0] %}
+    {% endif %}
+    <div class="quicklink-hover-box">
+        <a href="{{ quicklink.link }}" target="_blank" rel="{{ rel }}" class="md-quick__link">
+            {% include ".icons/" ~ quicklink.icon ~ ".svg" %}
+        </a>
+        <div class="md-sidebar__tooltip">
+            <p style="display: inline-block;">{{ quicklink.info }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
