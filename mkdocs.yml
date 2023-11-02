@@ -34,7 +34,8 @@ theme:
 
 plugins:
 - search
-- roamlinks
+- obsidian-bridge
+# - roamlinks
 # - embed_file
 # - mkdocs-jupyter
 # - tags:
@@ -75,14 +76,14 @@ markdown_extensions:
     custom_checkbox: true
 - pymdownx.arithmatex:
     generic: true
-- pymdownx.emoji:
-    emoji_index: !!python/name:materialx.emoji.twemoji
-    emoji_generator: !!python/name:materialx.emoji.to_svg
 - pymdownx.superfences:
     custom_fences:
     - name: mermaid
       class: mermaid
       format: !!python/name:pymdownx.superfences.fence_code_format
+# - pymdownx.emoji:
+#     emoji_index: !!python/name:materialx.emoji.twemoji
+#     emoji_generator: !!python/name:materialx.emoji.to_svg
 
 extra:
   generator: false
@@ -110,13 +111,13 @@ extra_css:
 - site/styles/testing.css
 
 extra_javascript:
-- site/script/quicklink.js
-- site/script/search.js
-- site/script/mathjax.js
+- site/scripts/quicklink.js
+- site/scripts/search.js
+- site/scripts/mathjax.js
 - https://polyfill.io/v3/polyfill.min.js?features=es6
 - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-# - site/script/tabs.js
-# - site/script/video.js
-# - site/script/video-test.js
+# - site/scripts/tabs.js
+# - site/scripts/video.js
+# - site/scripts/video-test.js
 
 
