@@ -101,22 +101,22 @@ extra:
     #   link: https://www.linkedin.com/in/harttraveller/
 
 extra_css:
-- static/styles/global.admonition.css
-- static/styles/global.notebook.css
-- static/styles/global.theme.css
-- static/styles/max.theme.css
-- static/styles/med.theme.css
-- static/styles/min.theme.css
-- static/styles/testing.css
+- site/styles/global.admonition.css
+- site/styles/global.notebook.css
+- site/styles/global.theme.css
+- site/styles/max.theme.css
+- site/styles/med.theme.css
+- site/styles/min.theme.css
+- site/styles/testing.css
 
 extra_javascript:
-- static/script/quicklink.js
-- static/script/search.js
-- static/script/mathjax.js
+- site/script/quicklink.js
+- site/script/search.js
+- site/script/mathjax.js
 - https://polyfill.io/v3/polyfill.min.js?features=es6
 - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-# - static/script/tabs.js
-# - static/script/video.js
-# - static/script/video-test.js
+# - site/script/tabs.js
+# - site/script/video.js
+# - site/script/video-test.js
 
 
