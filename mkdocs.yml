@@ -48,15 +48,19 @@ theme:
 
 extra:
   generator: false
-  social:
-  - icon: fontawesome/brands/github
-    link: https://www.github.com/harttraveller
-  - icon: fontawesome/brands/gitlab
-    link: https://www.gitlab.com/harttraveller
-  - icon: fontawesome/brands/linkedin
-    link: https://www.linkedin.com/in/harttraveller/
-  - icon: fontawesome/solid/envelope
-    link: https://forms.gle/tazKaRH6pNENsCJK8
+  quicklinks:
+  - name: GitHub
+    info: GitHub
+    icon: lucide/github
+    link: https://github.com/harttraveller
+    # - name: GitLab
+    #   info: GitLab Profile
+    #   icon: lucide/gitlab
+    #   link: https://www.gitlab.com/harttraveller
+    # - name: LinkedIn Profile
+    #   info: LinkedIn
+    #   icon: lucide/linkedin
+    #   link: https://www.linkedin.com/in/harttraveller/
 
 extra_css:
 - stylesheets/extra.css
