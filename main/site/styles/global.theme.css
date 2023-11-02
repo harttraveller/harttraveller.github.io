@@ -18,6 +18,14 @@ html {
     --quicklink-hover-color: rgb(81, 255, 191);
 }
 
+/* background color */
+
+html,
+body,
+.md-header {
+    background: var(--background);
+}
+
 div[id="MathJax_Message"] {
     display: none !important;
 }
@@ -78,13 +86,7 @@ video {
     margin: -1.2em 0em;
 }
 
-/* background color */
 
-html,
-body,
-.md-header {
-    background: var(--background) !important;
-}
 
 .md-content,
 .md-sidebar__scrollwrap {
@@ -220,7 +222,7 @@ header,
 /* layout width */
 
 .md-grid {
-    max-width: 96%;
+    max-width: 95%;
 }
 
 /* links */

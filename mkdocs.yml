@@ -13,7 +13,7 @@ theme:
   logo: icon.png
   logo_url: "/"
   logo_tooltip: ""
-  custom_dir: main/site
+  custom_dir: main/site/custom
   icon:
     annotation: material/plus-circle
   font:
@@ -29,8 +29,8 @@ theme:
   - content.code.annotate
   - navigation.tracking
   - navigation.footer
-  - navigation.tabs
-  - navigation.tabs.sticky
+  # - navigation.tabs
+  # - navigation.tabs.sticky
 
 plugins:
 - search
@@ -92,20 +92,20 @@ extra:
     info: GitHub
     icon: lucide/github
     link: https://github.com/harttraveller
-    # - name: GitLab
-    #   info: GitLab Profile
-    #   icon: lucide/gitlab
-    #   link: https://www.gitlab.com/harttraveller
+  - name: GitLab
+    info: GitLab
+    icon: lucide/gitlab
+    link: https://www.gitlab.com/harttraveller
     # - name: LinkedIn Profile
     #   info: LinkedIn
     #   icon: lucide/linkedin
     #   link: https://www.linkedin.com/in/harttraveller/
 
 extra_css:
-- site/styles/global.admonition.css
-- site/styles/global.notebook.css
 - site/styles/global.theme.css
 - site/styles/max.theme.css
+- site/styles/global.admonition.css
+- site/styles/global.notebook.css
 - site/styles/med.theme.css
 - site/styles/min.theme.css
 - site/styles/testing.css

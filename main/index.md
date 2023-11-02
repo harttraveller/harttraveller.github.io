@@ -5,24 +5,24 @@ hide:
 ---
 
 <style>
-    body {
-        background-image: url("./assets/site/index.jpg");
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    h1 {
-        display: none;
-    }
+body {
+    background-image: url("index.jpg") !important;
+    height: 100% !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+html,
+.md-header,
+.md-content__inner {
+    background: transparent !important;
+}
 </style>
 
-<br>
-<br>
-<br>
-<br>
+# Welcome
 
-# Home
+Thanks for visiting my site. Various posts and projects are listed below
 
 <!--
 Projects explanation
