@@ -13,7 +13,6 @@ body {
     background-size: cover !important;
 }
 
-html,
 .md-header,
 .md-content__inner {
     background: transparent !important;
