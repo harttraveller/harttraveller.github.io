@@ -1,18 +1,25 @@
 [tool.poetry]
-name = "harttraveller.github.io"
+name = "utils"
 version = "0.1.0"
-description = "Personal website."
+description = "Utilities for personal site and public vault."
 readme = "README.md"
 repository = "https://github.com/harttraveller.github.io"
-authors = ["Hart Traveller <hexes.town.0y@icloud.com>"]
-maintainers = ["Hart Traveller <hexes.town.0y@icloud.com>"]
+authors = ["Hart Traveller <ruling_fiction.0b@icloud.com>"]
+maintainers = ["Hart Traveller <ruling_fiction.0b@icloud.com>"]
 
 [tool.poetry.dependencies]
 python = ">=3.10, <4.0"
+
+
+[tool.poetry.group.pages]
+optional = true
+
+[tool.poetry.group.pages.dependencies]
 mkdocs-material = { git = "https://github.com/squidfunk/mkdocs-material-insiders.git", branch = "master" }
 mkdocs-glightbox = "^0.3.4"
 mkdocs-obsidian-bridge = "^1.0.1"
 mkdocs-rss-plugin = "^1.8.0"
+mkdocs-jupyter = "^0.24.6"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
