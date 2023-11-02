@@ -6,4 +6,12 @@
     .md-header {
         display: none;
     }
+
+    .md-post__header {
+        display: none !important;
+    }
+
+    .mobile-hide {
+        display: none;
+    }
 }

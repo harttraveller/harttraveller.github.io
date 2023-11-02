@@ -12,6 +12,7 @@ python = ">=3.10, <4.0"
 mkdocs-material = { git = "https://github.com/squidfunk/mkdocs-material-insiders.git", branch = "master" }
 mkdocs-glightbox = "^0.3.4"
 mkdocs-obsidian-bridge = "^1.0.1"
+mkdocs-rss-plugin = "^1.8.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

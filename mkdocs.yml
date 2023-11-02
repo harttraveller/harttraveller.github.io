@@ -1,5 +1,5 @@
 site_name: Hart Traveller
-docs_dir: graph
+docs_dir: main
 repo_name: harttraveller.github.io
 site_url: https://harttraveller.com
 repo_url: https://github.com/harttraveller/harttraveller.github.io
@@ -13,7 +13,7 @@ theme:
   logo: icon.png
   logo_url: "/"
   logo_tooltip: ""
-  custom_dir: graph/site/custom
+  custom_dir: main/config/custom
   icon:
     annotation: material/plus-circle
   font:
@@ -28,13 +28,32 @@ theme:
   - content.code.copy
   - content.code.annotate
   - navigation.tracking
-  - navigation.footer
+  # - navigation.footer
   # - navigation.tabs
   # - navigation.tabs.sticky
 
 plugins:
 - search
 - obsidian-bridge
+- blog:
+    blog_dir: .
+    blog_toc: true
+    post_url_format: "{slug}"
+# - rss:
+#     match_path: posts/.*
+#     comments_path: "#__comments"
+#     date_from_meta:
+#       as_creation: date
+#     categories:
+#     - categories
+#     enabled: true
+#     feed_ttl: 1440
+#     image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Feed-icon.svg/128px-Feed-icon.svg.png
+# url_parameters:
+#   utm_source: "documentation"
+#   utm_medium: "RSS"
+# utm_campaign: "feed-syndication"
+
 # - roamlinks
 # - embed_file
 # - mkdocs-jupyter
@@ -88,36 +107,54 @@ markdown_extensions:
 extra:
   generator: false
   quicklinks:
+  - name: Email
+    info: Email
+    icon: lucide/mail
+    link: mailto:hexes.town.0y@icloud.com
+    color: darkred
   - name: GitHub
     info: GitHub
     icon: lucide/github
     link: https://github.com/harttraveller
+    color: rgb(45, 94, 183)
   - name: GitLab
     info: GitLab
     icon: lucide/gitlab
     link: https://www.gitlab.com/harttraveller
-    # - name: LinkedIn Profile
-    #   info: LinkedIn
-    #   icon: lucide/linkedin
-    #   link: https://www.linkedin.com/in/harttraveller/
+    color: rgb(45, 94, 183)
+  - name: LinkedIn Profile
+    info: LinkedIn
+    icon: lucide/linkedin
+    link: https://www.linkedin.com/in/harttraveller/
+    color: rgb(45, 94, 183)
+  # - name: Chat
+  #   info: Chat
+  #   icon: lucide/bot
+  #   link: https://ai.harttraveller.com
+  #   color: rgb(45, 94, 183)
+  - name: Brain
+    info: Brain
+    icon: lucide/brain-circuit
+    link: https://brain.harttraveller.com
+    color: rgb(45, 94, 183)
 
 extra_css:
-- site/styles/global.theme.css
-- site/styles/max.theme.css
-- site/styles/global.admonition.css
-- site/styles/global.notebook.css
-- site/styles/med.theme.css
-- site/styles/min.theme.css
-- site/styles/testing.css
+- config/styles/global.theme.css
+- config/styles/max.theme.css
+- config/styles/global.admonition.css
+- config/styles/global.notebook.css
+- config/styles/med.theme.css
+- config/styles/min.theme.css
+- config/styles/testing.css
 
 extra_javascript:
-- site/scripts/quicklink.js
-- site/scripts/search.js
-- site/scripts/mathjax.js
+- config/scripts/quicklink.js
+- config/scripts/search.js
+- config/scripts/mathjax.js
 - https://polyfill.io/v3/polyfill.min.js?features=es6
 - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-# - site/scripts/tabs.js
-# - site/scripts/video.js
-# - site/scripts/video-test.js
+# - config/scripts/tabs.js
+# - config/scripts/video.js
+# - config/scripts/video-test.js
 
 
