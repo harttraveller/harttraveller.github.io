@@ -1,0 +1,9 @@
+@media (max-width: 59.95rem) {
+    .md-quick {
+        display: none;
+    }
+
+    .md-header {
+        display: none;
+    }
+}

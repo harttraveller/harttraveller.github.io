@@ -1,0 +1,119 @@
+@media (min-width: 59.95rem) and (max-width: 76.2rem) {
+
+    .md-quick {
+        display: none;
+    }
+
+    /* not needed here as site is one page */
+    .md-header__button {
+        display: none !important;
+    }
+
+    /* search bar */
+    /* *copied from max */
+
+    .md-search {
+        opacity: 0;
+        position: absolute;
+        margin-left: 1em;
+        margin-right: auto;
+        margin-top: 10em;
+        z-index: 999 !important;
+    }
+
+    .md-search-result__article.md-typeset {
+        padding-top: 10px;
+    }
+
+    .md-search__form {
+        background: var(--search-background-color) !important;
+    }
+
+    .md-search__form:hover {
+        filter: brightness(1.1);
+    }
+
+    .md-search-result__meta {
+        background-color: var(--search-background-color) !important;
+    }
+
+    [data-md-toggle=search]:checked~.md-header .md-search__input+.md-search__icon {
+        color: white;
+    }
+
+
+    .md-search-result__list {
+        background-color: var(--search-background-color) !important;
+    }
+
+
+    .md-search__scrollwrap {
+        background-color: var(--search-background-color) !important;
+    }
+
+    .md-search__form {
+        background-color: var(--search-background-color);
+    }
+
+
+    .md-search__form {
+        border-top-right-radius: 0.5em !important;
+        border-top-left-radius: 0.5em !important;
+    }
+
+    .md-search__output {
+        border-bottom-right-radius: 0.5em !important;
+        border-bottom-left-radius: 0.5em !important;
+    }
+
+
+    .md-search-result__item .md-tag {
+        display: none;
+    }
+
+    /* secondary/left sidebar toc */
+    .md-nav__title[for="__toc"] {
+        background: transparent;
+    }
+
+    .md-nav__link,
+    .md-nav__title {
+        background-color: transparent !important;
+        box-shadow: none !important;
+    }
+
+
+    .md-sidebar.md-sidebar--secondary {
+        top: 9em !important;
+        padding-top: 0.1em !important;
+        margin-top: -8em !important;
+        width: 32em;
+        z-index: 100000;
+    }
+
+    .md-sidebar.md-sidebar--secondary .md-sidebar__inner {
+        padding: 1.2em 0.5em 1.2em 0.5em !important;
+        border-radius: 0.4em;
+    }
+
+
+    .md-sidebar.md-sidebar--secondary .md-sidebar__scrollwrap {
+        top: -6em !important;
+        position: relative;
+        margin-bottom: -6.4em;
+        border-radius: 8px;
+    }
+
+    .md-sidebar.md-sidebar--secondary .md-sidebar__scrollwrap .md-sidebar__inner {
+        padding: 0.4em 1em 1em 1em;
+        border-radius: 8px;
+        left: 1em;
+    }
+
+    .md-sidebar.md-sidebar--secondary {
+        padding-top: 1em;
+        margin-top: -8em;
+    }
+
+
+}
