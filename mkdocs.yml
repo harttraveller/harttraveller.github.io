@@ -1,21 +1,23 @@
 site_name: Hart Traveller
-# repo_name: harttraveller.github.io
-# repo_url: https://github.com/harttraveller/harttraveller.github.io
+docs_dir: main
+repo_name: harttraveller.github.io
+site_url: https://harttraveller.com
+repo_url: https://github.com/harttraveller/harttraveller.github.io
 
 plugins:
 - search
 - roamlinks
-- embed_file
+# - embed_file
 # - mkdocs-jupyter
-- tags:
-    tags_file: projects/tags.md
-- blog:
-    blog_dir: projects
-    post_url_date_format: yyyy/MM/dd
-    post_date_format: long
-    draft_if_future_date: true
-    categories_name: Type
-    archive_name: Year
+# - tags:
+#     tags_file: projects/tags.md
+# - blog:
+#     blog_dir: projects
+#     post_url_date_format: yyyy/MM/dd
+#     post_date_format: long
+#     draft_if_future_date: true
+#     categories_name: Type
+#     archive_name: Year
 
 
 theme:
@@ -23,8 +25,8 @@ theme:
   font:
     text: Inter
     code: Ubuntu Mono
-  custom_dir: docs/overrides
-  logo: assets/site/profile.png
+  custom_dir: site/file/static/custom
+  logo: file/assets/profile.png
   favicon: assets/site/profile.png
   icon:
     repo: fontawesome/brands/github
