@@ -8,10 +8,9 @@ authors = ["Hart Traveller <hexes.town.0y@icloud.com>"]
 maintainers = ["Hart Traveller <hexes.town.0y@icloud.com>"]
 
 [tool.poetry.dependencies]
-python = ">=3.11"
+python = ">=3.10"
 mkdocs-material = { git = "https://github.com/squidfunk/mkdocs-material-insiders.git", branch = "master" }
 mkdocs-glightbox = "^0.3.4"
-mkdocs-roamlinks-plugin = "^0.3.2"
 # mkdocs-click = "^0.8.1"
 # mkdocstrings = "^0.23.0"
 # mkdocs-jupyter = "^0.24.5"
