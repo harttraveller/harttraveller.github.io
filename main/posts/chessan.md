@@ -8,6 +8,7 @@ categories:
   - =type/github-repository
   - =type/python-package
   - =area/data-formats
+  - =size/medium
 ---
 
 # Hello world!
