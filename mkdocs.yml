@@ -4,6 +4,10 @@ repo_name: harttraveller.github.io
 site_url: https://harttraveller.com
 repo_url: https://github.com/harttraveller/harttraveller.github.io
 
+nav:
+- index.md
+
+
 plugins:
 - search
 - roamlinks
@@ -85,20 +89,3 @@ markdown_extensions:
     emoji_index: !!python/name:materialx.emoji.twemoji
     emoji_generator: !!python/name:materialx.emoji.to_svg
 
-nav:
-- Resume:
-  - Abridged: resume/index.md
-    # - Experience: resume/experience.md
-    # - Education: resume/education.md
-    # - Projects: resume/projects.md
-    # - Research: resume/research.md
-    # - Skillset: resume/skillset.md
-    # - Interests: resume/interests.md # TODO: move to profile section
-    # - Links: resume/links.md # TODO: move to profile section
-    # - Awards: resume/awards.md
-    # - Recommendations: resume/recommendations.md # TODO: include as links in experience section
-    # - Documents: resume/documents.md # TODO: include transcripts in experience section
-    # - Contact: resume/contact.md
-- Projects:
-  - Index: projects/index.md
-  - Tags: projects/tags.md
