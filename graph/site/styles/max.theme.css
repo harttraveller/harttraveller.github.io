@@ -232,7 +232,7 @@
         z-index: 1000;
         background-color: var(--background);
         position: relative !important;
-        top: -2.95em;
+        top: -2.9em;
         padding: 1em;
         margin-right: 1.65em !important;
         margin-bottom: -6em;
@@ -243,7 +243,7 @@
     .md-search {
         opacity: 0;
         position: absolute;
-        margin-left: 3em;
+        margin-left: 2.6em;
         margin-right: auto;
         top: 0em;
         margin-top: 0em;
