@@ -2,3 +2,4 @@
 .obsidian
 _dev_
 temp/
+poetry.lock
