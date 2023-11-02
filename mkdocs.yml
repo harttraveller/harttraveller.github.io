@@ -69,15 +69,15 @@ markdown_extensions:
 - md_in_html
 - admonition
 - footnotes
+- pymdownx.critic
+- pymdownx.caret
+- pymdownx.keys
+- pymdownx.mark
+- pymdownx.tilde
 - pymdownx.details
 - pymdownx.inlinehilite
 - pymdownx.snippets
 - pymdownx.superfences
-# - pymdownx.critic
-- pymdownx.caret
-# - pymdownx.keys
-# - pymdownx.mark
-- pymdownx.tilde
 - pymdownx.highlight:
     anchor_linenums: true
     use_pygments: true
@@ -85,7 +85,18 @@ markdown_extensions:
     custom_checkbox: true
 - pymdownx.tabbed:
     alternate_style: true
+- pymdownx.highlight:
+    anchor_linenums: true
+    use_pygments: true
+- pymdownx.tasklist:
+    custom_checkbox: true
+- pymdownx.arithmatex:
+    generic: true
 - pymdownx.emoji:
     emoji_index: !!python/name:materialx.emoji.twemoji
     emoji_generator: !!python/name:materialx.emoji.to_svg
-
+- pymdownx.superfences:
+    custom_fences:
+    - name: mermaid
+      class: mermaid
+      format: !!python/name:pymdownx.superfences.fence_code_format
