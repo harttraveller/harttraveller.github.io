@@ -7,7 +7,6 @@ categories:
   - /page/docs
   - /area/chess
   - /area/python
-
 ---
 
 # Chessan Documentation

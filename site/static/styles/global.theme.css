@@ -77,9 +77,6 @@ div[id="MathJax_Message"] {
     border-radius: 0.3em;
 }
 
-/* .jupyter-wrapper {
-    padding-top: 1.05em;
-} */
 
 .jp-Collapser {
     display: none;
@@ -208,12 +205,19 @@ figcaption.nbref p {
     width: 30em;
 } */
 
-.md-content li {
+.md-content :not(.md-post--excerpt) li {
     text-align: justify;
     padding: 0em 0em;
     margin: -0.4em 0em;
     line-height: 1.4em;
     /* font-size: 0.95em !important; */
+}
+
+.md-content .md-post--excerpt li {
+    text-align: left;
+    padding: 0em 0em;
+    margin: 0em 0em;
+    line-height: 1.5em;
 }
 
 /* except footnote */
@@ -262,7 +266,7 @@ header,
 
 .md-content__inner a:not(.glightbox) {
     transition: 0.3s ease !important;
-    white-space: nowrap !important;
+    /* white-space: nowrap !important; */
 }
 
 

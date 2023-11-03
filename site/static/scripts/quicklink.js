@@ -1,7 +1,7 @@
 // javascript script such that when the user hovers on the class: '.md-quick__link'
 // the opacity of '.md-content' changes to 0.1, and back to 1 when the user is no longer hovering
 
-var dim = "0.2";
+var dim = "0";
 
 document.addEventListener('DOMContentLoaded', function () {
   // get all the elements with the class '.md-quick__link'
