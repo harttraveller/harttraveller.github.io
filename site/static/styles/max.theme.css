@@ -1,5 +1,13 @@
 @media (min-width: 76.2rem) {
 
+    .md-sidebar.md-sidebar--post {
+        position: relative;
+        margin-top: -5.6em;
+        margin-left: 2em;
+        z-index: 1000;
+    }
+
+
     /* quick links */
 
     .md-quick {
@@ -10,13 +18,13 @@
         position: fixed;
         top: 9.4em;
         left: 1.4%;
-        transition: 0.3s ease !important;
     }
 
     .md-quick__link {
         z-index: 999;
         display: inline;
         transition: 0.5s ease !important;
+        color: rgb(45, 94, 183);
     }
 
     .md-quick__link:hover {
@@ -40,10 +48,10 @@
         line-height: 0;
         padding: 0;
         margin: 0;
-        transition: 0.3s ease !important;
         top: -1.95em;
         left: 10vw;
         z-index: 999;
+        transition: 0.5s ease !important;
     }
 
     .md-quick__link:hover+.md-sidebar__tooltip {
@@ -151,29 +159,6 @@
         display: none;
     }
 
-    /* .md-sidebar.md-sidebar--primary {
-        top: 7.3em !important;
-        padding-top: 0em !important;
-        margin-top: -9em !important;
-
-    }
-
-    .md-sidebar.md-sidebar--primary,
-    .md-sidebar__scrollwrap {
-        z-index: 11;
-    }
-
-    .md-sidebar.md-sidebar--primary .md-sidebar__scrollwrap {
-        position: relative;
-    }
-
-    .md-sidebar.md-sidebar--primary .md-sidebar__inner {
-        background: var(--sidebar-background-color);
-        padding: 1.2em 0.5em 1.2em 0.5em;
-        border-radius: 0.4em;
-    }
-
-
 
 
     /* secondary/left sidebar toc */
@@ -226,11 +211,11 @@
 
 
     .md-content__inner {
-        transition: all 0.3s ease !important;
+        transition: all 0.5s ease !important;
         z-index: 1000;
         background-color: var(--background);
         position: relative !important;
-        top: -4.05em;
+        top: -2.95em;
         padding: 1em;
         margin-right: 1.65em !important;
         margin-bottom: -6em;

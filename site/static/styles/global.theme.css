@@ -19,6 +19,28 @@ html {
     --quicklink-hover-color: rgb(81, 255, 191);
 }
 
+.md-code__button {
+    transition: 0.3s ease !important;
+    color: grey;
+}
+
+.md-code__nav {
+    background: transparent !important;
+}
+
+/* clipboard copy message */
+.md-dialog {
+    z-index: 100000;
+    transition: 0.3s ease !important;
+    border-radius: 0.4em;
+    background: var(--external-button-color);
+}
+
+.md-dialog__inner.md-typeset {
+    color: white;
+    font-weight: bold;
+}
+
 /* background color */
 
 html,
@@ -55,6 +77,10 @@ div[id="MathJax_Message"] {
     border-radius: 0.3em;
 }
 
+/* .jupyter-wrapper {
+    padding-top: 1.05em;
+} */
+
 .jp-Collapser {
     display: none;
 }
@@ -79,6 +105,12 @@ video {
     gap: 1em;
     margin: -1.2em 0em;
 }
+
+/* .grid-container-1-4 {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 1em;
+} */
 
 .grid-container-3 {
     display: grid;
@@ -228,7 +260,7 @@ header,
 
 /* links */
 
-.md-content a:not(.glightbox) {
+.md-content__inner a:not(.glightbox) {
     transition: 0.3s ease !important;
     white-space: nowrap !important;
 }
@@ -275,24 +307,22 @@ header,
 }
 
 .md-post__action {
-    padding-top: 0.6em;
+    /* padding-top: 0.6em; */
+    display: none;
 }
 
 article.md-post.md-post--excerpt {
     background: #181A20;
     padding: 2em;
     border-radius: 0.4em;
-    margin-bottom: 2.1em;
+    margin-bottom: 2.7em;
 }
 
 
 .md-sidebar.md-sidebar--post {
-    /* padding-left: 2em; */
     position: relative;
-    /* padding-top: 1em; */
     margin-top: -5.6em;
     margin-left: 2em;
-    /* margin-right: -4em; */
     z-index: 1000;
 }
 
@@ -315,9 +345,15 @@ article.md-post.md-post--excerpt {
 }
 
 .md-post__back {
+    margin-top: 0.7em;
     /* border-bottom: none; */
     /* padding-bottom: 1em; */
-    display: none;
+}
+
+.md-nav,
+.md-post__meta,
+.md-post__meta.md-nav__list {
+    background: transparent !important;
 }
 
 .md-post__meta .md-post__title .md-ellipsis {

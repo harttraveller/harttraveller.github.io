@@ -7,8 +7,7 @@
     {% set title = url.split("/")[0] %}
     {% endif %}
     <div class="quicklink-hover-box">
-        <a href="{{ quicklink.link }}" style="color: {{ quicklink.color }};" target="_blank" rel="{{ rel }}"
-            class="md-quick__link">
+        <a href="{{ quicklink.link }}" target="_blank" rel="{{ rel }}" class="md-quick__link">
             {% include ".icons/" ~ quicklink.icon ~ ".svg" %}
         </a>
         <div class="md-sidebar__tooltip">

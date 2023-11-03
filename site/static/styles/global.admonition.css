@@ -86,8 +86,8 @@ details,
     background-color: transparent;
 }
 
-.md-typeset .mail>.admonition-title::before,
-.md-typeset .mail>summary::before {
+.md-typeset .premise>.admonition-title::before,
+.md-typeset .premise>summary::before {
     background-color: rgb(255, 172, 48);
     -webkit-mask-image: var(--icon-lucide-premise);
     mask-image: var(--icon-lucide-premise);

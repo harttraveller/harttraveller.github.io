@@ -1,5 +1,6 @@
 [tool.poetry]
 name = "nous"
+# * ref: https://www.wikiwand.com/en/Nous
 version = "0.1.0"
 description = "Utilities for personal site and public vault."
 readme = "README.md"

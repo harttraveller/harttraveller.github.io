@@ -1,0 +1,4 @@
+- page
+    - article
+    - analysis
+    - documentation

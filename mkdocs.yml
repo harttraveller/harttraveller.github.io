@@ -1,5 +1,5 @@
 site_name: Hart Traveller
-docs_dir: main
+docs_dir: site
 repo_name: harttraveller.github.io
 site_url: https://harttraveller.com
 repo_url: https://github.com/harttraveller/harttraveller.github.io
@@ -13,7 +13,7 @@ theme:
   logo: icon.png
   logo_url: "/"
   logo_tooltip: ""
-  custom_dir: main/config/custom
+  custom_dir: site/static/custom
   icon:
     annotation: material/plus-circle
   font:
@@ -35,17 +35,18 @@ theme:
 plugins:
 - search
 - obsidian-bridge
+- mkdocs-jupyter
 - blog:
     blog_dir: .
     blog_toc: true
     post_url_format: "{slug}"
-# - rss:
-#     match_path: posts/.*
-#     comments_path: "#__comments"
-#     date_from_meta:
-#       as_creation: date
-#     categories:
-#     - categories
+- rss:
+    match_path: posts/.*
+    comments_path: "#__comments"
+    date_from_meta:
+      as_creation: date
+    categories:
+    - categories
 #     enabled: true
 #     feed_ttl: 1440
 #     image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Feed-icon.svg/128px-Feed-icon.svg.png
@@ -56,7 +57,6 @@ plugins:
 
 # - roamlinks
 # - embed_file
-# - mkdocs-jupyter
 # - tags:
 #     tags_file: projects/tags.md
 # - blog:
@@ -107,54 +107,54 @@ markdown_extensions:
 extra:
   generator: false
   quicklinks:
-  - name: Email
-    info: Email
-    icon: lucide/mail
-    link: mailto:hexes.town.0y@icloud.com
-    color: darkred
   - name: GitHub
     info: GitHub
     icon: lucide/github
     link: https://github.com/harttraveller
-    color: rgb(45, 94, 183)
   - name: GitLab
     info: GitLab
     icon: lucide/gitlab
     link: https://www.gitlab.com/harttraveller
-    color: rgb(45, 94, 183)
-  - name: LinkedIn Profile
+  - name: LinkedIn
     info: LinkedIn
     icon: lucide/linkedin
     link: https://www.linkedin.com/in/harttraveller/
-    color: rgb(45, 94, 183)
-  # - name: Chat
-  #   info: Chat
-  #   icon: lucide/bot
-  #   link: https://ai.harttraveller.com
-  #   color: rgb(45, 94, 183)
-  - name: Brain
-    info: Brain
-    icon: lucide/brain-circuit
-    link: https://brain.harttraveller.com
-    color: rgb(45, 94, 183)
+    # - name: Chat
+    #   info: Chat
+    #   icon: lucide/bot
+    #   link: https://ai.harttraveller.com
+    #   color: rgb(45, 94, 183)
+    # - name: Brain
+    #   info: Brain
+    #   icon: lucide/brain-circuit
+    #   link: https://brain.harttraveller.com
+    #   color: rgb(45, 94, 183)
+    # - name: RSS
+    #   info: RSS
+    #   icon: lucide/rss
+    #   link: ./feed_rss_created.xml
+    # - name: Email
+    #   info: Copy Email Address (Obfuscated)
+    #   icon: lucide/mail
+    #   link:
 
 extra_css:
-- config/styles/global.theme.css
-- config/styles/max.theme.css
-- config/styles/global.admonition.css
-- config/styles/global.notebook.css
-- config/styles/med.theme.css
-- config/styles/min.theme.css
-- config/styles/testing.css
+- static/styles/global.theme.css
+- static/styles/max.theme.css
+- static/styles/global.admonition.css
+- static/styles/global.notebook.css
+- static/styles/med.theme.css
+- static/styles/min.theme.css
+- static/styles/testing.css
 
 extra_javascript:
-- config/scripts/quicklink.js
-- config/scripts/search.js
-- config/scripts/mathjax.js
+- static/scripts/quicklink.js
+- static/scripts/search.js
+- static/scripts/mathjax.js
 - https://polyfill.io/v3/polyfill.min.js?features=es6
 - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-# - config/scripts/tabs.js
-# - config/scripts/video.js
-# - config/scripts/video-test.js
+# - static/scripts/tabs.js
+# - static/scripts/video.js
+# - static/scripts/video-test.js
 
 
