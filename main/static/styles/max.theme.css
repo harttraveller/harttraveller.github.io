@@ -97,6 +97,17 @@
         transition: 0.3s ease !important;
     }
 
+    .md-blog-post__meta.md-meta {
+        position: relative;
+        /* left: 0.6rem; */
+        background: var(--search-background-color);
+        /* top: 1rem; */
+        padding: 0.6em;
+        margin-bottom: 1rem;
+        margin-top: -0.35rem;
+        border-radius: 0.4em;
+    }
+
     /* tabs */
     .md-tabs {
         position: fixed;

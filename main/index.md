@@ -23,23 +23,23 @@ body {
 !!! warning "This site is currently under construction."
 
 
-<!-- ## [Analysis](./page/analysis)
+## [Analysis](./page/analysis)
 - analysis (analysis of reality to find answer)
 
 ## [Article](./page/article)
 - article (normative)
 
 ## [Report](./page/report)
-- report (report on past tense actions) -->
+- report (report on past tense actions)
 
 <!-- open source operation -->
 
-<!-- ## [Documentation](./page/documentation)
+## [Documentation](./page/documentation)
 - documentation (how you use a tool)
 
 ## [Resource](./page/resource)
 - resource (non-tool resources)
- -->
+
 
 <!-- - project (? report) -->
 <!-- - article (normative)

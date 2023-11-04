@@ -476,15 +476,22 @@ pre code {
 
 .md-nav__item .md-nav__link {
     /* color: var(--section-color) !important; */
+    color: var(--section-color) !important;
     transition: 0.5s ease !important;
 }
 
 .md-nav__item .md-nav__link--active {
-    color: var(--section-active-color) !important;
-    font-weight: bold !important;
+    color: var(--section-color) !important;
+    /* color: var(--section-active-color) !important; */
+    /* font-weight: bold !important; */
     transition: 0.5s ease-in-out !important;
 }
 
 .md-nav__item .md-nav__link:hover {
+    font-weight: bold !important;
     color: var(--section-active-color) !important;
+}
+
+.md-content--post h1 {
+    margin: 0em 0em 0em 0em !important;
 }

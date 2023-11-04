@@ -1,41 +1,6 @@
 {% extends "main.html" %} {% import "partials/nav-item.html" as item with
 context %} {% block container %}
 <div class="md-content md-content--post" data-md-component="content">
-  <div
-    class="md-sidebar md-sidebar--post"
-    data-md-component="sidebar"
-    data-md-type="navigation"
-  >
-    <div class="md-sidebar__scrollwrap">
-      <div class="md-sidebar__inner md-post">
-        <nav class="md-nav md-nav--primary">
-          {% if page.config.readtime %} {% set time = page.config.readtime %}
-          <div class="md-nav__link">
-            {% include ".icons/material/clock-outline.svg" %}
-            <span class="md-ellipsis">
-              {% if time == 1 %} {{ lang.t("readtime.one") }} {% else %} {{
-              lang.t("readtime.other") | replace("#", time) }} {% endif %}
-            </span>
-          </div>
-          {% endif %}
-          <div class="md-nav__link">
-            {% include ".icons/material/calendar.svg" %}
-            <time datetime="{{ page.config.date.created }}" class="md-ellipsis">
-              {{-page.config.date.created | date -}}
-            </time>
-          </div>
-          {% if page.categories %}
-          <div class="md-nav__link" style="padding-bottom: 0em">
-            {% include ".icons/material/bookshelf.svg" %} {% for category in
-            page.categories|sort(attribute='title', reverse=True)%}
-            <a href="{{ category.url | url }}"> {{- category.title -}} </a>
-            {% endfor -%}
-          </div>
-          {% endif %}
-        </nav>
-      </div>
-    </div>
-  </div>
   <article class="md-content__inner md-typeset">
     {% block content %} {% include "partials/content.html" %} {% endblock %}
   </article>

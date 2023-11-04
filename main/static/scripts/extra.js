@@ -1,6 +1,6 @@
 // params
 
-var scrollPixels = 16;
+// var scrollPixels = 16;
 var dim = "0.3";
 
 // tracking vars
@@ -125,9 +125,9 @@ logo.addEventListener("mouseenter", function () {
   if (!search_is_open) {
     show_tabs();
     dim_content_container();
-    if (window.scrollY < scrollPixels) {
-      hide_title();
-    }
+    // if (window.scrollY < scrollPixels) {
+    //   hide_title();
+    // }
   }
 });
 
