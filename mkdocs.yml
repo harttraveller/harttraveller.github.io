@@ -6,12 +6,12 @@ repo_url: https://github.com/harttraveller/harttraveller.github.io
 
 nav:
 - index.md
-- page/index.md
-- Analysis: /page/analysis
-- Article: /page/article
-- Report: /page/report
+# - page/index.md
+# - Analysis: /page/analysis
+# - Article: /page/article
+# - Report: /page/report
 - Documentation: /page/documentation
-- Resource: /page/resource
+# - Resource: /page/resource
 
 theme:
   name: material

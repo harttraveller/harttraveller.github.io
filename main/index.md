@@ -1,8 +1,3 @@
----
-hide:
-- toc
----
-
 <style>
 
 body {
@@ -11,8 +6,6 @@ body {
     background-repeat: no-repeat !important;
     background-size: cover !important;
 }
-
-
 .md-content__inner {
     background: transparent !important;
 }
@@ -22,43 +15,29 @@ body {
 
 !!! warning "This site is currently under construction."
 
+!!! info "Thanks for visiting my site. The main sections are listed below."
 
-## [Analysis](./page/analysis)
+!!! details "[Documentation](./page/documentation)"
+    Documentation for various tools I've created.
 
-The analysis category
-- analysis (analysis of reality to find answer)
+<!-- ??? quote "[Positive vs. Normative](https://www.khanacademy.org/economics-finance-domain/ap-macroeconomics/basic-economics-concepts-macro/introduction-to-the-economic-way-of-thinking-macro/v/normative-and-positive-statements)"
+    > Normative statements are based on opinions or ethics—what someone believes should be. Positive statements, on the other hand, are testable, even if they may not necessarily be true. -->
 
-## [Article](./page/article)
-- article (normative)
+<!-- !!! details "[Analysis](./page/analysis)"
+    This category pertains to positive (as opposed to normative) analyses of reality, wherein the objective is to find some discrete answer. -->
 
-## [Report](./page/report)
-- report (report on past tense actions)
-
-<!-- open source operation -->
-
-## [Documentation](./page/documentation)
-- documentation (how you use a tool)
-
-## [Resource](./page/resource)
-- resource (non-tool resources)
+<!-- !!! details "[Article](./page/article)"
+    This category is for normative (as opposed to positive) articles, which may be more speculative and will probably be mostly about philosophy. -->
 
 
-<!-- - project (? report) -->
-<!-- - article (normative)
-- analysis (positive)
-- report (positive, report on action)
-- documentation (tool documentation)
-- report (project documentation)
-- resource (resource documentation) -->
+<!-- !!! details "[Report](./page/report)"
+    report (report on past tense actions/open source operation) -->
 
 
-<!--
-- articles are normative
-- analyses are positive
-- documentation is docs for tools
--->
+<!-- !!! details "[Resource](./page/resource)"
+    resource (non-tool resources) -->
 
-
-<!-- TODO: add more info on site structure -->
+<!-- !!! details "[Research](./page/research)"
+    ... -->
 
 <!-- !!! premise "You can press `Cmd + K` or `Ctrl + K` to open the quick search." -->

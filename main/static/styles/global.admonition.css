@@ -73,6 +73,7 @@ details,
     --icon-lucide-dollar: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dollar-sign"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>');
     --icon-lucide-premise: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>');
     --icon-lucide-mail: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>');
+    --icon-lucide-link: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>');
 }
 
 .md-typeset .admonition.premise,
@@ -164,6 +165,23 @@ details,
     mask-image: var(--icon-lucide-frown);
 }
 
+.md-typeset .admonition.link,
+.md-typeset details.link {
+    border-color: rgb(33, 159, 255);
+}
+
+.md-typeset .link>.admonition-title,
+.md-typeset .link>summary {
+    background-color: rgba(45, 105, 194, 0.1);
+}
+
+.md-typeset .link>.admonition-title::before,
+.md-typeset .link>summary::before {
+    background-color: rgb(48, 127, 255);
+    -webkit-mask-image: var(--icon-lucide-link);
+    mask-image: var(--icon-lucide-link);
+}
+
 /* dollar */
 
 
@@ -183,6 +201,8 @@ details,
     -webkit-mask-image: var(--icon-lucide-dollar);
     mask-image: var(--icon-lucide-dollar);
 }
+
+
 
 .md-typeset .admonition.dollar-green,
 .md-typeset details.dollar-green {
