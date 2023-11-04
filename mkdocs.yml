@@ -5,8 +5,13 @@ site_url: https://harttraveller.com
 repo_url: https://github.com/harttraveller/harttraveller.github.io
 
 nav:
-# - index.md
-- Blog: blog/index.md
+- index.md
+# - page/index.md
+# - Analysis: /page/analysis
+# - Article: /page/article
+# - Report: /page/report
+# - Documentation: /page/documentation
+# - Resource: /page/resource
 
 theme:
   name: material
@@ -32,42 +37,28 @@ theme:
   - navigation.tabs
   - navigation.tabs.sticky
   - navigation.indexes
-  # - navigation.footer
 
 plugins:
 - search
+- meta
 - obsidian-bridge
 - mkdocs-jupyter
 - blog:
-    blog_dir: blog
+    blog_dir: page
     blog_toc: true
     post_url_format: "{slug}"
+    categories_url_format: "{slug}"
+    # post_date_format: full
 - rss:
-    match_path: posts/.*
+    match_path: page/posts/.*
     comments_path: "#__comments"
     date_from_meta:
       as_creation: date
     categories:
     - categories
-#     enabled: true
-#     feed_ttl: 1440
-#     image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Feed-icon.svg/128px-Feed-icon.svg.png
-# url_parameters:
-#   utm_source: "documentation"
-#   utm_medium: "RSS"
-# utm_campaign: "feed-syndication"
-
 # - roamlinks
 # - embed_file
-# - tags:
-#     tags_file: projects/tags.md
-# - blog:
-#     blog_dir: projects
-#     post_url_date_format: yyyy/MM/dd
-#     post_date_format: long
-#     draft_if_future_date: true
-#     categories_name: Type
-#     archive_name: Year
+
 
 markdown_extensions:
 - attr_list
@@ -102,47 +93,42 @@ markdown_extensions:
     - name: mermaid
       class: mermaid
       format: !!python/name:pymdownx.superfences.fence_code_format
-# - pymdownx.emoji:
-#     emoji_index: !!python/name:materialx.emoji.twemoji
-#     emoji_generator: !!python/name:materialx.emoji.to_svg
 
 extra:
   generator: false
   quicklinks:
-  - name: GitHub
-    info: GitHub
+  - name: GitHub Profile
     icon: lucide/github
+    type: link
     link: https://github.com/harttraveller
-  - name: GitLab
-    info: GitLab
+  - name: GitLab Profile
     icon: lucide/gitlab
+    type: link
     link: https://www.gitlab.com/harttraveller
-  - name: PyPi
-    info: PyPi
+  - name: PyPi Profile
     icon: logo/python
+    type: link
     link: https://pypi.org/user/harttraveller/
-  - name: LinkedIn
-    info: LinkedIn
+  - name: LinkedIn Profile
     icon: lucide/linkedin
+    type: link
     link: https://www.linkedin.com/in/harttraveller/
-    # - name: Chat
-    #   info: Chat
+  # - name: Copy RSS Feed Link
+  #   icon: lucide/rss
+  #   type: copy
+  #   text: https://harttraveller.com/feed_rss_created.xml
+  - name: Copy (Obfuscated) Email Address
+    icon: lucide/mail
+    type: copy
+    text: ruling_fiction.0b@icloud.com
+    # - name: AI Chat
     #   icon: lucide/bot
     #   link: https://ai.harttraveller.com
     #   color: rgb(45, 94, 183)
     # - name: Brain
-    #   info: Brain
     #   icon: lucide/brain-circuit
     #   link: https://brain.harttraveller.com
     #   color: rgb(45, 94, 183)
-    # - name: RSS
-    #   info: RSS
-    #   icon: lucide/rss
-    #   link: ./feed_rss_created.xml
-    # - name: Email
-    #   info: Copy Email Address (Obfuscated)
-    #   icon: lucide/mail
-    #   link:
 
 extra_css:
 - static/styles/global.theme.css
@@ -154,13 +140,9 @@ extra_css:
 - static/styles/testing.css
 
 extra_javascript:
-# - static/scripts/quicklink.js
-- static/scripts/search.js
+- static/scripts/extra.js
 - static/scripts/mathjax.js
 - https://polyfill.io/v3/polyfill.min.js?features=es6
 - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-- static/scripts/tabs.js
-# - static/scripts/video.js
-# - static/scripts/video-test.js
 
 

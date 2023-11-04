@@ -1,22 +1,32 @@
 html {
-    --background: black;
-    --tab-color: #1C2232;
-    --tab-hover-color: #0F2B54;
-    --tab-active-color: #a85317;
+    --background: transparent;
+    --tab-color: #22262f;
+    --tab-hover-color: #a86417;
+    /* --tab-hover-color: var(--internal-link-color); */
+    --tab-active-color: #22262f;
     --external-link-color: rgb(114, 132, 253);
     --external-link-color-hover: rgb(112, 166, 247);
-    --internal-link-color: rgb(210, 137, 40);
+    --internal-link-color: rgb(198, 127, 33);
     --internal-link-color-hover: rgb(255, 189, 135);
     --section-color: var(--internal-link-color);
     --section-active-color: var(--internal-link-color-hover);
     --section-hover-color: var(--internal-link-color-hover);
     /* --internal-link-color-hover: rgb(154, 75, 10); */
-    --search-background-color: #181A20;
-    --search-active-color: #181A20;
+    --search-background-color: #22262f;
+    --search-active-color: #22262f;
     --internal-button-color: var(--tab-color);
     --external-button-color: rgb(0, 56, 113);
     --sidebar-background-color: var(--tab-color);
     --quicklink-hover-color: rgb(81, 255, 191);
+}
+
+html {
+    background: black;
+}
+
+body,
+.md-header {
+    background: var(--background);
 }
 
 .md-code__button {
@@ -43,11 +53,7 @@ html {
 
 /* background color */
 
-html,
-body,
-.md-header {
-    background: var(--background);
-}
+
 
 div[id="MathJax_Message"] {
     display: none !important;
@@ -245,6 +251,8 @@ img {
 }
 
 
+
+
 /* background */
 
 body,
@@ -327,7 +335,7 @@ article.md-post.md-post--excerpt {
     position: relative;
     margin-top: -5.6em;
     margin-left: 2em;
-    z-index: 1000;
+    /* z-index: 1000; */
 }
 
 .md-sidebar.md-sidebar--post .md-nav__item {
@@ -412,7 +420,7 @@ h6 {
 
 .md-content h1 {
     color: #ffffff !important;
-    margin: -0.4em 0em 0.6em 0em;
+    margin: -0.42em 0em 0.5em 0em;
     position: relative;
     font-size: 2.4em;
 }

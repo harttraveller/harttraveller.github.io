@@ -142,19 +142,23 @@ header.addEventListener("mouseleave", function () {
 
 search_overlay.onclick = function () {
   if (just_clicked_icon || search_is_open || hasFocusVisible()) {
+    // search_input.focus();
+    // search_input.select();
     close_search();
     hide_tabs();
     show_title();
+    // search_overlay.style["z-index"] = "0";
     just_clicked_icon = false;
   }
 };
 
 logo.onclick = function () {
   if (just_clicked_icon || search_is_open || hasFocusVisible()) {
-    close_search();
-    hide_tabs();
-    show_title();
-    just_clicked_icon = false;
+    search_overlay.click();
+    // close_search();
+    // hide_tabs();
+    // show_title();
+    // just_clicked_icon = false;
   } else {
     hide_tabs();
     open_search();

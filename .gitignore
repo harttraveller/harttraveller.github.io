@@ -3,6 +3,7 @@
 .obsidian
 _dev_
 temp/
+arch
 _temp_
 
 # Byte-compiled / optimized / DLL files

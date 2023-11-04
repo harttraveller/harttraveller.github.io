@@ -1,18 +1,25 @@
 <div class="md-quick">
-    {% for quicklink in config.extra.quicklinks %}
-    {% set rel = "noopener noreferrer" %}
-    {% set title = quicklink.name %}
-    {% if not title and "//" in quicklink.link %}
-    {% set _, url = quicklink.link.split("//") %}
-    {% set title = url.split("/")[0] %}
-    {% endif %}
+    {% for quicklink in config.extra.quicklinks %} {% set rel = "noopener
+    noreferrer" %} {% set title = quicklink.name %} {% if not title and "//" in
+    quicklink.link %} {% set _, url = quicklink.link.split("//") %} {% set title =
+    url.split("/")[0] %} {% endif %}
     <div class="quicklink-hover-box">
-        <a href="{{ quicklink.link }}" target="_blank" rel="{{ rel }}" class="md-quick__link">
+        {% if "link" in quicklink.type %}
+        <a href="{{ quicklink.link }}" target="_blank" rel="{{ rel }}" class="md-quick__link link">
             {% include ".icons/" ~ quicklink.icon ~ ".svg" %}
         </a>
         <div class="md-sidebar__tooltip">
-            <p style="display: inline-block;">{{ quicklink.info }}</p>
+            <p style="display: inline-block">{{ quicklink.name }}</p>
         </div>
+        {% endif %} {% if "copy" in quicklink.type %}
+        {% set text = quicklink.text %}
+        <button data-clipboard-text="{{ text }}" data-md-type="copy" class="md-quick__link copy">
+            {% include ".icons/" ~ quicklink.icon ~ ".svg" %}
+        </button>
+        <div class="md-sidebar__tooltip">
+            <p style="display: inline-block">{{ quicklink.name }}</p>
+        </div>
+        {% endif %}
     </div>
     {% endfor %}
 </div>
