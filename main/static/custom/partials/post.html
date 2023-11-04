@@ -10,6 +10,11 @@
         </nav>
         {% endif %}
         <div class="md-post__meta md-meta">
+            {% if post.config.draft %}
+            <span class="md-draft">
+                {{ lang.t("blog.draft") }}
+            </span>
+            {% endif %}
             <ul class="md-meta__list">
                 <li class="md-meta__item">
                     <time datetime="{{ post.config.date.created }}">
@@ -39,11 +44,7 @@
                 </li>
                 {% endif %}
             </ul>
-            {% if post.config.draft %}
-            <span class="md-draft">
-                {{ lang.t("blog.draft") }}
-            </span>
-            {% endif %}
+
         </div>
     </header>
     <div class="md-post__content md-typeset">
