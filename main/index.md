@@ -24,6 +24,8 @@ body {
 
 
 ## [Analysis](./page/analysis)
+
+The analysis category
 - analysis (analysis of reality to find answer)
 
 ## [Article](./page/article)

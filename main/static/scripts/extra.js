@@ -1,7 +1,7 @@
 // params
 
 // var scrollPixels = 16;
-var dim = "0.3";
+var dim = "0.2";
 
 // tracking vars
 
