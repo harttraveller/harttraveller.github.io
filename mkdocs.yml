@@ -1,5 +1,5 @@
 site_name: Hart Traveller
-docs_dir: site
+docs_dir: main
 repo_name: harttraveller.github.io
 site_url: https://harttraveller.com
 repo_url: https://github.com/harttraveller/harttraveller.github.io
@@ -19,7 +19,7 @@ theme:
   logo: icon.png
   logo_url: "/"
   logo_tooltip: ""
-  custom_dir: site/static/custom
+  custom_dir: main/static/custom
   icon:
     annotation: material/plus-circle
   font:
