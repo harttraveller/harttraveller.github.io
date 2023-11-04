@@ -6,12 +6,12 @@ repo_url: https://github.com/harttraveller/harttraveller.github.io
 
 nav:
 - index.md
-# - page/index.md
-# - Analysis: /page/analysis
-# - Article: /page/article
-# - Report: /page/report
-# - Documentation: /page/documentation
-# - Resource: /page/resource
+- page/index.md
+- Analysis: /page/analysis
+- Article: /page/article
+- Report: /page/report
+- Documentation: /page/documentation
+- Resource: /page/resource
 
 theme:
   name: material
@@ -113,10 +113,10 @@ extra:
     icon: lucide/linkedin
     type: link
     link: https://www.linkedin.com/in/harttraveller/
-  # - name: Copy RSS Feed Link
-  #   icon: lucide/rss
-  #   type: copy
-  #   text: https://harttraveller.com/feed_rss_created.xml
+  - name: Copy RSS Feed Link
+    icon: lucide/rss
+    type: copy
+    text: https://harttraveller.com/feed_rss_created.xml
   - name: Copy (Obfuscated) Email Address
     icon: lucide/mail
     type: copy
