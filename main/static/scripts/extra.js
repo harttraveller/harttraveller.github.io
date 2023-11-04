@@ -197,5 +197,6 @@ document.onkeydown = checkShortcuts;
 //   attributeFilter: ["class"],
 // });
 
-// document.addEventListener("DOMContentLoaded", function () {
-// });
+document.addEventListener("DOMContentLoaded", function () {
+  default_layers();
+});
