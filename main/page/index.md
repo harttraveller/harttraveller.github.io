@@ -3,5 +3,5 @@ hide:
 - navigation
 ---
 
-# List
+# Pages
 

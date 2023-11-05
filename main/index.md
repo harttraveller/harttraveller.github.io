@@ -20,7 +20,7 @@ body {
 
 !!! warning "This site is currently under construction."
 
-!!! info "Thanks for visiting my site. The main sections are listed below."
+<!-- !!! info "Thanks for visiting my site. The main sections are listed below." -->
 
 <!-- !!! details "[Documentation](./page/documentation)"
     Documentation for various tools I've created. -->

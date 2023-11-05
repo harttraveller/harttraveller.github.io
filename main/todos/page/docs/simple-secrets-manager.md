@@ -1,6 +1,5 @@
 ---
 draft: true
-date: 2023-11-02
 tags:
     - /status/development
     - /type/tool

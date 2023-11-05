@@ -7,11 +7,11 @@ edit_uri: edit/main/main/
 
 
 nav:
-- List: page/index.md
-- Blog: page/blog
-- Docs: page/docs
-- Projects: page/projects
-- Tags: tags.md
+# - List: page/index.md
+- Blog: page/blog.md
+- Docs: page/docs.md
+- Projects: page/projects.md
+# - Tags: tags.md
 
 theme:
   name: material
