@@ -10,11 +10,15 @@ nav:
 - index.md
 - tags.md
 - /pages: page/index.md
-# - Analysis: /page/analysis
-# - Article: /page/article
-# - Report: /page/report
-- /documentation: page/documentation/
-# - Resource: /page/resource
+- /analysis: page/analysis
+- /article: page/article
+- /documentation: page/documentation
+- /entity: page/entity
+- /project: page/project
+- /random: page/random
+- /report: page/report
+- /research: page/research
+- /resource: page/resource
 
 theme:
   name: material
@@ -33,7 +37,6 @@ theme:
     primary: black
     accent: orange
   features:
-  # - content.action.edit
   - content.action.view
   - search.suggest
   - content.code.copy
@@ -41,7 +44,6 @@ theme:
   - navigation.tracking
   - navigation.tabs
   - navigation.tabs.sticky
-  # - navigation.indexes
 
 plugins:
 - search
@@ -57,8 +59,7 @@ plugins:
     blog_toc: true
     post_url_format: "{categories}/{slug}"
     categories_url_format: "{slug}"
-    # pagination_per_page: 5
-    # post_date_format: full
+    pagination_per_page: 8
 - rss:
     match_path: page/posts/.*
     comments_path: "#__comments"
@@ -174,6 +175,7 @@ extra:
     #   link: https://brain.harttraveller.com
     #   color: rgb(45, 94, 183)
     # dagshub, huggingface
+
 extra_css:
 - static/styles/global.theme.css
 - static/styles/max.theme.css
