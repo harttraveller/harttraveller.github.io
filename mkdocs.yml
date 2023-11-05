@@ -1,5 +1,5 @@
 site_name: Hart Traveller
-docs_dir: main
+docs_dir: yield/pages
 repo_name: harttraveller.github.io
 site_url: https://harttraveller.com
 repo_url: https://github.com/harttraveller/harttraveller.github.io
@@ -7,11 +7,7 @@ edit_uri: edit/main/main/
 
 
 nav:
-# - List: page/index.md
-- Blog: page/blog.md
-- Docs: page/docs.md
-- Projects: page/projects.md
-# - Tags: tags.md
+- index.md
 
 theme:
   name: material
@@ -19,7 +15,7 @@ theme:
   logo: icon.png
   logo_url: "/"
   logo_tooltip: ""
-  custom_dir: main/static/custom
+  custom_dir: yield/pages/static/custom
   icon:
     annotation: material/plus-circle
   font:
@@ -41,8 +37,8 @@ theme:
 plugins:
 - search
 - meta
-- tags:
-    tags_file: tags.md
+# - tags:
+#     tags_file: tags.md
 - obsidian-bridge
 - mkdocs-jupyter
 - git-revision-date-localized:
@@ -54,7 +50,7 @@ plugins:
     categories_url_format: "{slug}"
     pagination_per_page: 8
 - rss:
-    match_path: page/posts/.*
+    match_path: posts/.*
     comments_path: "#__comments"
     date_from_meta:
       as_creation: date
