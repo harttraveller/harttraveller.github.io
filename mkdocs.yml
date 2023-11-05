@@ -7,7 +7,8 @@ edit_uri: edit/main/main/
 
 
 nav:
-- "#tags": tags.md
+- index.md
+- tags.md
 - /pages: page/index.md
 # - Analysis: /page/analysis
 # - Article: /page/article
@@ -106,20 +107,6 @@ markdown_extensions:
 extra:
   generator: false
   quicklinks:
-  - name: Home
-    icon: lucide/home
-    type: link
-    link: /
-    color: "#a86417"
-    tooltip: true
-    newtab: false
-  - name: Resume
-    icon: lucide/briefcase
-    type: link
-    link: /resume
-    color: "#a86417"
-    tooltip: true
-    newtab: false
   - name: GitHub Profile
     icon: lucide/github
     type: link
@@ -160,6 +147,20 @@ extra:
     text: ruling_fiction.0b@icloud.com
     color: darkred
     tooltip: true
+    # - name: Home
+    #   icon: lucide/home
+    #   type: link
+    #   link: /
+    #   color: "#a86417"
+    #   tooltip: true
+    #   newtab: false
+    # - name: Resume
+    #   icon: lucide/briefcase
+    #   type: link
+    #   link: /resume
+    #   color: "#a86417"
+    #   tooltip: true
+    #   newtab: false
     # - name: Cephalon Intelligence
     #   icon: lucide/eye
     #   type: link
