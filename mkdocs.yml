@@ -30,7 +30,7 @@ theme:
     primary: black
     accent: orange
   features:
-  - content.action.view
+  # - content.action.view
   - search.suggest
   - content.code.copy
   - content.code.annotate
