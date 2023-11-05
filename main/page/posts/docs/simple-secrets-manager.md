@@ -2,7 +2,10 @@
 draft: true
 date: 2023-11-02
 tags:
-    - status/present/medium
+    - /status/development
+    - /type/tool
+    - /type/python-package
+
 ---
 
 # simple-secrets-manager

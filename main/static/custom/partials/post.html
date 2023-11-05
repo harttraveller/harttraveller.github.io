@@ -18,23 +18,12 @@
                     </span>
                 </li>
                 {% endif %}
-                <li class="md-meta__item">
+                <!-- <li class="md-meta__item">
                     <time datetime="{{ post.config.date.created }}">
                         {{- post.config.date.created | date -}}
                     </time>
                     {#- Collapse whitespace -#}
-                </li>
-                <!-- {% if post.categories %}
-                <li class="md-meta__item">
-                    {{ lang.t("blog.categories.in") }}
-                    {% for category in post.categories|sort(attribute='title', reverse=True) %}
-                    <a href="{{ category.url | url }}" class="md-meta__link">
-                        {{- category.title -}}
-                    </a>
-                    {%- if loop.revindex > 1 %}, {% endif -%}
-                    {% endfor -%}
-                </li>
-                {% endif %} -->
+                </li> -->
                 {% if post.config.readtime %}
                 {% set time = post.config.readtime %}
                 <li class="md-meta__item">
@@ -43,6 +32,17 @@
                     {% else %}
                     {{ lang.t("readtime.other") | replace("#", time) }}
                     {% endif %}
+                </li>
+                {% endif %}
+                {% if post.categories %}
+                <li class="md-meta__item">
+                    {{ lang.t("blog.categories.in") }}
+                    {% for category in post.categories|sort(attribute='title', reverse=True) %}
+                    <a href="{{ category.url | url }}" class="md-meta__link">
+                        {{- category.title -}}
+                    </a>
+                    {%- if loop.revindex > 1 %}, {% endif -%}
+                    {% endfor -%}
                 </li>
                 {% endif %}
             </ul>

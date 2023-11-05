@@ -1,3 +1,8 @@
+---
+hide:
+- navigation
+---
+
 <style>
 
 body {
@@ -17,8 +22,8 @@ body {
 
 !!! info "Thanks for visiting my site. The main sections are listed below."
 
-!!! details "[Documentation](./page/documentation)"
-    Documentation for various tools I've created.
+<!-- !!! details "[Documentation](./page/documentation)"
+    Documentation for various tools I've created. -->
 
 <!-- ??? quote "[Positive vs. Normative](https://www.khanacademy.org/economics-finance-domain/ap-macroeconomics/basic-economics-concepts-macro/introduction-to-the-economic-way-of-thinking-macro/v/normative-and-positive-statements)"
     > Normative statements are based on opinions or ethics—what someone believes should be. Positive statements, on the other hand, are testable, even if they may not necessarily be true. -->

@@ -12,11 +12,13 @@
     {% endif %}
     {% if tag.url %}
     <a href="{{ tag.url | url }}" class="md-tag{{ icon }}">
-        #{{- tag.name -}}
+        <!-- #{{- tag.name -}} -->
+        {{- tag.name -}}
     </a>
     {% else %}
     <span class="md-tag{{ icon }}">
-        #{{- tag.name -}}
+        <!-- #{{- tag.name -}} -->
+        {{- tag.name -}}
     </span>
     {% endif %}
     {% endfor %}

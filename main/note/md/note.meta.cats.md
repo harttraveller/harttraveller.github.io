@@ -1,0 +1,11 @@
+- blog
+    - report
+    - analysis
+    - article
+- docs
+    - resource
+    - tool
+- page
+    - entity
+    - random
+    - research
