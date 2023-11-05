@@ -46,8 +46,9 @@ body {
 <!--
 todo
 
-- [ ] comments
+- [x] comments
 - [ ] header images
 - [ ] tags # symbol
+- [ ] fix min/max
 
  -->
