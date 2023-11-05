@@ -15,18 +15,10 @@
         left: 1.4%;
     }
 
-    .md-quick__link.link {
+    .md-quick__link {
         display: inline;
         transition: 0.5s ease !important;
-        color: rgb(45, 94, 183);
     }
-
-    .md-quick__link.copy {
-        display: inline;
-        transition: 0.5s ease !important;
-        color: darkred;
-    }
-
 
     .md-quick__link:hover {
         color: var(--quicklink-hover-color) !important;

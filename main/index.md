@@ -48,5 +48,6 @@ todo
 
 - [ ] comments
 - [ ] header images
+- [ ] tags # symbol
 
  -->

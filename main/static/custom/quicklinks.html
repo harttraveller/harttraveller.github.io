@@ -4,20 +4,34 @@
     quicklink.link %} {% set _, url = quicklink.link.split("//") %} {% set title =
     url.split("/")[0] %} {% endif %}
     <div class="quicklink-hover-box">
+        {% set color = quicklink.color %}
+        {% if quicklink.tooltip %}
+        {% set tiptext = quicklink.name %}
+        {% else %}
+        {% set tiptext = "" %}
+        {% endif %}
         {% if "link" in quicklink.type %}
-        <a href="{{ quicklink.link }}" target="_blank" rel="{{ rel }}" class="md-quick__link link">
+        {% if quicklink.newtab %}
+        {% set target = "_blank" %}
+        {% else %}
+        {% set target = "" %}
+        {% endif %}
+        <a href="{{ quicklink.link }}" target="{{ target }}" rel="{{ rel }}" class="md-quick__link link"
+            style="color: {{ color }}">
             {% include ".icons/" ~ quicklink.icon ~ ".svg" %}
         </a>
         <div class="md-sidebar__tooltip">
-            <p style="display: inline-block">{{ quicklink.name }}</p>
+            <p style="display: inline-block">{{ tiptext }}</p>
         </div>
-        {% endif %} {% if "copy" in quicklink.type %}
+        {% endif %}
+        {% if "copy" in quicklink.type %}
         {% set text = quicklink.text %}
-        <button data-clipboard-text="{{ text }}" data-md-type="copy" class="md-quick__link copy">
+        <button data-clipboard-text="{{ text }}" data-md-type="copy" class="md-quick__link copy"
+            style="color: {{ color }}">
             {% include ".icons/" ~ quicklink.icon ~ ".svg" %}
         </button>
         <div class="md-sidebar__tooltip">
-            <p style="display: inline-block">{{ quicklink.name }}</p>
+            <p style="display: inline-block">{{ tiptext }}</p>
         </div>
         {% endif %}
     </div>

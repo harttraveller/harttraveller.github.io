@@ -3,15 +3,16 @@ docs_dir: main
 repo_name: harttraveller.github.io
 site_url: https://harttraveller.com
 repo_url: https://github.com/harttraveller/harttraveller.github.io
+edit_uri: edit/main/main/
+
 
 nav:
-- index.md
-# - Tags: tags.md
-- Projects: page/index.md
+- "#tags": tags.md
+- /pages: page/index.md
 # - Analysis: /page/analysis
 # - Article: /page/article
 # - Report: /page/report
-- Documentation: page/documentation/
+- /documentation: page/documentation/
 # - Resource: /page/resource
 
 theme:
@@ -31,6 +32,8 @@ theme:
     primary: black
     accent: orange
   features:
+  # - content.action.edit
+  - content.action.view
   - search.suggest
   - content.code.copy
   - content.code.annotate
@@ -46,6 +49,8 @@ plugins:
     tags_file: tags.md
 - obsidian-bridge
 - mkdocs-jupyter
+- git-revision-date-localized:
+    enable_creation_date: true
 - blog:
     blog_dir: page
     blog_toc: true
@@ -101,30 +106,60 @@ markdown_extensions:
 extra:
   generator: false
   quicklinks:
+  - name: Home
+    icon: lucide/home
+    type: link
+    link: /
+    color: "#a86417"
+    tooltip: true
+    newtab: false
+  - name: Resume
+    icon: lucide/briefcase
+    type: link
+    link: /resume
+    color: "#a86417"
+    tooltip: true
+    newtab: false
   - name: GitHub Profile
     icon: lucide/github
     type: link
     link: https://github.com/harttraveller
+    color: rgb(45, 94, 183)
+    tooltip: true
+    newtab: true
   - name: GitLab Profile
     icon: lucide/gitlab
     type: link
     link: https://www.gitlab.com/harttraveller
+    color: rgb(45, 94, 183)
+    tooltip: true
+    newtab: true
   - name: PyPi Profile
     icon: logo/python
     type: link
     link: https://pypi.org/user/harttraveller/
+    color: rgb(45, 94, 183)
+    tooltip: true
+    newtab: true
   - name: LinkedIn Profile
     icon: lucide/linkedin
     type: link
     link: https://www.linkedin.com/in/harttraveller/
+    color: rgb(45, 94, 183)
+    tooltip: true
+    newtab: true
   - name: Copy RSS Feed Link
     icon: lucide/rss
     type: copy
     text: https://harttraveller.com/feed_rss_created.xml
+    color: darkred
+    tooltip: true
   - name: Copy (Obfuscated) Email Address
     icon: lucide/mail
     type: copy
     text: ruling_fiction.0b@icloud.com
+    color: darkred
+    tooltip: true
     # - name: Cephalon Intelligence
     #   icon: lucide/eye
     #   type: link
@@ -138,7 +173,6 @@ extra:
     #   link: https://brain.harttraveller.com
     #   color: rgb(45, 94, 183)
     # dagshub, huggingface
-
 extra_css:
 - static/styles/global.theme.css
 - static/styles/max.theme.css

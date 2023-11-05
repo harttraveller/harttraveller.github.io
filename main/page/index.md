@@ -1,4 +1,4 @@
-# Projects
+# /pages
 
 <!--
 This page is an index of all the other pages in:

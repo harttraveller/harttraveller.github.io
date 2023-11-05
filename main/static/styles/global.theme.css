@@ -29,6 +29,13 @@ body,
     background: var(--background);
 }
 
+.md-content__button.md-icon[title="View source of this page"] {
+    position: absolute;
+    top: 0.4rem;
+    right: 0.3rem;
+    z-index: 10;
+}
+
 .md-code__button {
     transition: 0.3s ease !important;
     color: grey;
