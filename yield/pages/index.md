@@ -16,7 +16,7 @@ body {
 }
 </style>
 
-# Welcome
+# Home
 
 !!! warning "This site is currently under construction."
 
