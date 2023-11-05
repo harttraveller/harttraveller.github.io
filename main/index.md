@@ -41,3 +41,12 @@ body {
     ... -->
 
 <!-- !!! premise "You can press `Cmd + K` or `Ctrl + K` to open the quick search." -->
+
+
+<!--
+todo
+
+- [ ] comments
+- [ ] header images
+
+ -->

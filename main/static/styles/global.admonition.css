@@ -74,6 +74,9 @@ details,
     --icon-lucide-premise: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>');
     --icon-lucide-mail: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>');
     --icon-lucide-link: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>');
+    --icon-lucide-version: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-history"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg>');
+    --icon-lucide-related: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-network"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></svg>');
+    --icon-lucide-summary: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sigma"><path d="M18 7V4H6l6 8-6 8h12v-3"/></svg>');
 }
 
 .md-typeset .admonition.premise,
@@ -111,6 +114,25 @@ details,
     -webkit-mask-image: var(--icon-lucide-mail);
     mask-image: var(--icon-lucide-mail);
 }
+
+.md-typeset .admonition.version,
+.md-typeset details.version {
+    border-color: rgb(33, 255, 107);
+}
+
+.md-typeset .version>.admonition-title,
+.md-typeset .version>summary {
+    background-color: rgba(45, 194, 90, 0.1);
+}
+
+.md-typeset .version>.admonition-title::before,
+.md-typeset .version>summary::before {
+    background-color: rgb(48, 255, 89);
+    -webkit-mask-image: var(--icon-lucide-version);
+    mask-image: var(--icon-lucide-version);
+}
+
+
 
 /* faces */
 
@@ -274,6 +296,23 @@ details,
     mask-image: var(--icon-lucide-tangent);
 }
 
+.md-typeset .admonition.related,
+.md-typeset details.related {
+    border-color: rgb(255, 129, 33);
+}
+
+.md-typeset .related>.admonition-title,
+.md-typeset .related>summary {
+    background-color: rgba(194, 117, 45, 0.1);
+}
+
+.md-typeset .related>.admonition-title::before,
+.md-typeset .related>summary::before {
+    background-color: rgb(255, 155, 48);
+    -webkit-mask-image: var(--icon-lucide-related);
+    mask-image: var(--icon-lucide-related);
+}
+
 /* details admonition */
 
 .md-typeset .admonition.details,
@@ -291,6 +330,25 @@ details,
     background-color: rgb(48, 148, 255);
     -webkit-mask-image: var(--icon-lucide-details);
     mask-image: var(--icon-lucide-details);
+}
+
+/* summary */
+
+.md-typeset .admonition.summary,
+.md-typeset details.summary {
+    border-color: rgb(33, 133, 255);
+}
+
+.md-typeset .summary>.admonition-title,
+.md-typeset .summary>summary {
+    background-color: rgba(45, 120, 194, 0.1);
+}
+
+.md-typeset .summary>.admonition-title::before,
+.md-typeset .summary>summary::before {
+    background-color: rgb(48, 148, 255);
+    -webkit-mask-image: var(--icon-lucide-summary);
+    mask-image: var(--icon-lucide-summary);
 }
 
 /* code admonition */

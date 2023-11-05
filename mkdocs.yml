@@ -6,11 +6,11 @@ repo_url: https://github.com/harttraveller/harttraveller.github.io
 
 nav:
 - index.md
-# - page/index.md
+- Tags: tags.md
 # - Analysis: /page/analysis
 # - Article: /page/article
 # - Report: /page/report
-- Documentation: /page/documentation
+- Documentation: page/documentation/
 # - Resource: /page/resource
 
 theme:
@@ -36,11 +36,13 @@ theme:
   - navigation.tracking
   - navigation.tabs
   - navigation.tabs.sticky
-  - navigation.indexes
+  # - navigation.indexes
 
 plugins:
 - search
 - meta
+- tags:
+    tags_file: tags.md
 - obsidian-bridge
 - mkdocs-jupyter
 - blog:
@@ -48,6 +50,7 @@ plugins:
     blog_toc: true
     post_url_format: "{categories}/{slug}"
     categories_url_format: "{slug}"
+    # pagination_per_page: 5
     # post_date_format: full
 - rss:
     match_path: page/posts/.*
@@ -133,6 +136,7 @@ extra:
     #   icon: lucide/brain-circuit
     #   link: https://brain.harttraveller.com
     #   color: rgb(45, 94, 183)
+    # dagshub, huggingface
 
 extra_css:
 - static/styles/global.theme.css

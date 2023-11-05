@@ -495,3 +495,15 @@ pre code {
 .md-content--post h1 {
     margin: 0em 0em 0em 0em !important;
 }
+
+.md-tag {
+    color: grey !important;
+    background: var(--tab-active-color) !important;
+    border-radius: 0.4em !important;
+}
+
+.md-tag:hover {
+    color: white !important;
+    background: var(--tab-hover-color) !important;
+    border-radius: 0.4em !important;
+}

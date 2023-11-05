@@ -30,6 +30,7 @@ var search_overlay = document.querySelector(".md-search__overlay ");
 var content_container = document.querySelector(".md-container");
 
 function default_layers() {
+  console.log("set default layers");
   header.style["z-index"] = "0";
   inner_content.style["z-index"] = "1";
   content_container.style["z-index"] = "1";

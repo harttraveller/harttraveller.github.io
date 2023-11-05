@@ -58,10 +58,8 @@
         color: var(--quicklink-hover-color);
         left: 2.4em;
         border-radius: 0.4em;
-        /* background-color: rgba(0, 0, 0, 0.5);i */
         padding-left: 0.3em;
         margin-right: 0.5em !important;
-        /* width: 10rem; */
         transition: 0.5s ease !important;
     }
 
@@ -327,6 +325,7 @@
     .md-container {
         left: 3rem;
         transition: 0.3s ease !important;
+        z-index: 1;
     }
 
     .md-container,
