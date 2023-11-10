@@ -24,6 +24,11 @@ html {
     background: black;
 }
 
+.blog-title {
+    position: relative;
+    top: -0.3rem !important;
+}
+
 body,
 .md-header {
     background: var(--background);
@@ -190,6 +195,7 @@ figcaption.nbref p {
 
 /* justify text */
 
+
 /* p */
 
 .md-content p {
@@ -200,11 +206,15 @@ figcaption.nbref p {
 
 /* lists */
 
+.md-content p,
 .md-content ul,
-.md-content ol {
+.md-content ol,
+.md-content li {
     text-align: justify;
-    padding: 0em 0em;
-    /* font-size: 0.95em !important; */
+    line-height: 0.95rem !important;
+    margin-bottom: 0.05rem !important;
+    margin-top: 0.05rem !important;
+    font-size: 0.75rem !important;
 }
 
 .image {
@@ -218,13 +228,12 @@ figcaption.nbref p {
     width: 30em;
 } */
 
-.md-content :not(.md-post--excerpt) li {
+/* .md-content :not(.md-post--excerpt) li {
     text-align: justify;
     padding: 0em 0em;
     margin: -0.4em 0em;
     line-height: 1.4em;
-    /* font-size: 0.95em !important; */
-}
+} */
 
 .md-content .md-post--excerpt li {
     text-align: left;
@@ -330,8 +339,12 @@ header,
     display: none;
 }
 
+.md-post--excerpt .md-post__header {
+    margin-bottom: -0.5rem;
+}
+
 article.md-post.md-post--excerpt {
-    background: #181A20;
+    border: 1px solid rgb(16, 17, 21);
     padding: 2em;
     border-radius: 0.4em;
     margin-bottom: 2.7em;
@@ -405,13 +418,17 @@ sup,
 
 /* headings */
 
+/* h1 {
+    text-transform: capitalize !important;
+} */
+
+
 .md-content h1,
 .md-content h2,
 .md-content h3,
 .md-content h4,
 .md-content h5,
 .md-content h6 {
-    text-transform: none !important;
     padding-bottom: 0em;
     padding-top: 0em;
     font-weight: normal !important;
@@ -422,6 +439,7 @@ h3,
 h4,
 h5,
 h6 {
+    text-transform: none !important;
     margin: 0em 0em 0.2em 0em !important;
 }
 
@@ -468,6 +486,21 @@ h6 {
     box-shadow: none;
 }
 
+.md-blog-post__meta.md-meta {
+    position: relative;
+    padding-bottom: 0.4rem;
+    padding-left: 0.8rem;
+    margin-top: -0.4rem;
+    margin-bottom: 0.3rem;
+}
+
+.md-post-header {
+    border-radius: 0.4em;
+    border: 1px solid rgb(16, 17, 21);
+    padding-top: 1rem;
+    margin-top: -1rem;
+}
+
 /* code */
 
 pre code {
@@ -500,7 +533,7 @@ pre code {
 }
 
 .md-content--post h1 {
-    margin: 0em 0em 0em 0em !important;
+    padding-left: 0.8rem;
 }
 
 .md-tag {

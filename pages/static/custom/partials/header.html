@@ -4,18 +4,13 @@ set class = class ~ " md-header--shadow md-header--lifted" %} {% elif
 %} {% endif %}
 <header class="{{ class }}" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="{{ lang.t('header') }}">
-    <!-- <a
-      href="{{ config.theme.logo_url }}"
-      title="{{ config.theme.logo_tooltip }}"
-      class="md-header__button md-logo"
-      aria-label="{{ config.site_name }}"
-      data-md-component="logo"
-    >
-      {% include "partials/logo.html" %}
-    </a> -->
-    <a class="md-header__button md-logo" data-md-component="logo">
+    <a href="{{ config.theme.logo_url }}" title="{{ config.theme.logo_tooltip }}" class="md-header__button md-logo"
+      aria-label="{{ config.site_name }}" data-md-component="logo">
       {% include "partials/logo.html" %}
     </a>
+    <!-- <a class="md-header__button md-logo" data-md-component="logo">
+      {% include "partials/logo.html" %}
+    </a> -->
 
     {% if config.extra.quicklinks %} {% include "quicklinks.html" %} {% endif %}
 

@@ -1,5 +1,5 @@
 site_name: Hart Traveller
-docs_dir: yield/pages
+docs_dir: pages
 repo_name: harttraveller.github.io
 site_url: https://harttraveller.com
 repo_url: https://github.com/harttraveller/harttraveller.github.io
@@ -11,11 +11,11 @@ nav:
 
 theme:
   name: material
-  favicon: icon.png
-  logo: icon.png
+  favicon: files/site/icon.png
+  logo: files/site/icon.png
   logo_url: "/"
   logo_tooltip: ""
-  custom_dir: yield/pages/static/custom
+  custom_dir: pages/static/custom
   icon:
     annotation: material/plus-circle
   font:
@@ -37,16 +37,20 @@ theme:
 plugins:
 - search
 - meta
-# - tags:
-#     tags_file: tags.md
 - obsidian-bridge
 - mkdocs-jupyter
 - git-revision-date-localized:
     enable_creation_date: true
+# - tags:
+#     tags_file: tags.md
 - blog:
     blog_dir: .
     blog_toc: true
-    post_url_format: "{categories}/{slug}"
+    archive: true
+    archive_name: Years
+    archive_url_format: "year/{date}"
+    archive_toc: true
+    post_url_format: "{slug}"
     categories_url_format: "{slug}"
     pagination_per_page: 8
 - rss:
@@ -56,8 +60,6 @@ plugins:
       as_creation: date
     categories:
     - categories
-# - roamlinks
-# - embed_file
 
 
 markdown_extensions:
@@ -97,13 +99,48 @@ markdown_extensions:
 extra:
   generator: false
   quicklinks:
-  - name: Home
-    icon: lucide/home
-    type: link
-    link: /
-    color: "#a86417"
-    tooltip: true
-    newtab: false
+  # - name: Posts
+  #   icon: lucide/pen
+  #   type: link
+  #   link: /post
+  #   color: "#a86417"
+  #   tooltip: true
+  #   newtab: false
+  # - name: Categories
+  #   icon: lucide/tag
+  #   type: link
+  #   link: /post/categories
+  #   color: "#a86417"
+  #   tooltip: true
+  #   newtab: false
+  # - name: Archive
+  #   icon: lucide/history
+  #   type: link
+  #   link: /post/archive
+  #   color: "#a86417"
+  #   tooltip: true
+  #   newtab: false
+  # - name: Tags
+  #   icon: lucide/tag
+  #   type: link
+  #   link: ./tags
+  #   color: "#a86417"
+  #   tooltip: true
+  #   newtab: false
+  # - name: Projects
+  #   icon: lucide/wrench
+  #   type: link
+  #   link: /projects
+  #   color: "#a86417"
+  #   tooltip: true
+  #   newtab: false
+  # - name: Resources
+  #   icon: lucide/package
+  #   type: link
+  #   link: ./resources
+  #   color: "#a86417"
+  #   tooltip: true
+  #   newtab: false
   # - name: Resume
   #   icon: lucide/briefcase
   #   type: link
@@ -111,53 +148,46 @@ extra:
   #   color: "#a86417"
   #   tooltip: true
   #   newtab: false
-  # - name: Page Index
-  #   icon: lucide/layers
-  #   type: link
-  #   link: /page
-  #   color: "#a86417"
-  #   tooltip: true
-  #   newtab: false
-  - name: GitHub Profile
-    icon: lucide/github
-    type: link
-    link: https://github.com/harttraveller
-    color: rgb(45, 94, 183)
-    tooltip: true
-    newtab: true
-  - name: GitLab Profile
-    icon: lucide/gitlab
-    type: link
-    link: https://www.gitlab.com/harttraveller
-    color: rgb(45, 94, 183)
-    tooltip: true
-    newtab: true
-  - name: PyPi Profile
-    icon: logo/python
-    type: link
-    link: https://pypi.org/user/harttraveller/
-    color: rgb(45, 94, 183)
-    tooltip: true
-    newtab: true
-  - name: LinkedIn Profile
-    icon: lucide/linkedin
-    type: link
-    link: https://www.linkedin.com/in/harttraveller/
-    color: rgb(45, 94, 183)
-    tooltip: true
-    newtab: true
-  - name: Copy RSS Feed Link
+  - name: RSS
     icon: lucide/rss
     type: copy
     text: https://harttraveller.com/feed_rss_created.xml
     color: darkred
     tooltip: true
-  - name: Copy (Obfuscated) Email Address
+  - name: Email
     icon: lucide/mail
     type: copy
     text: ruling_fiction.0b@icloud.com
     color: darkred
     tooltip: true
+  - name: GitHub
+    icon: lucide/github
+    type: link
+    link: https://github.com/harttraveller
+    color: rgb(30, 70, 160)
+    tooltip: true
+    newtab: true
+  - name: GitLab
+    icon: lucide/gitlab
+    type: link
+    link: https://www.gitlab.com/harttraveller
+    color: rgb(30, 70, 160)
+    tooltip: true
+    newtab: true
+  - name: PyPi
+    icon: logo/python
+    type: link
+    link: https://pypi.org/user/harttraveller/
+    color: rgb(30, 70, 160)
+    tooltip: true
+    newtab: true
+  - name: LinkedIn
+    icon: lucide/linkedin
+    type: link
+    link: https://www.linkedin.com/in/harttraveller/
+    color: rgb(30, 70, 160)
+    tooltip: true
+    newtab: true
     # - name: Cephalon Intelligence
     #   icon: lucide/eye
     #   type: link
@@ -165,11 +195,11 @@ extra:
     # - name: AI Chat
     #   icon: lucide/bot
     #   link: https://ai.harttraveller.com
-    #   color: rgb(45, 94, 183)
+    #   color: rgb(30, 70, 160)
     # - name: Brain
     #   icon: lucide/brain-circuit
     #   link: https://brain.harttraveller.com
-    #   color: rgb(45, 94, 183)
+    #   color: rgb(30, 70, 160)
     # dagshub, huggingface
 
 extra_css:
@@ -183,6 +213,7 @@ extra_css:
 
 extra_javascript:
 - static/scripts/extra.js
+# - static/scripts/extra.tabs.js
 - static/scripts/mathjax.js
 - https://polyfill.io/v3/polyfill.min.js?features=es6
 - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
