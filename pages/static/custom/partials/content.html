@@ -1,0 +1,48 @@
+<!-- {% if "material/tags" in config.plugins and tags %}
+{% include "partials/tags.html" %}
+{% endif %}
+{% include "partials/actions.html" %} -->
+
+{% if page.meta.post %}
+<div class="md-post-header" style="background-image: url('{{ page.meta.header }}') !important; background-size: cover;">
+    <h1 class=".blog-title">{{ page.title | d(config.site_name, true)}}</h1>
+    <div class="md-blog-post__meta md-meta">
+        {% if page.meta.draft %}
+        <span class="md-draft">
+            {{ lang.t("blog.draft") }}
+        </span>
+        •
+        {% endif %}
+        <time datetime="{{ page.config.date.created }}">
+            {{- page.config.date.created | date -}}
+        </time>
+        •
+        {% if page.config.readtime %}
+        {% set time = page.config.readtime %}
+        {% if time == 1 %}
+        {{ lang.t("readtime.one") }}
+        {% else %}
+        {{ lang.t("readtime.other") | replace("#", time) }}
+        {% endif %}
+        {% endif %}
+        {% if page.categories %}
+        •
+        {{ lang.t("blog.categories.in") }}
+        {% for category in page.categories|sort(attribute='title', reverse=True) %}
+        <a href="{{ category.url | url }}" class="md-meta__link">
+            {{- category.title -}}
+        </a>
+        {%- if loop.revindex > 1 %}, {% endif -%}
+        {% endfor -%}
+        {% endif %}
+    </div>
+</div>
+{% else %}
+{% if "\x3ch1" not in page.content %}
+<h1>{{ page.title | d(config.site_name, true)}}</h1>
+{% endif %}
+{% endif %}
+{{ page.content }}
+{% include "partials/source-file.html" %}
+{% include "partials/feedback.html" %}
+{% include "partials/comments.html" %}

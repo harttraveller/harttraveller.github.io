@@ -1,7 +1,8 @@
 ---
-title: test
-header: /file/site/index.jpg
+title: test page
+header: /files/site/index.jpg
 draft: false
+post: true
 date: 2023-01-01
 categories:
 - /test

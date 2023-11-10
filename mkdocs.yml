@@ -1,4 +1,5 @@
 site_name: Hart Traveller
+docs_dir: pages
 site_url: https://harttraveller.github.io
 
 
@@ -7,11 +8,11 @@ nav:
 
 theme:
   name: material
-  favicon: file/site/icon.png
-  logo: file/site/icon.png
+  favicon: files/site/icon.png
+  logo: files/site/icon.png
   logo_url: "/"
   logo_tooltip: ""
-  custom_dir: docs/static/custom
+  custom_dir: pages/static/custom
   icon:
     annotation: material/plus-circle
   font:
@@ -33,7 +34,7 @@ plugins:
 - search
 - obsidian-bridge
 - blog:
-    blog_dir: blog
+    blog_dir: .
     blog_toc: true
     archive: true
     archive_name: Years

@@ -1,0 +1,8 @@
+{% extends "main.html" %} {% import "partials/nav-item.html" as item with
+context %} {% block container %}
+<div class="md-content md-content--post" data-md-component="content">
+  <article class="md-content__inner md-typeset">
+    {% block content %} {% include "partials/content.html" %} {% endblock %}
+  </article>
+</div>
+{% endblock %}
