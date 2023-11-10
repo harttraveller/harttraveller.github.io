@@ -27,7 +27,6 @@ hide:
 
 <!-- !!! note "Hit the `/` key in the search to search post categories specifically." -->
 
----
 
 <!--
 todo

@@ -1,5 +1,5 @@
 ---
-header: /files/site/index.jpg
+header: /file/site/index.jpg
 draft: true
 post: true
 date: 2023-01-01
