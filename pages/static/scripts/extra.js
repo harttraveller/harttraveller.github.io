@@ -94,19 +94,9 @@ function checkShortcuts(event) {
     search_is_open
   ) {
     close_search();
-    hide_tabs();
-    show_title();
     just_clicked_icon = false;
   }
 }
-
-// logo.addEventListener("mouseenter", function () {
-//   lift_header_layer();
-//   if (!search_is_open) {
-//     open_search();
-//     dim_content_container();
-//   }
-// });
 
 logo.addEventListener("mouseenter", function () {
   hoverTimer = setTimeout(function () {
