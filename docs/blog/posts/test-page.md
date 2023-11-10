@@ -1,7 +1,7 @@
 ---
+title: test
 header: /file/site/index.jpg
-draft: true
-post: true
+draft: false
 date: 2023-01-01
 categories:
 - /test
