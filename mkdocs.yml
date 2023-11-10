@@ -35,8 +35,6 @@ theme:
 plugins:
 - search
 - obsidian-bridge
-# - tags:
-#     tags_file: tags.md
 - blog:
     blog_dir: .
     blog_toc: true
