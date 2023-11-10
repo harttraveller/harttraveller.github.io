@@ -1,0 +1,5 @@
+# mkdocs material insiders: git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
+
+mkdocs-obsidian-bridge
+mkdocs-rss-plugin
+mkdocs-glightbox
