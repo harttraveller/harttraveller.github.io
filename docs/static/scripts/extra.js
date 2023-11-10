@@ -115,8 +115,6 @@ logo.addEventListener("mouseleave", function () {
 header.addEventListener("mouseleave", function () {
   if (!search_is_open) {
     default_layers();
-    hide_tabs();
-    show_title();
     brighten_content_container();
   }
 });
@@ -124,8 +122,6 @@ header.addEventListener("mouseleave", function () {
 search_overlay.onclick = function () {
   if (just_clicked_icon || search_is_open || hasFocusVisible()) {
     close_search();
-    hide_tabs();
-    show_title();
     just_clicked_icon = false;
   }
 };
