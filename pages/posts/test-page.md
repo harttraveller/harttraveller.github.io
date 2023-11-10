@@ -2,7 +2,7 @@
 header: /files/site/index.jpg
 draft: true
 post: true
-date: 1900-01-01
+date: 2023-01-01
 categories:
 - /test
 ---

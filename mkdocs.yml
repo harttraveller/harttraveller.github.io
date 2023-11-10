@@ -3,7 +3,6 @@ docs_dir: pages
 repo_name: harttraveller.github.io
 site_url: https://harttraveller.com
 repo_url: https://github.com/harttraveller/harttraveller.github.io
-edit_uri: edit/main/main/
 
 
 nav:
@@ -26,7 +25,6 @@ theme:
     primary: black
     accent: orange
   features:
-  # - content.action.view
   - search.suggest
   - content.code.copy
   - content.code.annotate
@@ -36,11 +34,7 @@ theme:
 
 plugins:
 - search
-- meta
 - obsidian-bridge
-- mkdocs-jupyter
-- git-revision-date-localized:
-    enable_creation_date: true
 # - tags:
 #     tags_file: tags.md
 - blog:
