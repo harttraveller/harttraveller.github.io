@@ -148,46 +148,46 @@ extra:
   #   color: "#a86417"
   #   tooltip: true
   #   newtab: false
-  - name: RSS
-    icon: lucide/rss
-    type: copy
-    text: https://harttraveller.com/feed_rss_created.xml
-    color: darkred
-    tooltip: true
+  # - name: RSS
+  #   icon: lucide/rss
+  #   type: copy
+  #   text: https://harttraveller.com/feed_rss_created.xml
+  #   color: darkred
+  #   tooltip: true
   - name: Email
     icon: lucide/mail
     type: copy
     text: ruling_fiction.0b@icloud.com
     color: darkred
     tooltip: true
-  - name: GitHub
-    icon: lucide/github
-    type: link
-    link: https://github.com/harttraveller
-    color: rgb(30, 70, 160)
-    tooltip: true
-    newtab: true
-  - name: GitLab
-    icon: lucide/gitlab
-    type: link
-    link: https://www.gitlab.com/harttraveller
-    color: rgb(30, 70, 160)
-    tooltip: true
-    newtab: true
-  - name: PyPi
-    icon: logo/python
-    type: link
-    link: https://pypi.org/user/harttraveller/
-    color: rgb(30, 70, 160)
-    tooltip: true
-    newtab: true
-  - name: LinkedIn
-    icon: lucide/linkedin
-    type: link
-    link: https://www.linkedin.com/in/harttraveller/
-    color: rgb(30, 70, 160)
-    tooltip: true
-    newtab: true
+    # - name: GitHub
+    #   icon: lucide/github
+    #   type: link
+    #   link: https://github.com/harttraveller
+    #   color: rgb(30, 70, 160)
+    #   tooltip: true
+    #   newtab: true
+    # - name: GitLab
+    #   icon: lucide/gitlab
+    #   type: link
+    #   link: https://www.gitlab.com/harttraveller
+    #   color: rgb(30, 70, 160)
+    #   tooltip: true
+    #   newtab: true
+    # - name: PyPi
+    #   icon: logo/python
+    #   type: link
+    #   link: https://pypi.org/user/harttraveller/
+    #   color: rgb(30, 70, 160)
+    #   tooltip: true
+    #   newtab: true
+    # - name: LinkedIn
+    #   icon: lucide/linkedin
+    #   type: link
+    #   link: https://www.linkedin.com/in/harttraveller/
+    #   color: rgb(30, 70, 160)
+    #   tooltip: true
+    #   newtab: true
     # - name: Cephalon Intelligence
     #   icon: lucide/eye
     #   type: link

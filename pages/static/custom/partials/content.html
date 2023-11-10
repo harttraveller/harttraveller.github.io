@@ -7,7 +7,7 @@
 <div class="md-post-header" style="background-image: url('{{ page.meta.header }}') !important; background-size: cover;">
     <h1 class=".blog-title">{{ page.title | d(config.site_name, true)}}</h1>
     <div class="md-blog-post__meta md-meta">
-        {% if page.config.draft %}
+        {% if page.meta.draft %}
         <span class="md-draft">
             {{ lang.t("blog.draft") }}
         </span>

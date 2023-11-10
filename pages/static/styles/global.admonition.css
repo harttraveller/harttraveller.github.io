@@ -1,11 +1,11 @@
 /* admonition styles */
 
-.admonition,
+/* .admonition,
 details {
     padding-bottom: 0.8rem !important;
-}
+} */
 
-.admonition p {
+/* .admonition p {
     margin-top: 0.2em;
     margin-bottom: 0.3rem;
 }
@@ -13,7 +13,7 @@ details {
 details p {
     margin-top: 0.2em;
     margin-bottom: 0.3rem;
-}
+} */
 
 details {
     transition: 0.5s ease !important;

@@ -206,7 +206,7 @@ figcaption.nbref p {
 
 /* lists */
 
-.md-content p,
+/* .md-content p,
 .md-content ul,
 .md-content ol,
 .md-content li {
@@ -215,7 +215,7 @@ figcaption.nbref p {
     margin-bottom: 0.05rem !important;
     margin-top: 0.05rem !important;
     font-size: 0.75rem !important;
-}
+} */
 
 .image {
     text-align: center;
@@ -235,12 +235,12 @@ figcaption.nbref p {
     line-height: 1.4em;
 } */
 
-.md-content .md-post--excerpt li {
+/* .md-content .md-post--excerpt li {
     text-align: left;
     padding: 0em 0em;
     margin: 0em 0em;
     line-height: 1.5em;
-}
+} */
 
 /* except footnote */
 
