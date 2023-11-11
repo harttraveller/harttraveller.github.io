@@ -49,10 +49,9 @@ This package addresses the two main drawbacks to this approach (or any other sim
 ??? note "Global Environment Variable Security Comparison"
     Currently this package does not offer major security benefits over simply using global environment variables, although it is ideally easier to use. Future versions will incorporate enhanced security measures, time permitting.
 
-## Documentation
+## Quickstart
 
-
-### Installation
+To get started, first install the package.
 
 === "pip"
 
@@ -74,3 +73,9 @@ This package addresses the two main drawbacks to this approach (or any other sim
     conda activate pssm
     pip install python-simple-secrets-manager
     ```
+
+You can test to make sure it has successfully installed with:
+
+```sh
+secrets --version
+```
