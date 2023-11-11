@@ -328,6 +328,7 @@ header,
     margin-left: 0em !important;
     margin-top: 2em !important;
     padding: 0em !important;
+    text-transform: capitalize;
 }
 
 .md-meta {
@@ -418,9 +419,10 @@ sup,
 
 /* headings */
 
-/* h1 {
+h1 {
     text-transform: capitalize !important;
-} */
+    /* left: 1%; */
+}
 
 
 .md-content h1,
@@ -488,17 +490,22 @@ h6 {
 
 .md-blog-post__meta.md-meta {
     position: relative;
+    text-align: center;
     padding-bottom: 0.4rem;
-    padding-left: 0.8rem;
+    /* padding-left: 0.8rem; */
     margin-top: -0.4rem;
     margin-bottom: 0.3rem;
 }
 
 .md-post-header {
+    position: relative;
     border-radius: 0.4em;
-    border: 1px solid rgb(16, 17, 21);
+    /* border: 1px solid rgb(16, 17, 21); */
     padding-top: 1rem;
     margin-top: -1rem;
+    padding-bottom: 0.1rem;
+    /* width: 102%;
+    left: -1%; */
 }
 
 /* code */
@@ -528,12 +535,12 @@ pre code {
 }
 
 .md-nav__item .md-nav__link:hover {
-    font-weight: bold !important;
+    /* font-weight: bold !important; */
     color: var(--section-active-color) !important;
 }
 
 .md-content--post h1 {
-    padding-left: 0.8rem;
+    text-align: center;
 }
 
 .md-tag {

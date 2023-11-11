@@ -2,7 +2,6 @@
 {% include "partials/tags.html" %}
 {% endif %}
 {% include "partials/actions.html" %} -->
-
 {% if page.meta.post %}
 <div class="md-post-header" style="background-image: url('{{ page.meta.header }}') !important; background-size: cover;">
     <h1 class=".blog-title">{{ page.title | d(config.site_name, true)}}</h1>
@@ -38,10 +37,11 @@
     </div>
 </div>
 {% else %}
-{% if "\x3ch1" not in page.content %}
 <h1>{{ page.title | d(config.site_name, true)}}</h1>
 {% endif %}
-{% endif %}
+<!-- {% if "\x3ch1" not in page.content %}
+<h1>{{ page.title | d(config.site_name, true)}}</h1>
+{% endif %} -->
 {{ page.content }}
 {% include "partials/source-file.html" %}
 {% include "partials/feedback.html" %}
