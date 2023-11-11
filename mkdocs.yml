@@ -33,6 +33,8 @@ theme:
 plugins:
 - search
 - obsidian-bridge
+- git-revision-date-localized:
+    enable_creation_date: true
 - markmap:
     base_path: pages
     file_extension: .md
