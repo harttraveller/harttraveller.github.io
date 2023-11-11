@@ -33,6 +33,7 @@ theme:
 plugins:
 - search
 - obsidian-bridge
+# - mkdocs-jupyter
 - git-revision-date-localized:
     enable_creation_date: true
 - markmap:
