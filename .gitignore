@@ -5,6 +5,8 @@ _dev_
 temp/
 arch
 _temp_
+brain/file/unsorted
+brain/file/external
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
