@@ -3,30 +3,12 @@ hide:
 - navigation
 ---
 
-<style>
-
-/* body {
-    background-image: url("./index.jpg") !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    background-attachment: fixed !important;
-} */
-.md-content__inner {
-    background: transparent !important;
-}
-</style>
-
 # Welcome
 
-!!! globe "Thanks for visiting my site (currently under development)."
+!!! globe "Thanks for visiting my site. The main pages are indexed below."
 
-<!-- !!! globe "Thanks for visiting my site. Recent posts are included below." -->
-
-<!-- !!! note "Hover on the site icon or press `Cmd + K` or `Ctrl + K` to open the quick search." -->
-
-<!-- !!! note "Hit the `/` key in the search to search post categories specifically." -->
-
+??? note "Generally I don't feel that anything is ever 'finished' - these pages are stuff that is at least 50% complete, or are ongoing, but presentable."
+    The publish date is sort of arbitrary, and loosely correlates with when I created the page, or transferred it here from somewhere else. You *can* find unfinished pages on this site, but I'll leave it up to you to figure that out. Actually, this site is a subset of an entire second brain project, with stuff that you can't find on this site but that is publicly available. Again I'll leave that up to you to figure out. Not trying to be mysterious or anything, but if I try and document it I'll get bogged down in rewriting documentation and not actually get anything interesting done.
 
 <!--
 todo
