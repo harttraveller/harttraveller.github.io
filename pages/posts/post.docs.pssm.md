@@ -16,7 +16,8 @@ categories:
 <!-- more -->
 
 !!! links
-    - []
+    - [PyPi Package](https://pypi.org/project/python-simple-secrets-manager/)
+    - [GitHub Repository](https://github.com/harttraveller/python-simple-secrets-manager)
 
 ## Purpose
 
@@ -45,3 +46,8 @@ This package addresses both of these issues.
 
 ??? note "Global Environment Variable Security Comparison"
     Currently this package does not offer major security benefits over simply using global environment variables, although it is ideally easier to use. Future versions will incorporate enhanced security measures, time permitting.
+
+## Documentation
+
+!!! bug "Support"
+    If you find a bug, you can submit an issue on [GitHub](https://github.com/harttraveller/python-simple-secrets-manager/issues) and I'll try to address it time permitting.
