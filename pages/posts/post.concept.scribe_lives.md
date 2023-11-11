@@ -107,7 +107,7 @@ $$
 \frac {34290000000000000000 \ floating \ point \ operations}{1 \ bitcoin} \times \frac{1 \ scrife}{186291940.3 \ floating \ point \ operations} = \frac{184065934064 \ scrives}{1 \ bitcoin}
 $$
 
-Accordingly, the approx. computational cost of one mining one bitcoin is 184 gigascrives.
+Accordingly, the approx. computational cost of mining one bitcoin is 184 gigascrives.
 
 ## Future Work
 
