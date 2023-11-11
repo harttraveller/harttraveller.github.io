@@ -3,3 +3,5 @@
 mkdocs-obsidian-bridge
 mkdocs-rss-plugin
 mkdocs-glightbox
+mkdocs-markmap
+# mkdocs-jupyter
