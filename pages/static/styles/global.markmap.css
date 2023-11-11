@@ -34,8 +34,8 @@
 
 :not(svg),
 :not(foreignObject)>svg {
-    -ms-transform-origin-x: 22vw !important;
-    -webkit-transform-origin-x: 22vw !important;
+    -ms-transform-origin-x: 20vw !important;
+    -webkit-transform-origin-x: 20vw !important;
 }
 
 g line[stroke-width="4"] {
