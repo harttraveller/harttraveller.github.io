@@ -11,7 +11,7 @@ categories:
 ---
 
 !!! summary
-    A simple command line based secrets and tokens manager built in with python. This page covers its purpose, setup process, usage, and other details.
+    A simple command line based secrets and tokens manager built in python. This page covers its purpose, setup process, usage, and other details.
 
 <!-- more -->
 
@@ -74,8 +74,23 @@ To get started, first install the package.
     pip install python-simple-secrets-manager
     ```
 
-You can test to make sure it has successfully installed with:
+Check and make sure it's actually installed. The expected output is included (your version may be newer).
 
 ```sh
 secrets --version
+```
+
+![[pssm.version.png]]{ width="500" }
+
+You can now add a secret. You will be prompted to specify the uid and key.
+
+```sh
+secrets keep
+```
+
+Then, if you want to access the secret from within python, just make sure the package is installed and get the secret by the uid set earlier.
+
+```py
+from pssm import secrets
+token = secrets.get("secret_uid")
 ```
