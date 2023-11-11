@@ -33,6 +33,9 @@ theme:
 plugins:
 - search
 - obsidian-bridge
+- markmap:
+    base_path: pages
+    file_extension: .md
 - blog:
     blog_dir: .
     blog_toc: true
