@@ -10,12 +10,35 @@ categories:
     - /cli
 ---
 
-This is a simple secrets manager built with python.
+!!! summary
+    A simple command line based secrets and tokens manager built in with python. This page covers its purpose, setup process, usage, and other details.
 
 <!-- more -->
 
-Sunt veniam voluptate officia ipsum tempor aliqua aute aute dolor aliqua. Nulla ut magna ad sit esse consequat qui excepteur velit enim tempor exercitation. Irure exercitation anim occaecat ut et sit duis enim cillum incididunt fugiat proident amet. Eiusmod proident enim nisi eiusmod ea reprehenderit exercitation non cillum. Nostrud aute quis fugiat elit. Do anim ex pariatur laborum ad occaecat sunt fugiat. Nulla cillum culpa anim exercitation ex consectetur ad officia esse ullamco aute laborum sit.
+## Purpose
 
-Laboris eiusmod minim sunt duis reprehenderit labore eiusmod laboris. Fugiat pariatur enim ut nostrud cillum reprehenderit est nulla velit. Laboris ullamco mollit esse duis quis eiusmod adipisicing culpa culpa laborum duis reprehenderit. Aliquip eu nisi nisi dolor proident minim ullamco excepteur aliquip eiusmod.
+Suppose you're developing a python package that needs to access external API services. To test the package, you need to be able to load your API key, but users of your package should sign up to get their own API key. You can address this by creating a directory structure like:
 
-Reprehenderit nostrud eiusmod et culpa dolor duis amet sint id do eu anim reprehenderit. Ullamco ea proident aute aliqua mollit id culpa est reprehenderit magna voluptate mollit. Excepteur excepteur ut mollit aute sint commodo proident minim in laboris non sit tempor. Aliqua proident nulla dolor mollit ipsum nulla. Enim eiusmod ullamco sit amet id in.
+```
+my_package/
+├── __init__.py
+└── ...
+secrets.yaml
+.gitignore
+```
+
+and then in your `.gitignore` add:
+
+```
+secrets.yaml
+```
+
+There are two main drawbacks to this approach (or any other similar approach). First, you can't easily access the API key from other projects. Second, you might accidentally commit the secrets file anyways. (1)
+{ .annotate }
+
+1.  A common mistake I've seen here is that someone will be working on a branch (let's say `dev`). They add the `secrets.yaml` or equivalent file on this branch, and add it to the `.gitignore`. Then, they switch back to the `main` (or any other) branch. Because they're now on a separate branch where `secrets.yaml` wasn't ignored, it's (naturally) no longer ignored, but because it *was* ignored in `dev`, it isn't removed from the context of the directory, and now shows up as a new file that is not yet committed in `main`. Now if the user commits all the changes they make in `main` - the `secrets.yaml` might also be unwittingly committed.
+
+This package addresses both of these issues.
+
+!!! note
+    Currently this package does not offer major security benefits over simply using global environment variables, although it is ideally easier to use. Future versions will incorporate enhanced security measures, time permitting.

@@ -24,20 +24,20 @@
     transition: 0.3s ease !important;
 } */
 
-.markmap-node:not(.markmap-fold)>circle {
+.language-markmap.mkdocs-markmap .markmap-node:not(.markmap-fold)>circle {
     fill: lightgreen !important;
 }
 
-.markmap-node.markmap-fold>circle {
+.language-markmap.mkdocs-markmap .markmap-node.markmap-fold>circle {
     fill: orangered !important;
 }
 
-:not(svg),
-:not(foreignObject)>svg {
+.language-markmap.mkdocs-markmap :not(svg),
+.language-markmap.mkdocs-markmap :not(foreignObject)>svg {
     -ms-transform-origin-x: 20vw !important;
     -webkit-transform-origin-x: 20vw !important;
 }
 
-g line[stroke-width="4"] {
+.language-markmap.mkdocs-markmap g line[stroke-width="4"] {
     display: none !important;
 }
