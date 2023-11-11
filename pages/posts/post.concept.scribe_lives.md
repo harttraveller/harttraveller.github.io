@@ -15,7 +15,7 @@ date: 2023-11-11
 ---
 
 !!! summary
-    In this post I introduce a new unit of measurement for computation, the "Scrife" (plural: "Scrives"). It is approximately equal to ~186 million floating point operations. We can estimate that mining one bitcoin is approximately ~184 gigascrives.
+    This post introduces a new unit of measurement for computation, the "Scrife" (plural: "Scrives"). It is approximately equal to ~186 million floating point operations. We can estimate that mining one bitcoin is approximately ~184 gigascrives.
 
 <!-- more -->
 
