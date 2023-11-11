@@ -1,0 +1,3 @@
+/gpt explain what a FLOP is
+In computing, FLOP stands for "Floating Point Operations Per Second". It is a measure of computer performance, useful in fields of scientific computations that require floating-point calculations. This could be anything where very large numbers are being multiplied together, such as in simulations, cryptography, rendering, and physical calculations.
+For example, if a computer is said to perform at 5 FLOPS, it means it is capable of performing 5 floating point operations every second. With advancements in technology, modern computers can perform trillions of these operations per second, so you'll often hear performance referred to in terms like teraflops or petaflops.

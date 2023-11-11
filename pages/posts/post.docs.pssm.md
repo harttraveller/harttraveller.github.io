@@ -5,7 +5,7 @@ published: true
 date: 2023-11-10
 # categories:
 #     - /docs
-#     - /python
+#     - /python-package
 #     - /tool
 #     - /cli
 ---

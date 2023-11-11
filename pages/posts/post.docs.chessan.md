@@ -1,9 +1,12 @@
 ---
+title: Chessan Documentation
+header: /files/head/chessan.jpg
+published: false
+draft: true
+date: 1900-01-01
 tags:
   - time/future/min
 ---
-
-# chessan
 
 *Work in progress...*
 

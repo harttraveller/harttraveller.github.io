@@ -7,16 +7,21 @@ hide:
 
 !!! globe "Thanks for visiting my site. The main pages are indexed below (will add more when I get around to it)."
 
-??? note "Generally I don't feel that anything is ever 'finished' - the pages below are at least 50% complete, or are ongoing (but presentable) projects."
+??? note "Completion Status"
+    Generally I don't feel that anything is ever 'finished' - the pages below are at least 50% complete, or are less than 50% complete but ordered and large enough that there is a substantial amount of content, or are ongoing (but presentable) projects.
+
     The publish date is sort of arbitrary, and loosely correlates with when I created the page, or transferred it here from somewhere else. Also note that some pages will probably be consistently updated and may entirely change.(1)
     { .annotate }
 
     1.  Unfortunately my mkdocs setup breaks unless I include a date.
 
-    You *can* find unfinished pages on this site, but I'll leave it up to you to figure that out.(1)
+    You *can* find unfinished pages, but I'll leave it up to you to figure that out.(1)
     { .annotate }
 
-    1.  Actually, this site is a subset of an entire second brain project, with stuff that you can't find on this site but that is publicly available. Again I'll leave that up to you to figure out. Not trying to be mysterious, but if I try and document it I'll get bogged down in rewriting documentation and not actually get anything interesting done. Given I imagine very few if any people would be interested in it, this would almost certainly be wasted effort.
+    1.  Actually, this site is a subset of an entire second brain project. The ommission of docs is attributable to the low utility to benefit ratio. IE: If I try and document it I'll get bogged down in rewriting documentation and not actually get anything interesting done, and I imagine very few if any people would be interested in it.
+
+---
+
 
 <!--
 todo

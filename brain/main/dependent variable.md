@@ -1,0 +1,2 @@
+/gpt what is a dependent variable?
+A dependent variable is the variable being tested and measured in a scientific experiment. It is called dependent because it "depends" on the independent variable. As the experimenter changes the independent variable, the effect on the dependent variable is observed and recorded.
