@@ -197,6 +197,7 @@ extra:
 
 extra_css:
 - static/styles/global.theme.css
+- static/styles/global.markmap.css
 - static/styles/max.theme.css
 - static/styles/global.admonition.css
 - static/styles/global.notebook.css
