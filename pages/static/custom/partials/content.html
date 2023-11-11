@@ -2,7 +2,7 @@
 {% include "partials/tags.html" %}
 {% endif %}
 {% include "partials/actions.html" %} -->
-{% if page.meta.post %}
+{% if page.meta.published %}
 <div class="md-post-header" style="background-image: url('{{ page.meta.header }}') !important; background-size: cover;">
     <h1 class=".blog-title">{{ page.title | d(config.site_name, true)}}</h1>
     <div class="md-blog-post__meta md-meta">

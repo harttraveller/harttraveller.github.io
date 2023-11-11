@@ -2,7 +2,7 @@
 title: Test Post
 header: /files/site/index.jpg
 draft: false
-post: true
+published: true
 date: 2023-01-01
 categories:
 - /test

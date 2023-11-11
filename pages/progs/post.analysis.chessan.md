@@ -1,7 +1,7 @@
 ---
 title: Analyzing Chess Player Behavior
 header: /files/head/chessan.jpg
-post: false
+published: false
 date: 2023-11-08
 categories:
     - /analysis
