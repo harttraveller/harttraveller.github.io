@@ -52,8 +52,6 @@ This package addresses the two main drawbacks to this approach (or any other sim
 ## Documentation
 
 
-
-
 ### Installation
 
 === "pip"
