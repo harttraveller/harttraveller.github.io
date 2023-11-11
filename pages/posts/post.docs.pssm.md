@@ -15,6 +15,9 @@ categories:
 
 <!-- more -->
 
+!!! links
+    - []
+
 ## Purpose
 
 Suppose you're developing a python package that needs to access external API services. To test the package, you need to be able to load your API key, but users of your package should sign up to get their own API key. You can address this by creating a directory structure like:

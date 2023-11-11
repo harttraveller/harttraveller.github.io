@@ -222,18 +222,18 @@ summary {
     mask-image: var(--icon-lucide-frown);
 }
 
-.md-typeset .admonition.link,
-.md-typeset details.link {
+.md-typeset .admonition.links,
+.md-typeset details.links {
     border-color: rgb(125, 125, 125);
 }
 
-.md-typeset .link>.admonition-title,
-.md-typeset .link>summary {
+.md-typeset .links>.admonition-title,
+.md-typeset .links>summary {
     background-color: transparent;
 }
 
-.md-typeset .link>.admonition-title::before,
-.md-typeset .link>summary::before {
+.md-typeset .links>.admonition-title::before,
+.md-typeset .links>summary::before {
     background-color: rgb(123, 123, 123);
     -webkit-mask-image: var(--icon-lucide-link);
     mask-image: var(--icon-lucide-link);
