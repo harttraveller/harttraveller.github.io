@@ -1,0 +1,43 @@
+.language-markmap.mkdocs-markmap {
+    position: relative;
+    top: -4rem;
+    height: 98vh !important;
+    width: 95vw !important;
+    /* border-radius: 0.4em; */
+    /* border: 1px solid red; */
+    border: none;
+    transition: none !important;
+}
+
+.language-markmap.mkdocs-markmap code {
+    /* left: 0rem; */
+    color: lightgreen;
+    background: transparent;
+    padding: 0.4rem 0.1rem;
+}
+
+.language-markmap.mkdocs-markmap .markmap-foreign {
+    x: 1 !important;
+}
+
+/* .markmap-node>circle {
+    transition: 0.3s ease !important;
+} */
+
+.markmap-node:not(.markmap-fold)>circle {
+    fill: lightgreen !important;
+}
+
+.markmap-node.markmap-fold>circle {
+    fill: orangered !important;
+}
+
+:not(svg),
+:not(foreignObject)>svg {
+    -ms-transform-origin-x: 22vw !important;
+    -webkit-transform-origin-x: 22vw !important;
+}
+
+g line[stroke-width="4"] {
+    display: none !important;
+}
