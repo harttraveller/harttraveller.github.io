@@ -40,5 +40,5 @@ There are two main drawbacks to this approach (or any other similar approach). F
 
 This package addresses both of these issues.
 
-!!! note
+??? note "Global Environment Variable Security Comparison"
     Currently this package does not offer major security benefits over simply using global environment variables, although it is ideally easier to use. Future versions will incorporate enhanced security measures, time permitting.
