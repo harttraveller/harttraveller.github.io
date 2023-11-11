@@ -34,7 +34,7 @@ plugins:
 - search
 - obsidian-bridge
 # - mkdocs-jupyter
-# - glightbox
+- glightbox
 - git-revision-date-localized:
     enable_creation_date: true
 - markmap:
