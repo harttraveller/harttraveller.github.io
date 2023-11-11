@@ -5,10 +5,10 @@ hide:
 
 # Welcome
 
-!!! globe "Thanks for visiting my site. The main pages are indexed below (will add when I get around to it)."
+!!! globe "Thanks for visiting my site. The main pages are indexed below (will add more when I get around to it)."
 
-<!-- ??? note "Generally I don't feel that anything is ever 'finished' - the pages below are at least 50% complete, or are ongoing but presentable projects."
-    The publish date is sort of arbitrary, and loosely correlates with when I created the page, or transferred it here from somewhere else. You *can* find unfinished pages on this site, but I'll leave it up to you to figure that out. Actually, this site is a subset of an entire second brain project, with stuff that you can't find on this site but that is publicly available. Again I'll leave that up to you to figure out. Not trying to be mysterious or anything, but if I try and document it I'll get bogged down in rewriting documentation and not actually get anything interesting done. -->
+??? note "Generally I don't feel that anything is ever 'finished' - the pages below are at least 50% complete, or are ongoing but presentable projects."
+    The publish date is sort of arbitrary, and loosely correlates with when I created the page, or transferred it here from somewhere else. You *can* find unfinished pages on this site, but I'll leave it up to you to figure that out. Actually, this site is a subset of an entire second brain project, with stuff that you can't find on this site but that is publicly available. Again I'll leave that up to you to figure out. Not trying to be mysterious, it's really just that if I try and document it I'll get bogged down in rewriting documentation and not actually get anything interesting done.
 
 <!--
 todo
