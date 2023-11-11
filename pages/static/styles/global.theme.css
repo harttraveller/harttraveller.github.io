@@ -345,7 +345,7 @@ header,
 }
 
 article.md-post.md-post--excerpt {
-    border: 1px solid rgb(16, 17, 21);
+    /* border: 1px solid rgb(16, 17, 21); */
     padding: 2em;
     border-radius: 0.4em;
     margin-bottom: 2.7em;
@@ -418,11 +418,6 @@ sup,
 }
 
 /* headings */
-
-h1 {
-    text-transform: capitalize !important;
-    /* left: 1%; */
-}
 
 
 .md-content h1,
@@ -541,6 +536,7 @@ pre code {
 
 .md-content--post h1 {
     text-align: center;
+    text-transform: capitalize !important;
 }
 
 .md-tag {
