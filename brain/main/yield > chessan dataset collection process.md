@@ -1,6 +1,6 @@
 #isa/note #time/future/min 
 
-- [ ] add to: [[analyzing chess player behavior]]
+- [ ] add to: [[post.analysis.chessan]]
 
 ---
 

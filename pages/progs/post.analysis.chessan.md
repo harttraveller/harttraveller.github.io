@@ -1,4 +1,5 @@
 ---
+title: Analyzing Chess Player Behavior
 header: /files/head/chessan.jpg
 post: false
 date: 2023-11-08

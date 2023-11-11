@@ -1,4 +1,4 @@
 #time/present/min 
 
-- [[analyzing chess player behavior]]
+- [[post.analysis.chessan]]
 - [[yield > chessan dataset collection process]]

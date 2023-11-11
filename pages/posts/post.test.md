@@ -1,4 +1,5 @@
 ---
+title: Test Post
 header: /files/site/index.jpg
 draft: false
 post: true

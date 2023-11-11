@@ -98,19 +98,19 @@ function checkShortcuts(event) {
   }
 }
 
-logo.addEventListener("mouseenter", function () {
-  hoverTimer = setTimeout(function () {
-    lift_header_layer();
-    if (!search_is_open) {
-      open_search();
-      dim_content_container();
-    }
-  }, search_wait);
-});
+// logo.addEventListener("mouseenter", function () {
+//   hoverTimer = setTimeout(function () {
+//     lift_header_layer();
+//     if (!search_is_open) {
+//       open_search();
+//       dim_content_container();
+//     }
+//   }, search_wait);
+// });
 
-logo.addEventListener("mouseleave", function () {
-  clearTimeout(hoverTimer);
-});
+// logo.addEventListener("mouseleave", function () {
+//   clearTimeout(hoverTimer);
+// });
 
 header.addEventListener("mouseleave", function () {
   if (!search_is_open) {
