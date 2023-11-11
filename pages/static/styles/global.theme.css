@@ -6,8 +6,8 @@ html {
     --tab-active-color: #22262f;
     --external-link-color: rgb(114, 132, 253);
     --external-link-color-hover: rgb(112, 166, 247);
-    --internal-link-color: rgb(198, 127, 33);
-    --internal-link-color-hover: rgb(255, 189, 135);
+    --internal-link-color: rgb(246, 187, 110);
+    --internal-link-color-hover: rgb(253, 203, 194);
     --section-color: var(--internal-link-color);
     --section-active-color: var(--internal-link-color-hover);
     --section-hover-color: var(--internal-link-color-hover);
@@ -495,12 +495,9 @@ h6 {
 .md-post-header {
     position: relative;
     border-radius: 0.4em;
-    /* border: 1px solid rgb(16, 17, 21); */
     padding-top: 1rem;
     margin-top: -1rem;
     padding-bottom: 0.1rem;
-    /* width: 102%;
-    left: -1%; */
 }
 
 /* code */
@@ -550,3 +547,8 @@ pre code {
     background: var(--tab-hover-color) !important;
     border-radius: 0.4em !important;
 }
+
+/* blurs everything... */
+/* .md-post.md-post--excerpt:hover {
+    filter: blur(8px);
+} */

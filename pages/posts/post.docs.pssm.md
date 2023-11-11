@@ -1,21 +1,18 @@
 ---
-title: Test Post
-header: /files/site/index.jpg
-draft: false
+title: Python Simple Secrets Manager
+header: /files/head/pssm.jpg
 published: true
-date: 2023-01-01
+date: 2023-11-10
 categories:
-- /test
+    - /docs
+    - /python
+    - /tool
+    - /cli
 ---
 
-Fugiat irure dolore labore laboris ad nisi consectetur incididunt ut. Id ex est sit adipisicing nisi cupidatat non labore ipsum ullamco consequat in amet ullamco. Velit non est dolor enim commodo consequat veniam adipisicing laboris ex.
-
+This is a simple secrets manager built with python.
 
 <!-- more -->
-
-## Heading 2
-
-### Adipisicing duis officia eiusmod non. Sit nostrud sint consectetur cillum. Ullamco ad veniam nisi id dolore reprehenderit ullamco.
 
 Sunt veniam voluptate officia ipsum tempor aliqua aute aute dolor aliqua. Nulla ut magna ad sit esse consequat qui excepteur velit enim tempor exercitation. Irure exercitation anim occaecat ut et sit duis enim cillum incididunt fugiat proident amet. Eiusmod proident enim nisi eiusmod ea reprehenderit exercitation non cillum. Nostrud aute quis fugiat elit. Do anim ex pariatur laborum ad occaecat sunt fugiat. Nulla cillum culpa anim exercitation ex consectetur ad officia esse ullamco aute laborum sit.
 
