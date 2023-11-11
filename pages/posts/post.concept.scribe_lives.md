@@ -82,7 +82,7 @@ In essence, we get a computation rate of ~$0.197$ FLOP/s. Presumably, working wi
 
 
 
-We can multiply this by our earlier figure for the number of seconds of work per scribe to get the scrive value.
+We can multiply this by our earlier figure for the number of seconds of work per scribe to get the scrife count.
 
 $$
 \frac{943488000 \ seconds}{1 \ scribe} \times \frac {0.1974502487614 \ floating \ point \ operations}{1 \ second} = \frac{186291940.3 \ floating \ point \ operations}{1 \ scribe}
