@@ -33,9 +33,10 @@ date: 2023-11-11
 
 ## Introduction
 
-A little while back I was having a conversation with a friend and we came up with the idea of measuring computation in "scribe lives". (I can't remember which of us thought of it, so credit also goes to [him](https://github.com/adamatbi) as well). This idea was inspired after reading [this blog post](https://www.righto.com/2014/09/mining-bitcoin-with-pencil-and-paper.html) by Ken Shirriff in which he mines Bitcoin by hand.
+A little while back I was having a conversation with a friend and we came up with the idea of measuring computation in "scribe lives". (I can't remember which of us thought of it, so credit also goes to [him](https://github.com/adamatbi) as well). This idea was inspired by [this blog post](https://www.righto.com/2014/09/mining-bitcoin-with-pencil-and-paper.html) by Ken Shirriff in which he mines Bitcoin by hand. (1)
 { .annotate }
 
+1.  Also, this article is somewhat duplicative of his (Ken) work. I'd definitely recommend checking out the original article.
 
 The general idea of this unit of measurement is that there should be some rough analogue between digital computation in FLOPs and scribe lives. Or in to put another way, for any given computational operation, we might ask: "How many ancient Babylonian scribes would I have to pay to work out this operation by hand, for their entire lives, in order to find the result?"
 
