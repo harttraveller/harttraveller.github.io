@@ -69,7 +69,7 @@ $$
 
 ### Hashes to FLOPS
 
-Since cryptographic algorithms like SHA-256 primarily use integer operations, technically FLOPs are the wrong unit of measurement. This unit of measurement isn't meant to be perfectly accurate though (that might be impossible given the inherent complexity), and IOPs aren't as well known as FLOPs. The point is really just to find a neat way to contextualize computational cost, effort, and human technological progress. Accordingly we'll overlook the imprecise unit conversations.
+Since cryptographic algorithms like SHA-256 primarily use integer operations, technically FLOPs are the wrong unit of measurement. This unit of measurement isn't meant to be perfectly accurate though (that might be impossible given the inherent complexity), and IOPs aren't as well known as FLOPs. The point is really just to find a neat way to contextualize computational cost, effort, and human technological progress. Accordingly we'll overlook the imprecise unit conversions.
 
 If we use the rough estimated figures from these [quora](https://www.quora.com/How-do-you-convert-m-flop-s-to-hash-s) and [bitcoin forum](https://bitcointalk.org/index.php?topic=50720.0) posts, the conversion factor between hashes and floating point operations is $1:12700$.
 
