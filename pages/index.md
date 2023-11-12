@@ -10,6 +10,6 @@ hide:
 ??? note "Completion Status"
     Generally I don't feel that anything is ever 'finished' - the pages below are at least 50% complete, or are less than 50% complete but ordered and large enough that there is a substantial amount of content, or are ongoing (but presentable) projects.
 
-    The publish date is sort of arbitrary, and loosely correlates with when I created the page, or transferred it here from somewhere else. Also note that some pages will probably be consistently updated and may entirely change.    You *can* find unfinished pages, but I'll leave it up to you to figure that out.(1)
+    The publish date is sort of arbitrary, and loosely correlates with when I created the page, or transferred it here from somewhere else. Also note that some pages will probably be consistently updated and may entirely change.
 
 -->
