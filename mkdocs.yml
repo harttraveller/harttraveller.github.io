@@ -165,6 +165,13 @@ extra:
     #   color: rgb(30, 70, 160)
     #   tooltip: true
     #   newtab: true
+    # - name: Wikipedia
+    #   icon: lucide/github
+    #   type: link
+    #   link: https://en.wikipedia.org/wiki/Special:Contributions/Harttrav
+    #   color: rgb(30, 70, 160)
+    #   tooltip: true
+    #   newtab: true
     # - name: GitLab
     #   icon: lucide/gitlab
     #   type: link
