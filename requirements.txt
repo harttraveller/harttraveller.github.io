@@ -5,4 +5,4 @@ mkdocs-rss-plugin
 mkdocs-glightbox
 mkdocs-markmap
 mkdocs-git-revision-date-localized-plugin
-# mkdocs-jupyter
+mkdocs-jupyter
