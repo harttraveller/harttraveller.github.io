@@ -334,7 +334,7 @@ header,
     margin-left: 0em !important;
     margin-top: 2em !important;
     padding: 0em !important;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
 }
 
 .md-meta {
@@ -536,7 +536,7 @@ pre code {
 
 .md-content--post h1 {
     text-align: center;
-    text-transform: capitalize !important;
+    /* text-transform: capitalize !important; */
 }
 
 .md-tag {
