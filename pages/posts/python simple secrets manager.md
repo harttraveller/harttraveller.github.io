@@ -1,17 +1,11 @@
 ---
 title: Python Simple Secrets Manager
-header: /files/head/pssm.jpg
-published: true
+draft: false
 date: 2023-11-10
-# categories:
-#     - /docs
-#     - /python-package
-#     - /tool
-#     - /cli
+header: /file/pssm.jpg
 ---
 
-!!! summary
-    A simple command line based secrets and tokens manager built in python. This page covers its purpose, setup process, usage, and other details.
+A simple command line based secrets and tokens manager built in python. This page covers its purpose, setup process, usage, and other details.
 
 <!-- more -->
 

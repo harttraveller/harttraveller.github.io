@@ -1,6 +1,6 @@
 site_name: Hart Traveller
 docs_dir: pages
-site_url: https://harttraveller.github.io
+site_url: https://harttraveller.com
 
 
 nav:
@@ -8,11 +8,11 @@ nav:
 
 theme:
   name: material
-  favicon: files/site/icon.png
-  logo: files/site/icon.png
+  favicon: core/icon.png
+  logo: core/icon.png
   logo_url: "/"
   logo_tooltip: ""
-  custom_dir: pages/static/custom
+  custom_dir: pages/core/custom
   icon:
     annotation: material/plus-circle
   font:
@@ -34,7 +34,7 @@ plugins:
 - search
 - meta
 - obsidian-bridge
-# - mkdocs-jupyter
+- mkdocs-jupyter
 - glightbox
 - git-revision-date-localized:
     enable_creation_date: true
@@ -51,13 +51,13 @@ plugins:
     post_url_format: "{slug}"
     categories_url_format: "{slug}"
     pagination_per_page: 8
-- rss:
-    match_path: posts/.*
-    comments_path: "#__comments"
-    date_from_meta:
-      as_creation: date
-    categories:
-    - categories
+# - rss:
+#     match_path: posts/.*
+#     comments_path: "#__comments"
+#     date_from_meta:
+#       as_creation: date
+#     categories:
+#     - categories
 
 
 markdown_extensions:
@@ -207,19 +207,19 @@ extra:
     #   color: rgb(30, 70, 160)
     # dagshub, huggingface
 
+
 extra_css:
-- static/styles/global.theme.css
-- static/styles/global.markmap.css
-- static/styles/max.theme.css
-- static/styles/global.admonition.css
-- static/styles/global.notebook.css
-- static/styles/med.theme.css
-- static/styles/min.theme.css
-- static/styles/testing.css
+- core/theme.global.css
+- core/theme.max.css
+- core/theme.med.css
+- core/theme.min.css
+- core/theme.global.admonition.css
+- core/theme.global.notebook.css
+- core/theme.global.markmap.css
 
 extra_javascript:
-- static/scripts/extra.js
-- static/scripts/mathjax.js
+- core/script.extra.js
+- core/script.mathjax.js
 - https://polyfill.io/v3/polyfill.min.js?features=es6
 - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 

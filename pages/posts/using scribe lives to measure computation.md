@@ -1,25 +1,20 @@
 ---
 title: Using Scribe Lives to Measure Computation
-header: /files/head/scrife.jpg
+header: /file/scrife.jpg
 draft: false
-published: true
 date: 2023-11-11
-# categories:
-#     - length/short
-#     - /included-for-posterity
-#     - /economic-ideology
-#     - /survey
-#     - /data-visualization
-#     - /capitalism
-#     - /communism
 ---
 
-!!! summary
-    This post introduces a new unit of measurement for computation, the "Scrife" (plural: "Scrives"). It is approximately equal to ~186 million floating point operations. We can estimate that mining one bitcoin is approximately ~184 gigascrives.
+A little while back I was having a conversation with a friend and we came up with the idea of measuring computation in "scribe lives". This post introduces a new unit of measurement for computation, the "Scrife" (plural: "Scrives"). It is approximately equal to ~186 million floating point operations. We can estimate that mining one bitcoin is approximately ~184 gigascrives.
 
 <!-- more -->
 
-!!! note "If you notice a mistake in the calculations, feel free to comment and I'll fix it and update this page accordingly."
+(I can't remember which of us thought of it, so credit also goes to [him](https://github.com/adamatbi) as well). This idea was inspired by [this blog post](https://www.righto.com/2014/09/mining-bitcoin-with-pencil-and-paper.html) by Ken Shirriff in which he mines Bitcoin by hand. (1)
+{ .annotate }
+
+1.  Also, this article is somewhat duplicative of his Kens work. I'd definitely recommend checking out the original article.
+
+The general idea of this unit of measurement is that there should be some rough analogue between digital computation in FLOPs and scribe lives. Or in to put another way, for any given computational operation, we might ask: "How many ancient Babylonian scribes would I have to pay to work out this operation by hand, for their entire lives, in order to find the result?"
 
 ??? info "FLOPS vs. FLOPs"
     - 1 FLOP is 1 floating point operation.
@@ -30,15 +25,6 @@ date: 2023-11-11
         - These however, are a vector unit, and represent floating point operations per second.
     - I will refer to floating point operations (scaler) as FLOPs and floating point operations per second (vector) as FLOP/s.
     - For more info on FLOP/s see the wikipedia page: [FLOPS](https://www.wikiwand.com/en/FLOPS)
-
-## Introduction
-
-A little while back I was having a conversation with a friend and we came up with the idea of measuring computation in "scribe lives". (I can't remember which of us thought of it, so credit also goes to [him](https://github.com/adamatbi) as well). This idea was inspired by [this blog post](https://www.righto.com/2014/09/mining-bitcoin-with-pencil-and-paper.html) by Ken Shirriff in which he mines Bitcoin by hand. (1)
-{ .annotate }
-
-1.  Also, this article is somewhat duplicative of his (Ken) work. I'd definitely recommend checking out the original article.
-
-The general idea of this unit of measurement is that there should be some rough analogue between digital computation in FLOPs and scribe lives. Or in to put another way, for any given computational operation, we might ask: "How many ancient Babylonian scribes would I have to pay to work out this operation by hand, for their entire lives, in order to find the result?"
 
 ## Value Calculation
 

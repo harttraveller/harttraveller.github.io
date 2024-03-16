@@ -1,0 +1,513 @@
+/* admonition styles */
+
+/* .admonition,
+details {
+    padding-bottom: 0.8rem !important;
+} */
+
+/* .admonition p {
+    margin-top: 0.2em;
+    margin-bottom: 0.3rem;
+}
+
+details p {
+    margin-top: 0.2em;
+    margin-bottom: 0.3rem;
+} */
+
+details {
+    transition: 0.5s ease !important;
+}
+
+details[open] summary {
+    background-color: transparent !important;
+}
+
+.admonition-title {
+    background-color: transparent !important;
+}
+
+/* .md-typeset details:not([open]) {
+    border: 1.5px solid transparent;
+} */
+
+.md-typeset details {
+    box-shadow: none !important;
+
+}
+
+
+
+details,
+.admonition {
+    border: 1.5px solid transparent !important;
+}
+
+/* icon adjustments */
+
+.md-typeset .admonition-title:before {
+    margin-top: -0.12em;
+}
+
+.md-typeset summary:before {
+    margin-top: 0em;
+}
+
+
+/* .admonition.min {
+    border: 1px solid transparent !important;
+} */
+
+/* .md-typeset .admonition.tip,
+.md-typeset details.tip {
+    background: transparent;
+} */
+
+
+/* custom admonitions */
+
+:root {
+    --icon-lucide-tangent: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-split"><path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3"/><path d="m15 9 6-6"/></svg>');
+    --icon-lucide-user: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-circle-2"><path d="M18 20a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="12" r="10"/></svg>');
+    --icon-lucide-details: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>');
+    --icon-lucide-objective: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-goal"><path d="M12 13V2l8 4-8 4"/><path d="M20.55 10.23A9 9 0 1 1 8 4.94"/><path d="M8 10a5 5 0 1 0 8.9 2.02"/></svg>');
+    --icon-lucide-code: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-2"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>');
+    --icon-lucide-smile: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-smile"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></svg>');
+    --icon-lucide-meh: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-meh"><circle cx="12" cy="12" r="10"/><line x1="8" x2="16" y1="15" y2="15"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></svg>');
+    --icon-lucide-frown: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-frown"><circle cx="12" cy="12" r="10"/><path d="M16 16s-1.5-2-4-2-4 2-4 2"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></svg>');
+    --icon-lucide-dollar: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dollar-sign"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>');
+    --icon-lucide-point: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>');
+    --icon-lucide-mail: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>');
+    --icon-lucide-link: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>');
+    --icon-lucide-version: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-history"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg>');
+    --icon-lucide-related: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-network"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></svg>');
+    --icon-lucide-summary: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sigma"><path d="M18 7V4H6l6 8-6 8h12v-3"/></svg>');
+    --icon-lucide-pen: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pen-tool"><path d="m12 19 7-7 3 3-7 7-3-3z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="m2 2 7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>');
+    --icon-lucide-wrench: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wrench"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>');
+    --icon-lucide-globe: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>');
+    --icon-lucide-reference: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-library-big"><rect width="8" height="18" x="3" y="3" rx="1"/><path d="M7 3v18"/><path d="M20.4 18.9c.2.5-.1 1.1-.6 1.3l-1.9.7c-.5.2-1.1-.1-1.3-.6L11.1 5.1c-.2-.5.1-1.1.6-1.3l1.9-.7c.5-.2 1.1.1 1.3.6Z"/></svg>');
+    --icon-lucide-tldr: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>');
+}
+
+.md-typeset .admonition.point,
+.md-typeset details.point {
+    border-color: rgb(255, 170, 33);
+}
+
+
+.md-typeset .point>.admonition-title,
+.md-typeset .point>summary {
+    /* background-color: rgba(194, 139, 45, 0.1); */
+    background-color: transparent;
+}
+
+.md-typeset .point>.admonition-title::before,
+.md-typeset .point>summary::before {
+    background-color: rgb(255, 172, 48);
+    -webkit-mask-image: var(--icon-lucide-point);
+    mask-image: var(--icon-lucide-point);
+}
+
+.md-typeset .admonition.tldr,
+.md-typeset details.tldr {
+    border-color: rgb(255, 170, 33);
+}
+
+
+.md-typeset .tldr>.admonition-title,
+.md-typeset .tldr>summary {
+    /* background-color: rgba(194, 139, 45, 0.1); */
+    background-color: transparent;
+}
+
+.md-typeset .tldr>.admonition-title::before,
+.md-typeset .tldr>summary::before {
+    background-color: rgb(255, 172, 48);
+    -webkit-mask-image: var(--icon-lucide-tldr);
+    mask-image: var(--icon-lucide-tldr);
+}
+
+.md-typeset .admonition.mail,
+.md-typeset details.mail {
+    border-color: rgb(255, 170, 33);
+}
+
+.md-typeset .mail>.admonition-title,
+.md-typeset .mail>summary {
+    /* background-color: rgba(194, 139, 45, 0.1); */
+    background-color: transparent;
+}
+
+.admonition-title,
+summary {
+    background-color: transparent !important;
+}
+
+.md-typeset .mail>.admonition-title::before,
+.md-typeset .mail>summary::before {
+    background-color: rgb(255, 172, 48);
+    -webkit-mask-image: var(--icon-lucide-mail);
+    mask-image: var(--icon-lucide-mail);
+}
+
+.md-typeset .admonition.version,
+.md-typeset details.version {
+    border-color: rgb(33, 255, 107);
+}
+
+.md-typeset .version>.admonition-title,
+.md-typeset .version>summary {
+    background-color: rgba(45, 194, 90, 0.1);
+}
+
+.md-typeset .version>.admonition-title::before,
+.md-typeset .version>summary::before {
+    background-color: rgb(48, 255, 89);
+    -webkit-mask-image: var(--icon-lucide-version);
+    mask-image: var(--icon-lucide-version);
+}
+
+
+
+/* faces */
+
+.md-typeset .admonition.smile,
+.md-typeset details.smile {
+    border-color: rgb(33, 255, 107);
+}
+
+.md-typeset .smile>.admonition-title,
+.md-typeset .smile>summary {
+    background-color: rgba(45, 194, 90, 0.1);
+}
+
+.md-typeset .smile>.admonition-title::before,
+.md-typeset .smile>summary::before {
+    background-color: rgb(48, 255, 89);
+    -webkit-mask-image: var(--icon-lucide-smile);
+    mask-image: var(--icon-lucide-smile);
+}
+
+.md-typeset .admonition.meh,
+.md-typeset details.meh {
+    border-color: rgb(255, 214, 33);
+}
+
+.md-typeset .meh>.admonition-title,
+.md-typeset .meh>summary {
+    background-color: rgba(194, 147, 45, 0.1);
+}
+
+.md-typeset .meh>.admonition-title::before,
+.md-typeset .meh>summary::before {
+    background-color: rgb(255, 214, 48);
+    -webkit-mask-image: var(--icon-lucide-meh);
+    mask-image: var(--icon-lucide-meh);
+}
+
+.md-typeset .admonition.frown,
+.md-typeset details.frown {
+    border-color: rgb(255, 33, 55);
+}
+
+.md-typeset .frown>.admonition-title,
+.md-typeset .frown>summary {
+    background-color: rgba(194, 45, 65, 0.1);
+}
+
+.md-typeset .frown>.admonition-title::before,
+.md-typeset .frown>summary::before {
+    background-color: rgb(255, 48, 65);
+    -webkit-mask-image: var(--icon-lucide-frown);
+    mask-image: var(--icon-lucide-frown);
+}
+
+.md-typeset .admonition.links,
+.md-typeset details.links {
+    border-color: rgb(29, 105, 191);
+}
+
+.md-typeset .links>.admonition-title,
+.md-typeset .links>summary {
+    background-color: transparent;
+}
+
+.md-typeset .links>.admonition-title::before,
+.md-typeset .links>summary::before {
+    background-color: rgb(49, 143, 243);
+    -webkit-mask-image: var(--icon-lucide-link);
+    mask-image: var(--icon-lucide-link);
+}
+
+.md-typeset .admonition.reference,
+.md-typeset details.reference {
+    border-color: rgb(125, 125, 125);
+}
+
+.md-typeset .reference>.admonition-title,
+.md-typeset .reference>summary {
+    background-color: transparent;
+}
+
+.md-typeset .reference>.admonition-title::before,
+.md-typeset .reference>summary::before {
+    background-color: rgb(123, 123, 123);
+    -webkit-mask-image: var(--icon-lucide-reference);
+    mask-image: var(--icon-lucide-reference);
+}
+
+/* dollar */
+
+
+.md-typeset .admonition.dollar-blue,
+.md-typeset details.dollar-blue {
+    border-color: rgb(33, 159, 255);
+}
+
+.md-typeset .dollar-blue>.admonition-title,
+.md-typeset .dollar-blue>summary {
+    background-color: rgba(45, 105, 194, 0.1);
+}
+
+.md-typeset .dollar-blue>.admonition-title::before,
+.md-typeset .dollar-blue>summary::before {
+    background-color: rgb(48, 127, 255);
+    -webkit-mask-image: var(--icon-lucide-dollar);
+    mask-image: var(--icon-lucide-dollar);
+}
+
+
+
+.md-typeset .admonition.dollar-green,
+.md-typeset details.dollar-green {
+    border-color: rgb(33, 255, 118);
+}
+
+.md-typeset .dollar-green>.admonition-title,
+.md-typeset .dollar-green>summary {
+    background-color: rgba(45, 194, 100, 0.1);
+}
+
+.md-typeset .dollar-green>.admonition-title::before,
+.md-typeset .dollar-green>summary::before {
+    background-color: rgb(48, 255, 114);
+    -webkit-mask-image: var(--icon-lucide-dollar);
+    mask-image: var(--icon-lucide-dollar);
+}
+
+.md-typeset .admonition.dollar-yellow,
+.md-typeset details.dollar-yellow {
+    border-color: rgb(255, 203, 33);
+}
+
+.md-typeset .dollar-yellow>.admonition-title,
+.md-typeset .dollar-yellow>summary {
+    background-color: rgba(194, 149, 45, 0.1);
+}
+
+.md-typeset .dollar-yellow>.admonition-title::before,
+.md-typeset .dollar-yellow>summary::before {
+    background-color: rgb(255, 217, 48);
+    -webkit-mask-image: var(--icon-lucide-dollar);
+    mask-image: var(--icon-lucide-dollar);
+}
+
+.md-typeset .admonition.dollar-red,
+.md-typeset details.dollar-red {
+    border-color: rgb(255, 33, 51);
+}
+
+.md-typeset .dollar-red>.admonition-title,
+.md-typeset .dollar-red>summary {
+    background-color: rgba(194, 45, 92, 0.1);
+}
+
+.md-typeset .dollar-red>.admonition-title::before,
+.md-typeset .dollar-red>summary::before {
+    background-color: rgb(255, 48, 79);
+    -webkit-mask-image: var(--icon-lucide-dollar);
+    mask-image: var(--icon-lucide-dollar);
+}
+
+/* tangent admonition */
+
+.md-typeset .admonition.tangent,
+.md-typeset details.tangent {
+    border-color: rgb(255, 129, 33);
+}
+
+.md-typeset .tangent>.admonition-title,
+.md-typeset .tangent>summary {
+    background-color: rgba(194, 117, 45, 0.1);
+}
+
+.md-typeset .tangent>.admonition-title::before,
+.md-typeset .tangent>summary::before {
+    background-color: rgb(255, 155, 48);
+    -webkit-mask-image: var(--icon-lucide-tangent);
+    mask-image: var(--icon-lucide-tangent);
+}
+
+.md-typeset .admonition.related,
+.md-typeset details.related {
+    border-color: rgb(255, 129, 33);
+}
+
+.md-typeset .related>.admonition-title,
+.md-typeset .related>summary {
+    background-color: rgba(194, 117, 45, 0.1);
+}
+
+.md-typeset .related>.admonition-title::before,
+.md-typeset .related>summary::before {
+    background-color: rgb(255, 155, 48);
+    -webkit-mask-image: var(--icon-lucide-related);
+    mask-image: var(--icon-lucide-related);
+}
+
+/* details admonition */
+
+.md-typeset .admonition.details,
+.md-typeset details.details {
+    border-color: rgb(33, 133, 255);
+}
+
+.md-typeset .details>.admonition-title,
+.md-typeset .details>summary {
+    background-color: rgba(45, 120, 194, 0.1);
+}
+
+.md-typeset .details>.admonition-title::before,
+.md-typeset .details>summary::before {
+    background-color: rgb(48, 148, 255);
+    -webkit-mask-image: var(--icon-lucide-details);
+    mask-image: var(--icon-lucide-details);
+}
+
+/* summary */
+
+.md-typeset .admonition.summary,
+.md-typeset details.summary {
+    border-color: rgb(33, 133, 255);
+}
+
+.md-typeset .summary>.admonition-title,
+.md-typeset .summary>summary {
+    background-color: rgba(45, 120, 194, 0.1);
+}
+
+.md-typeset .summary>.admonition-title::before,
+.md-typeset .summary>summary::before {
+    background-color: rgb(48, 148, 255);
+    -webkit-mask-image: var(--icon-lucide-summary);
+    mask-image: var(--icon-lucide-summary);
+}
+
+/* code admonition */
+
+.md-typeset .admonition.code,
+.md-typeset details.code {
+    border-color: rgb(33, 255, 118);
+}
+
+.md-typeset .code>.admonition-title,
+.md-typeset .code>summary {
+    background-color: rgba(45, 194, 60, 0.1);
+}
+
+.md-typeset .code>.admonition-title::before,
+.md-typeset .code>summary::before {
+    background-color: rgb(48, 255, 117);
+    -webkit-mask-image: var(--icon-lucide-code);
+    mask-image: var(--icon-lucide-code);
+}
+
+/* goal admonition */
+
+.md-typeset .admonition.objective,
+.md-typeset details.objective {
+    border-color: rgb(255, 181, 33);
+}
+
+.md-typeset .objective>.admonition-title,
+.md-typeset .objective>summary {
+    background-color: rgba(194, 159, 45, 0.1);
+}
+
+.md-typeset .objective>.admonition-title::before,
+.md-typeset .objective>summary::before {
+    background-color: rgb(255, 186, 48);
+    -webkit-mask-image: var(--icon-lucide-objective);
+    mask-image: var(--icon-lucide-objective);
+}
+
+/* user admonition */
+
+
+.md-typeset .admonition.user,
+.md-typeset details.user {
+    border-color: rgb(255, 129, 33);
+}
+
+.md-typeset .user>.admonition-title,
+.md-typeset .user>summary {
+    background-color: rgba(194, 117, 45, 0);
+}
+
+.md-typeset .user>.admonition-title::before,
+.md-typeset .user>summary::before {
+    background-color: rgb(255, 155, 48);
+    -webkit-mask-image: var(--icon-lucide-user);
+    mask-image: var(--icon-lucide-user);
+}
+
+.md-typeset .admonition.pen,
+.md-typeset details.pen {
+    border-color: rgb(255, 129, 33);
+}
+
+.md-typeset .pen>.admonition-title,
+.md-typeset .pen>summary {
+    background-color: rgba(194, 117, 45, 0);
+}
+
+.md-typeset .pen>.admonition-title::before,
+.md-typeset .pen>summary::before {
+    background-color: rgb(255, 155, 48);
+    -webkit-mask-image: var(--icon-lucide-pen);
+    mask-image: var(--icon-lucide-pen);
+}
+
+.md-typeset .admonition.wrench,
+.md-typeset details.wrench {
+    border-color: rgb(255, 129, 33);
+}
+
+.md-typeset .wrench>.admonition-title,
+.md-typeset .wrench>summary {
+    background-color: rgba(194, 117, 45, 0);
+}
+
+.md-typeset .wrench>.admonition-title::before,
+.md-typeset .wrench>summary::before {
+    background-color: rgb(255, 155, 48);
+    -webkit-mask-image: var(--icon-lucide-wrench);
+    mask-image: var(--icon-lucide-wrench);
+}
+
+.md-typeset .admonition.globe,
+.md-typeset details.globe {
+    border-color: rgb(255, 129, 33);
+}
+
+.md-typeset .globe>.admonition-title,
+.md-typeset .globe>summary {
+    background-color: rgba(194, 117, 45, 0);
+}
+
+.md-typeset .globe>.admonition-title::before,
+.md-typeset .globe>summary::before {
+    background-color: rgb(255, 155, 48);
+    -webkit-mask-image: var(--icon-lucide-globe);
+    mask-image: var(--icon-lucide-globe);
+}
