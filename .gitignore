@@ -1,11 +1,7 @@
 # Custom
 .DS_Store
 .obsidian
-_dev_
-temp/
-_temp_
-brain/file/unsorted
-brain/file/external
+local
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
