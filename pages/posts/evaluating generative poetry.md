@@ -1,8 +1,8 @@
 ---
 title: "Evaluating Generative Poetry"
 draft: false
-date: 2024-03-15
-header: /file/sunkcosts.jpg
+date: 2024-03-24
+header: /file/library-babel-labyrinth.jpg
 ---
 
 I recently watched the video: [The Hellish Landscape of Published AI Poetry](https://www.youtube.com/watch?v=zJ6xor2SLNU) - or got to the 25 minute mark at least. As the title suggests, it's fairly critical. The author's point that AI generated poetry falls short of human poetry (or at least the really good human poetry) seems reasonable to me. Of course, if the value of poetry is derived in part by it's nature as a human created entity, then by definition AI generated poetry will always fall short. That said, even though the video was published yesterday, most of the models criticized in the video were fairly old, so I thought it would be fair to test some of the newer models, and ended up trying to write an executable poem. I loved the results so much that I felt compelled to publish them somewhere - hence, this post.
