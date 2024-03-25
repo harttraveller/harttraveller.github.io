@@ -1,0 +1,942 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://harttraveller.com/python-simple-secrets-manager/">
+      
+      
+      
+        <link rel="next" href="../using-scribe-lives-to-measure-computation/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../core/icon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.15+insiders-4.53.3">
+    
+    
+      
+        <title>Python Simple Secrets Manager - Hart Traveller</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.458d28d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Ubuntu Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../core/theme.global.css">
+    
+      <link rel="stylesheet" href="../core/theme.max.css">
+    
+      <link rel="stylesheet" href="../core/theme.med.css">
+    
+      <link rel="stylesheet" href="../core/theme.min.css">
+    
+      <link rel="stylesheet" href="../core/theme.global.admonition.css">
+    
+      <link rel="stylesheet" href="../core/theme.global.notebook.css">
+    
+      <link rel="stylesheet" href="../core/theme.global.markmap.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#purpose" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+         
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="/" title="" class="md-header__button md-logo"
+      aria-label="Hart Traveller" data-md-component="logo">
+      
+  <img src="../core/icon.png" alt="logo">
+
+    </a>
+    <!-- <a class="md-header__button md-logo" data-md-component="logo">
+      
+  <img src="../core/icon.png" alt="logo">
+
+    </a> -->
+
+     <div class="md-quick">
+       
+    <div class="quicklink-hover-box">
+        
+        
+        
+        
+        
+        
+        
+        <button data-clipboard-text="ruling_fiction.0b@icloud.com" data-md-type="copy" class="md-quick__link copy"
+            style="color: darkred">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+    class="lucide lucide-mail">
+    <rect width="20" height="16" x="2" y="4" rx="2" />
+    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+</svg>
+        </button>
+        <div class="md-sidebar__tooltip">
+            <p style="display: inline-block">Email</p>
+        </div>
+        
+    </div>
+    
+</div> 
+
+    <label class="md-header__button md-icon" for="__drawer">
+       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+
+        
+    <label class="md-header__button md-icon" for="__search">
+       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+    </label>
+    <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+  </nav>
+    
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Homepage
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../year/2024/" class="md-tabs__link">
+          
+  
+  Years
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Hart Traveller" class="md-nav__button md-logo" aria-label="Hart Traveller" data-md-component="logo">
+      
+  <img src="../core/icon.png" alt="logo">
+
+    </a>
+    Hart Traveller
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Homepage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    
+  
+    Years
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Years
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../year/2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    2024
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../year/2023/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    2023
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Headings">
+
+    
+    
+    
+    
+    <label class="md-nav__title">
+        <span class="md-nav__icon md-icon"></span>
+        Go To
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+</li>
+        
+        <li class="md-nav__item">
+  <a href="#quickstart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quickstart
+      
+    </span>
+  </a>
+  
+</li>
+        
+        <li class="md-nav__item">
+  <a href="#tutorial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tutorial
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tutorial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-secret" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add Secret
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-secret" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        View Secret
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copy-secret" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Copy Secret
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List Secret(s)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forget-secretss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forget Secrets(s)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+        <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changelog
+      
+    </span>
+  </a>
+  
+</li>
+        
+        <li class="md-nav__item">
+  <a href="#tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tasks
+      
+    </span>
+  </a>
+  
+</li>
+        
+    </ul>
+    
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+<div class="md-content md-content--post" data-md-component="content">
+    <article class="md-content__inner md-typeset">
+        <div class="md-post-header"
+            style="background-image: url('/file/pssm.jpg') !important; background-size: cover;">
+            <h1 class=".blog-title">Python Simple Secrets Manager</h1>
+            <div class="md-blog-post__meta md-meta">
+                
+                <time datetime="2023-11-10 00:00:00">November 10, 2023</time>
+                •
+                
+                
+                
+                5 min read
+                
+                
+                
+                <!-- <br><br>
+                <a>Comments</a> -->
+            </div>
+        </div>
+        <p>A simple command line based secrets and tokens manager built in python. This page covers its purpose, setup process, usage, and other details.</p>
+<!-- more -->
+<details class="links">
+<summary>Links</summary>
+<ul>
+<li><a href="https://pypi.org/project/python-simple-secrets-manager/">PyPi Package</a></li>
+<li><a href="https://github.com/harttraveller/python-simple-secrets-manager">GitHub Repository</a></li>
+</ul>
+</details>
+<details class="bug">
+<summary>Support</summary>
+<p>If you find a bug, you can submit an issue on <a href="https://github.com/harttraveller/python-simple-secrets-manager/issues">GitHub</a> and I'll try to address it time permitting.</p>
+</details>
+<h2 id="purpose">Purpose</h2>
+<p>Suppose you're developing a python package that needs to access external API services. To test the package, you need to be able to load your API key, but users of your package should sign up to get their own API key. You can address this by creating a directory structure like:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>my_package/
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>├── __init__.py
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>└── ...
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>secrets.yaml
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>.gitignore
+</code></pre></div>
+<p>and then in your <code>.gitignore</code> add:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>secrets.yaml
+</code></pre></div>
+<p class="annotate">This package addresses the two main drawbacks to this approach (or any other similar approach): First, you can't easily access the API key from other projects. Second, you might accidentally commit the secrets file anyways. (1)</p>
+<ol>
+<li>A common mistake I've seen here is that someone will be working on a branch (let's say <code>dev</code>). They add the <code>secrets.yaml</code> or equivalent file on this branch, and add it to the <code>.gitignore</code>. Then, they switch back to the <code>main</code> (or any other) branch. Because they're now on a separate branch where <code>secrets.yaml</code> wasn't ignored, it's (naturally) no longer ignored, but because it <em>was</em> ignored in <code>dev</code>, it isn't removed from the context of the directory, and now shows up as a new file that is not yet committed in <code>main</code>. Now if the user commits all the changes they make in <code>main</code> - the <code>secrets.yaml</code> might also be unwittingly committed.</li>
+</ol>
+<details class="note">
+<summary>Global Environment Variable Security Comparison</summary>
+<p>Currently this package does not offer major security benefits over simply using global environment variables, although it is ideally easier to use, and offers additional features. Future versions will incorporate enhanced security measures, time permitting.</p>
+</details>
+<h2 id="quickstart">Quickstart</h2>
+<p>To get started, first install the package.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"/><input id="__tabbed_1_2" name="__tabbed_1" type="radio"/><input id="__tabbed_1_3" name="__tabbed_1" type="radio"/><div class="tabbed-labels"><label for="__tabbed_1_1">pip</label><label for="__tabbed_1_2">poetry</label><label for="__tabbed_1_3">conda</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>pip<span class="w"> </span>install<span class="w"> </span>python-simple-secrets-manager
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>poetry<span class="w"> </span>add<span class="w"> </span>python-simple-secrets-manager
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>poetry<span class="w"> </span>install
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>pssm<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.11<span class="w"> </span>-y
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>conda<span class="w"> </span>activate<span class="w"> </span>pssm
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>pip<span class="w"> </span>install<span class="w"> </span>python-simple-secrets-manager
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>Check and make sure it's actually installed. The expected output is included (your version may be newer).</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>secrets<span class="w"> </span>--version
+</code></pre></div>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../file/pssm.version.png"><img alt="pssm.version.png" src="../file/pssm.version.png" width="500"/></a></p>
+<p>You can now add a secret. You will be prompted to specify the uid and key.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>secrets<span class="w"> </span>keep
+</code></pre></div>
+<p>Then, if you want to access the secret from within python, just make sure the package is installed and get the secret by the uid set earlier.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kn">from</span> <span class="nn">pssm</span> <span class="kn">import</span> <span class="n">secrets</span>
+<a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="n">token</span> <span class="o">=</span> <span class="n">secrets</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"[SECRET UID FROM EARLIER]"</span><span class="p">)</span>
+</code></pre></div>
+<details class="info">
+<summary>Command Help</summary>
+<p>If you want to view information about a particular CLI command just use the <code>--help</code> flag on the command.</p>
+</details>
+<details class="info">
+<summary>Argument Mode</summary>
+<p>By default the CLI operates interactively, but you can pass the <code>-a</code> flag to run commands by passing in parameters directly. For example:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>secrets<span class="w"> </span>keep<span class="w"> </span>-a<span class="w"> </span>--uid<span class="w"> </span>example<span class="w"> </span>--key<span class="w"> </span><span class="m">1234</span>
+</code></pre></div>
+</details>
+<h2 id="tutorial">Tutorial</h2>
+<p>This tutorial extends the quickstart. Full documentation might be added at a later date, but for now I'll just cover a few key points, commands, and methods which should be sufficient. To start, open a terminal and a jupyter notebook (or python script) to run this code. For notebooks/scripts, make sure you've imported the module.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kn">from</span> <span class="nn">pssm</span> <span class="kn">import</span> <span class="n">secrets</span>
+</code></pre></div>
+<h3 id="add-secret">Add Secret</h3>
+<p>Add a secret with:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a>secrets<span class="w"> </span>keep
+</code></pre></div>
+<p>or if via arguments with:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a>secrets<span class="w"> </span>keep<span class="w"> </span>-a<span class="w"> </span>--uid<span class="w"> </span>example<span class="w"> </span>--key<span class="w"> </span><span class="m">1234</span>
+</code></pre></div>
+<p>or in python with:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="n">secrets</span><span class="o">.</span><span class="n">keep</span><span class="p">(</span><span class="n">uid</span><span class="o">=</span><span class="s2">"example"</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="s2">"1234"</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="view-secret">View Secret</h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a>secrets<span class="w"> </span>view
+</code></pre></div>
+<p>or if you already know the <code>uid</code>:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a>secrets<span class="w"> </span>view<span class="w"> </span>-a<span class="w"> </span>--uid<span class="w"> </span>example
+</code></pre></div>
+<p>You can get the key in python with:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="n">secrets</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">uid</span><span class="o">=</span><span class="s2">"example"</span><span class="p">)</span>
+</code></pre></div>
+<!-- * this was temporarily removed due to pydantic version mismatch -->
+<!--todo
+
+Or by the automatically generated attributes:
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>
+</code></pre></div>
+-->
+<h3 id="copy-secret">Copy Secret</h3>
+<p>This only works in the CLI:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a>secrets<span class="w"> </span>copy
+</code></pre></div>
+<p>or if you already know the <code>uid</code>:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a>secrets<span class="w"> </span>copy<span class="w"> </span>-a<span class="w"> </span>--uid<span class="w"> </span>example
+</code></pre></div>
+<h3 id="list-secrets">List Secret(s)</h3>
+<p>With the CLI:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a>secrets<span class="w"> </span>list
+</code></pre></div>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../file/pssm.secrets-list.jpg"><img alt="pssm.secrets-list.jpg" src="../file/pssm.secrets-list.jpg" width="500"/></a></p>
+<p>In python:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-20-1" id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="n">secrets</span><span class="o">.</span><span class="n">uids</span>
+</code></pre></div>
+<h3 id="forget-secretss">Forget Secrets(s)</h3>
+<p>With the CLI:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-21-1" id="__codelineno-21-1" name="__codelineno-21-1"></a>secrets<span class="w"> </span>forget
+</code></pre></div>
+<p>or if you already know the <code>uid</code>:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-22-1" id="__codelineno-22-1" name="__codelineno-22-1"></a>secrets<span class="w"> </span>forget<span class="w"> </span>-a<span class="w"> </span>--uid<span class="w"> </span>example
+</code></pre></div>
+<p>In python:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-23-1" id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="n">secrets</span><span class="o">.</span><span class="n">forget</span><span class="p">(</span><span class="n">uid</span><span class="o">=</span><span class="s2">"example"</span><span class="p">)</span>
+</code></pre></div>
+<!-- todo: add more info -->
+<h2 id="architecture">Architecture</h2>
+<p>By default the package will create a <code>secrets.toml</code> file in a <code>.secrets</code> directory in your home folder, which is where data is stored. More info may be added here in the future.</p>
+<details class="note">
+<summary>Architecture Notes</summary>
+<ul>
+<li>In future versions secret groups may be added, which is why it (<code>.secrets</code>) is a directory.</li>
+<li>Does this work on windows? I haven't tested, lmk on GitHub if it doesn't but you'd like to use it.</li>
+<li>Conceivably, if someone got your <code>secrets.toml</code> file they'd have all your secrets, but seeing as a decent fraction of AWS free tier users still just put their root keys in the <code>~/.aws</code> directory, I figure this is 'secure enough' in the worldly context for right now.<ul>
+<li>That said, at a later date I'd like to add encryption options, though doing so would make this 'less simple'.</li>
+<li>Specifically, I imagine if a package user <em>did</em> use a gitignored <code>secrets.yaml</code> (or equiv.) file in their repository, but <em>that</em> only contained the keys to the secret group for the secrets held in <code>secrets.toml</code>, then a malicious actor who just steals the <code>secrets.toml</code> file wouldn't get anything useful, but also if you accidentally commit your <code>secrets.yaml</code> you've only actually committed the keys used to unlock your local secrets, which can be solved easily enough by refreshing these keys. Committing secrets wouldn't even technically be security violation then, though TBH would still be pretty wierd.<ul>
+<li>Of course, if someone has access to your computer and the <code>secrets.toml</code> file is encrypted with keys in the yaml in a given repository, they can still access the real keys in the toml, they would just need to find where they are referenced. So this wouldn't be a huge security benefit insofar as it's not actually secure beyond the laziness of the would be hacker.<ul>
+<li>This could be ameliorated by storing decryption keys in 1P.<ul>
+<li>But you might as well just use 1P CLI then...</li>
+</ul>
+</li>
+<li>Could add logs to ameliorate this.</li>
+<li>I should probably just learn how to use the 1P CLI. I just realized that probably does exactly what I want and is way more secure than anything I can create.</li>
+<li>Maybe I could integrate this package with 1P? A bit of a sunk cost development effort...<ul>
+<li>In fairness, maybe this is useful insofar as it's more secure than including ignored secrets in your repository, but more simple than whatever the 1P CLI does, though I haven't bothered to check that yet.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</details>
+<!-- todo
+## Features
+-->
+<!-- todo
+## Documentation
+
+### CLI
+
+### Python
+
+-->
+<!-- todo
+## Security
+
+-->
+<h2 id="changelog">Changelog</h2>
+<div class="admonition version">
+<p class="admonition-title">0.1.2</p>
+<ul>
+<li>Make dependency groups optional.</li>
+</ul>
+</div>
+<details class="version">
+<summary>0.1.1</summary>
+<ul>
+<li>Implement basic features documented on initial version of documentation site. Future changelogs will include more information about specific features.</li>
+</ul>
+</details>
+<details class="version">
+<summary>0.1.0</summary>
+<ul>
+<li>Initial PyPi push, this version is broken.</li>
+</ul>
+</details>
+<h2 id="tasks">Tasks</h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Refactor listing secrets to return a list of <code>Secret</code> objects, differentiate it from CLI.<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Related: Add CLI <code>uids</code> list</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Add multiple parameters inputs for <code>-a</code> mode in CLI to:<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> <code>view</code></li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> <code>keep</code></li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> <code>forget</code></li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Reload secrets before returning properties<ul>
+<li>This fixes issue where something is added via CLI but in memory secrets don't change.</li>
+</ul>
+</li>
+</ul>
+        
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 25, 2024</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 25, 2024</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+        
+
+  
+
+
+        
+<span id="comments"></span>
+<script src="https://giscus.app/client.js" data-repo="harttraveller/harttraveller.github.io" data-repo-id="R_kgDOInjTSg"
+    data-category="Comments" data-category-id="DIC_kwDOInjTSs4CYYAX" data-mapping="pathname" data-strict="0"
+    data-reactions-enabled="0" data-emit-metadata="0" data-input-position="top" data-theme="transparent_dark"
+    data-lang="en" data-loading="lazy" crossorigin="anonymous" async>
+    </script>
+
+<script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+        var theme = palette.color.scheme === "slate" ? "dark" : "light"
+        giscus.setAttribute("data-theme", theme)
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function () {
+        var ref = document.querySelector("[data-md-component=palette]")
+        ref.addEventListener("change", function () {
+            var palette = __md_get("__palette")
+            if (palette && typeof palette.color === "object") {
+                var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+                /* Instruct Giscus to change theme */
+                var frame = document.querySelector(".giscus-frame")
+                frame.contentWindow.postMessage(
+                    { giscus: { setConfig: { theme } } },
+                    "https://giscus.app"
+                )
+            }
+        })
+    })
+</script>
+
+    </article>
+</div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["search.suggest", "content.code.copy", "content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.1e90e0fb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a255a381.min.js"></script>
+      
+        <script src="../core/script.extra.js"></script>
+      
+        <script src="../core/script.mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

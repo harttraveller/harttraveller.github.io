@@ -1,0 +1,30 @@
+@media (max-width: 59.95rem) {
+    .md-quick {
+        display: none;
+    }
+
+    .md-header__button.md-icon {
+        display: none;
+    }
+
+    .mobile-hide {
+        display: none;
+    }
+
+    /* patches */
+    .md-post-header {
+        position: relative;
+        border-radius: 0.4em;
+        padding-top: 1rem;
+        margin-top: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 0.1rem;
+    }
+
+    .md-content__inner.md-typeset {
+        margin-top: -2rem;
+    }
+
+
+}

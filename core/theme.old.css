@@ -1,0 +1,251 @@
+html {
+    --background: black;
+    --tab-color: #1C2232;
+    --tab-hover-color: #0F2B54;
+    --tab-active-color: #a85317;
+    --section-color: #a85317;
+    --section-active-color: #ffcea3;
+    --section-hover-color: #5584ea;
+    --external-link-color: var(--section-hover-color);
+    --internal-link-color: var(--section-active-color);
+    --search-background-color: var(--tab-color);
+    --search-active-color: var(--tab-hover-color);
+    --internal-button-color: var(--tab-color);
+    --external-button-color: rgb(0, 56, 113);
+    --sidebar-background-color: var(--tab-color);
+    --page-bg-color: black;
+}
+
+
+/* dialog box */
+
+.md-dialog {
+    transition: 0.3s ease !important;
+    background-color: green;
+}
+
+.md-dialog__inner.md-typeset {
+    color: white !important;
+}
+
+
+
+/* .md-footer .md-footer__inner.md-grid {
+    width: 90em;
+} */
+
+
+
+
+/* glitchy jupyter source */
+
+
+
+
+
+
+
+.md-main .md-content {
+    margin-bottom: -6em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* maximum page width width */
+
+@media (min-width: 76.2rem) {
+
+    /* Jupyter download and heading */
+
+    .md-content__button.md-icon[title="Download Notebook"] {
+        position: relative;
+        left: -4.5em;
+        top: -0.8em;
+        scale: 1.3;
+    }
+
+    .md-content .jupyter-wrapper h1 {
+        color: #ffffff !important;
+        margin: 0em 0em 0.4em 0.0em !important;
+        position: relative;
+    }
+
+
+
+
+
+    /* inner content */
+
+    /* .md-content__inner {
+        transition: all 0.3s ease !important;
+        z-index: 10;
+        background-color: var(--page-bg-color);
+        position: relative !important;
+        top: -7.91em;
+        margin-bottom: -6em;
+        padding: 1em;
+        border-radius: 0.8em;
+        margin-right: 1.65em !important;
+    } */
+}
+
+/* ? */
+
+/* @media screen and (min-width:45em) {
+    .md-social {
+        position: absolute;
+        top: 0.35em;
+        right: 1.8%;
+    }
+
+} */
+
+/* ? greater than equal to medium width */
+
+@media (min-width: 59.95rem) {
+
+    /* search bar */
+
+    .md-search {
+        opacity: 0;
+        position: absolute;
+        left: 28%;
+        right: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20em;
+        z-index: 999 !important;
+    }
+
+    .md-search-result__article.md-typeset {
+        padding-top: 10px;
+    }
+
+    .md-search__form {
+        background: var(--search-background-color) !important;
+    }
+
+    .md-search__form:hover {
+        filter: brightness(1.1);
+    }
+
+
+    .md-search-result__meta {
+        background-color: var(--search-background-color) !important;
+    }
+
+    [data-md-toggle=search]:checked~.md-header .md-search__input+.md-search__icon {
+        color: white;
+    }
+
+
+    .md-search-result__list {
+        background-color: var(--search-background-color) !important;
+    }
+
+    .md-search__scrollwrap {
+        background-color: var(--search-background-color) !important;
+    }
+
+    .md-search__form {
+        background-color: var(--search-background-color);
+    }
+
+    .md-search__form:not(.focus-visible) {
+        border-radius: 8px;
+    }
+
+    .md-search__input:not(.focus-visible) {
+        border-radius: 8px;
+    }
+
+    .md-search__form .focus-visible {
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+    }
+
+    .md-search__input .focus-visible {
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+    }
+
+    .md-search-result__item .md-tag {
+        display: none;
+    }
+
+
+
+    :not(.md-header--shadow) [dir=ltr] .md-search-result__icon {
+        top: 0.8em;
+    }
+
+
+    :not(.md-header--shadow) .md-search__output {
+        background-color: var(--search-background-color) !important;
+        border-bottom-left-radius: 0.4em;
+        border-bottom-right-radius: 0.4em;
+    }
+
+
+
+    [data-md-toggle=search]:checked~.md-header .md-search__form {
+        box-shadow: none;
+        background-color: var(--search-background-color) !important;
+        border-top-left-radius: 0.4em;
+        border-top-right-radius: 0.4em;
+    }
+
+    /* both sidebars */
+
+    .md-nav__item .md-nav__link {
+        color: var(--section-color) !important;
+        transition: 0.5s ease !important;
+    }
+
+    .md-nav__item .md-nav__link:hover {
+        color: var(--section-hover-color) !important;
+    }
+
+    .md-nav__item .md-nav__link--active {
+        color: var(--section-active-color) !important;
+        font-weight: bold !important;
+    }
+
+
+    /* secondary sidebar */
+
+    .md-nav__title[for="__toc"] {
+        background: transparent;
+    }
+
+    .md-nav__link,
+    .md-nav__title {
+        background-color: transparent !important;
+        box-shadow: none !important;
+    }
+
+
+    .md-sidebar.md-sidebar--secondary .md-sidebar__scrollwrap {
+        top: 0em !important;
+        position: relative;
+        margin-left: -0.7em;
+        margin-bottom: -6.4em;
+        border-radius: 0.4em;
+    }
+
+    .md-sidebar.md-sidebar--secondary .md-sidebar__scrollwrap .md-sidebar__inner {
+        padding: 0.4em 1em 1em 1em;
+        border-radius: 0.4em;
+        left: 1em;
+        width: 23.4em;
+    }
+}
