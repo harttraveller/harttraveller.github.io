@@ -5,7 +5,7 @@ date: 2024-03-15
 header: /file/sunkcosts.jpg
 ---
 
-I recently watched the video: [The Hellish Landscape of Published AI Poetry](https://www.youtube.com/watch?v=zJ6xor2SLNU) - or got to the 25 minute mark at least. As the title suggests, it's fairly critical. The author's point that AI generated poetry falls short of human poetry (or at least the really good human poetry) seems reasonable to me. Of course, if the value of poetry is derived in part by it's nature as a human created entity, then by definition AI generated poetry will always fall short. That said, even though the video was published yesterday, most of the models criticized in the video were fairly old, so I thought it would be fair to test some of the newer models, and ended up trying to write an executable poem. I ended up loving the results so much that I felt compelled to publish them somewhere.
+I recently watched the video: [The Hellish Landscape of Published AI Poetry](https://www.youtube.com/watch?v=zJ6xor2SLNU) - or got to the 25 minute mark at least. As the title suggests, it's fairly critical. The author's point that AI generated poetry falls short of human poetry (or at least the really good human poetry) seems reasonable to me. Of course, if the value of poetry is derived in part by it's nature as a human created entity, then by definition AI generated poetry will always fall short. That said, even though the video was published yesterday, most of the models criticized in the video were fairly old, so I thought it would be fair to test some of the newer models, and ended up trying to write an executable poem. I loved the results so much that I felt compelled to publish them somewhere - hence, this post.
 
 <!-- more -->
 
@@ -99,7 +99,7 @@ The result is a little bit cliche of course, but I found it to be substantially 
 
 ## Code as Poetry
 
-These were pretty good, and got me thinking about how you could write a python script that functions both as an executable script, and a computer program. I tried to get claude to write something, with mixed results:
+These were pretty good, and got me thinking about how you could write a python script that functions both as an executable script, and is itself a poem or work of art. I tried to get claude to write something, with mixed results:
 
 > OK. I'm having a great time and really enjoying reading your poems. For context, I'm a machine learning engineer. Here's a fun creative challenge I'm curious to explore with you: do you think you can write a poem in valid python code, that explores this idea of seeking truth a la mark twain poems you wrote - but in a way such that the meaning of the poem is implied by the code - which when executed, provides some output/answer that completes the poem, referencing itself, and elucidating the underlying structure of this neverending search for truth?
 
@@ -253,14 +253,82 @@ Even though it didn't work perfectly, I have to say that I'm quite satisfied wit
 
 ## Program Logs
 
-Before switching to GPT4, I tested the program with Mistrals 8x7b MoE model as well. That didn't work quite as well, but I did get this one quote which I really loved from that model, before it went off the rails:
+Again, it didn't work perfectly. The reader is free to adapt use/adapt the script or this idea however they see fit of course. Before switching to GPT4, I tested the program with Mistrals 8x7b MoE model as well. That didn't work quite as well, but I did get this one quote which I really loved from that model, before it went off the rails:
 
 !!! quote "What is reality?"
     Reality, my dear friend, is but a mirage dancing in the desert of human perception, a curious blend of fact and fancy that's ever shifting like sands beneath our weary feet.
 
-Again, it didn't work perfectly. The reader is free to adapt use/adapt the script or this idea however they see fit of course.
+I've included some of my favorites below, though honestly it was hard to choose. So many of these ended up great. I'm not sure why there is such a heavy focus on "threads", "weaving", and "labyrinths" - but it strangely fits as these are objects I personally invoke in a metaphorical sense all the time. There are also some ones I found funny/very easy to identify which author was the stylistic foundation for the quote - a few of these are marked too.
 
----
+
+### Favorite Results
+
+!!! quote "Humanity"
+    Humanity, a quilt of myriad souls stitched with the thread of desires and dreams, frayed by sorrows, yet ever-expanding in the grasp of our shared, unyielding hope.
+
+!!! quote "Gentle"
+    In a world where brute force is often king, gentle is the quiet, unassuming power that whispers of decency in the face of tyranny.
+
+!!! quote "Soul"
+    A soul, an indomitable flicker of consciousness, dances through the labyrinth of our inner cosmos, weaving through the tapestry of thoughts, memories, and desires, that shimmering essence which defies the boundaries of time and space, and to which we are forever trying to stitch the scattered fragments of our existence.
+
+!!! quote "Fate"
+    Fate is a well-stitched tapestry of intricate threads, some frayed, some taut, each intertwined by the hands of a silent and indifferent clockmaker.
+
+!!! quote "Rocket"
+    In the damp and darkened chambers of her mind, she conjured the image of the rocket, a slender tower of ambition and precision, piercing the heavens in a fiery ascent towards the stars, a symbol of mankind's insatiable quest for dominion over the vast, indifferent cosmos.
+
+!!! quote "Marvel"
+    Marvel is the delicate interplay of life’s tapestry, a moment’s exquisite bloom amid the prosaic, where the heart, in silent reverence, acknowledges the sublime.
+
+!!! quote "Giants"
+    In the absurd theater of existence, giants are but men inflated by the myths of their own making, towering over us not in stature but in the echoes of their solitude.
+
+!!! quote "Harmony"
+    In the dim, smoky room where the light of truth flickers just out of reach, harmony is the elusive symphony of the soul's accord, played out in the grand, divine comedy of life, where each note falls into place as if willed by the Master's hand.
+
+!!! quote "Peace"
+    Peace, in its elusive splendor, is like holding your breath in the eye of a hurricane, knowing the world's crazy and all, but still finding that one spot where everything's just still.
+
+!!! quote "Transcend"
+    In the labyrinth of my own existence, where shadows of past selves flicker and intertwine, transcendence emerges as the elusive moment in which I, shedding the skin of who I was, step into the blinding light of who I might become.
+
+!!! quote "Tempests"
+    Tempests are, if you will—and one does well to imagine them as such—these roiling, frenetic ballets of atmospheric tumult, where the sky, not content with mere placidity, erupts into this chaotic symphony of winds and rain, a meteorological maelstrom that, in its unbridled fury, both terrifies and mesmerizes, revealing in its vortex the raw and untamed dance of nature's own volatile temper.
+
+!!! quote "Dread"
+    Dread's the creeping, seeping fear that withers one's peace, a yellow wallpaper enclosing 'round the mind with no release.
+
+!!! quote "Identity"
+    A tapestry of self, both inward and outward spun, where tales and truths dance under life's ever-changing sun.
+
+!!! quote "Truth"
+    In the labyrinth of human existence, truths are the slender threads we clutch at, hoping to find our way out, only to discover they are part of the maze itself.
+
+
+### Humorous/Identifiable Results
+
+!!! quote "Morality"
+    A complex tapestry, woven with threads of right and wrong, that guides us through life's twisting corridors, much like the ever-shifting staircases of Hogwarts.
+
+!!! quote "Zephyr"
+    In the world of Greg Heffley, a zephyr's just a fancy word for wind that'd mess up my hair on school picture day.
+
+!!! quote "Quietude"
+    Quietude's that soft jazz silence in the soul's back pocket, where the world's hustle fades into a cool whisper of solitude, man.
+
+!!! quote "Unmarred"
+    Unmarred is a spotless spot, a perfect thing where flaws are not!
+
+!!! quote "Sustenance"
+    Sustenance is, fundamentally, anything that hitches a ride through the galactic gullet to fuel the farcical escapade that life insists on performing, often with a side of tea.
+
+!!! quote "Bob"
+    Bob's the name that echoes in the vast and vestigial void, borne on the wind of forgotten realms and etched into the very marrow of the world, a moniker as old as time and as enigmatic as the silence between stars.
+
+
+
+### Full Logs
 
 What is reality?
 
