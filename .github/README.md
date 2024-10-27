@@ -1,3 +1,3 @@
-# Rokos Phoenix
+# Obsidian Publish Site
 
-The main [site](https://rokosphoenix.com) has more information.
+Link: [harttraveller.com](https://harttraveller.com)
