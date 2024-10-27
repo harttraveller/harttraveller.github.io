@@ -1,1 +1,0 @@
-<img src="<% tp.file.cursor(1) %>" class="header-image">
