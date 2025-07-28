@@ -3,5 +3,5 @@ name = "publish"
 version = "0.1.0"
 description = ""
 readme = "./github/README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.11,<=3.14"
 dependencies = []
