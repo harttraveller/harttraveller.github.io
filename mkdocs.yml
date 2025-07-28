@@ -1,0 +1,37 @@
+site_name: Personal
+docs_dir: pages
+
+theme:
+  name: material
+  palette:
+    scheme: slate
+  features:
+  - navigation.instant
+  - navigation.tracking
+  - navigation.tabs
+  - navigation.tabs.sticky
+
+plugins:
+- search
+- blog
+
+extra:
+  generator: false
+
+markdown_extensions:
+- admonition
+- attr_list
+- footnotes
+- md_in_html
+- pymdownx.caret
+- pymdownx.critic
+- pymdownx.details
+- pymdownx.inlinehilite
+- pymdownx.keys
+- pymdownx.mark
+- pymdownx.snippets
+- pymdownx.superfences
+- pymdownx.tilde
+
+nav:
+- Home: "index.md"
