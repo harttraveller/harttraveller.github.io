@@ -4,4 +4,6 @@ version = "0.1.0"
 description = ""
 readme = "./github/README.md"
 requires-python = ">=3.11,<=3.14"
-dependencies = []
+dependencies = [
+    "mkdocs-material>=9.6.16",
+]
