@@ -2,6 +2,7 @@
 .DS_Store
 .obsidian
 .vscode
+uv.lock
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
