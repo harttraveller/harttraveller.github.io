@@ -1,3 +1,3 @@
-# Obsidian Publish Site
+# Personal Site
 
 Link: [harttraveller.com](https://harttraveller.com)
