@@ -1,6 +1,6 @@
 ---
 title: Outbreak simulation
-draft: true
+draft: false
 date:
   created: 2020-02-01
   updated: 2025-07-29
