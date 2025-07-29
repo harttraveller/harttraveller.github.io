@@ -1,11 +1,9 @@
 ---
 title: Test Page
-draft: false
-tags: [test, page, test/page, test-page]
-categories: [cat1, cat2]
+draft: true
+categories: [test-cat, nested/cat]
 date:
-  created: 2023-12-31
-  updated: 2024-01-02
+  created: 1800-12-31
 ---
 
 ## Heading 2
