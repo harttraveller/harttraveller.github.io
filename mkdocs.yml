@@ -24,6 +24,7 @@ plugins:
 - blog
 - tags
 - offline
+- privacy
 - markdown-exec
 - awesome-nav
 
