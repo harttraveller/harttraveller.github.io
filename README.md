@@ -2,6 +2,10 @@
 
 Link: [harttraveller.com](https://harttraveller.com)
 
+## Mostly Finished Posts
+
+- [Evaluating Generative Poetry](./pages/posts/evaluating-generative-poetry.md)
+
 ## Developer Details
 
 If you want to use the theme, mkdocs configuration, or anything else feel free. Some notes for myself that you might find useful if you use anything here are below.
