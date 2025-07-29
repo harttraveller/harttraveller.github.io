@@ -45,6 +45,3 @@ markdown_extensions:
 - pymdownx.snippets
 - pymdownx.superfences
 - pymdownx.tilde
-
-nav:
-- Home: "index.md"
