@@ -1,0 +1,443 @@
+:root {
+  --base-background-color-1: #0E1017;
+  --base-background-color-2: var(--base-background-color-1);
+  --base-background-color-3: #1F2430;
+  --accent-color-1: #FBB153;
+  --accent-color-2: #ffad55e8;
+  --background-color-statusbar: var(--base-background-color-2);
+  --text-color-statusbar: #3CCAFF;
+  --border-color-statusbar: #3CCAFF;
+  --text-color-normal: white;
+  --urlbarView-separator-color: transparent !important;
+  --focus-outline-width: 1px !important;
+  --focus-outline-color: var(--accent-color-2) !important;
+  --focus-outline: var(--focus-outline-width) solid var(--focus-outline-color);
+  --in-content-page-background: #0E1017 !important;
+  ;
+  /* motion */
+  --motion-smooth: cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  --motion-delay: cubic-bezier(0.65, 0.05, 0.36, 1);
+  --motion-jumpy: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  --motion-swing: cubic-bezier(0, 0.55, 0.45, 1);
+  /* duration */
+  --duration-fastest: 128ms;
+  --duration-faster: 150ms;
+  --duration-fast: 256ms;
+  --duration-medium: 512ms;
+}
+
+:root {
+  --background-color-canvas: var(--base-background-color-1) !important;
+  /* dark */
+  --lwt-accent-color: var(--base-background-color-1) !important;
+  --lwt-text-color: var(--text-color-normal) !important;
+  --arrowpanel-background: var(--base-background-color-3) !important;
+  --arrowpanel-color: var(--text-color-normal) !important;
+  --arrowpanel-border-color: transparent !important;
+  --toolbar-field-background-color: rgba(0, 0, 0, 0.30000001192092896) !important;
+  --toolbar-bgcolor: var(--base-background-color-1) !important;
+  --toolbar-color: rgb(251, 251, 254) !important;
+  --toolbar-field-color: rgb(251, 251, 254) !important;
+  --toolbar-field-border-color: rgba(0, 0, 0, 0) !important;
+  --toolbar-field-focus-background-color: rgba(66, 65, 77, 1) !important;
+  --toolbar-field-focus-color: rgb(251, 251, 254) !important;
+  --newtab-background-color: green !important;
+  --newtab-background-color-secondary: green !important;
+  --newtab-text-primary-color: rgb(251, 251, 254) !important;
+  --tab-selected-bgcolor: rgba(106, 106, 120, 0.699999988079071) !important;
+  --tab-selected-textcolor: rgb(255, 255, 255) !important;
+  --lwt-tab-line-color: rgba(0, 0, 0, 0) !important;
+  --tabs-navbar-separator-color: rgba(0, 0, 0, 0) !important;
+  --tabs-navbar-separator-style: none !important;
+  --chrome-content-separator-color: rgb(82, 82, 94) !important;
+  --urlbarView-highlight-background: rgb(43, 42, 51) !important;
+  --sidebar-background-color: var(--base-background-color-3) !important;
+  --sidebar-text-color: rgb(249, 249, 250) !important;
+  --button-background-color: rgba(0, 0, 0, 0.33000001311302185) !important;
+  --button-background-color-hover: rgba(207, 207, 216, 0.20000000298023224) !important;
+  --button-background-color-active: rgba(207, 207, 216, 0.4000000059604645) !important;
+  --color-accent-primary: rgb(0, 221, 255) !important;
+  --color-accent-primary-hover: rgb(128, 235, 255) !important;
+  --color-accent-primary-active: rgb(170, 242, 255) !important;
+  --button-text-color-primary: rgb(43, 42, 51) !important;
+  --input-bgcolor: rgb(66, 65, 77) !important;
+  --input-color: rgb(251, 251, 254) !important;
+  --urlbarView-separator-color: rgb(82, 82, 94) !important;
+  --arrowpanel-dimmed-further: color-mix(in srgb, currentColor 14%, transparent) !important;
+  --urlbar-icon-fill-opacity: 1 !important;
+  --panel-separator-zap-gradient: linear-gradient(90deg, #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100%) !important;
+  --lwt-accent-color-inactive: var(--base-background-color-1) !important;
+  --toolbarbutton-icon-fill: rgb(251, 251, 254) !important;
+  --sidebar-border-color: transparent !important;
+  /* moss */
+  --toolbar-field-focus-border-color: rgba(0, 221, 255, 0.699999988079071) !important;
+  --tab-loading-fill: rgb(226, 225, 223) !important;
+  --lwt-toolbarbutton-icon-fill-attention: rgb(226, 225, 223) !important;
+  --urlbarView-highlight-color: rgb(255, 255, 255) !important;
+  /* generic */
+  --toolbarbutton-icon-fill-attention: light-dark(rgb(0, 97, 224), rgb(0, 221, 255));
+  --toolbarbutton-icon-fill-attention-text: light-dark(rgb(240, 240, 244), rgb(28, 27, 34));
+  --urlbarView-action-color: light-dark(rgb(91, 91, 102), rgb(191, 191, 201));
+  --urlbarView-hover-background: light-dark(rgb(240, 240, 244), var(--arrowpanel-dimmed));
+  --urlbar-box-bgcolor: light-dark(white, rgb(66, 65, 77));
+  --toolbox-bgcolor-inactive: light-dark(rgb(235, 235, 239), var(--base-background-color-2)) !important;
+  --toolbox-bgcolor: light-dark(rgb(240, 240, 244), var(--base-background-color-2)) !important;
+  --toolbox-textcolor: light-dark(rgb(21, 20, 26), rgb(251, 251, 254));
+  --toolbox-bgcolor-inactive: var(--toolbox-bgcolor);
+  --toolbox-textcolor-inactive: var(--toolbox-textcolor);
+}
+
+/* get ride of annoying edges */
+:root {
+  --chrome-content-separator-color: transparent !important;
+  --content-area-shadow: none !important;
+  --tabpanel-background-color: #0E1017 !important;
+
+  @media (-moz-content-prefers-color-scheme: dark) {
+    --tabpanel-background-color: #0E1017 !important;
+  }
+}
+
+/* remove traffic light buttons (mac) */
+
+.titlebar-buttonbox-container {
+  display: none !important;
+}
+
+/* remove titlebar spacer for vertical tabs */
+
+.titlebar-spacer[type="pre-tabs"] {
+  width: 2px !important;
+}
+
+.titlebar-spacer[type="post-tabs"] {
+  width: 0px !important;
+}
+
+
+@-moz-document url-prefix("chrome:") {
+  #statuspanel {
+    margin: 10px !important;
+  }
+
+  #statuspanel-label {
+    border-radius: 10000px !important;
+    padding: 2px 10px !important;
+    border: 1px solid var(--border-color-statusbar) !important;
+    background: var(--background-color-statusbar) !important;
+    color: var(--text-color-statusbar) !important;
+  }
+}
+
+@-moz-document url-prefix("chrome:") {
+
+  /* --anim-urlbar-gradient: #136d19, #254e6a, #79ff9f; */
+  /* * smoother, darker, still bright */
+  /* --anim-urlbar-gradient: #44a05e, #1f435c, #44a05e; */
+  /* * just about right */
+  /* --anim-urlbar-gradient: #43ea7273, #255475b7, #43ea7273; */
+  /* --anim-urlbar-gradient: #33f96b54, #24699a8c, #33f96b54; */
+
+  /* Firefox URL Bar Loading Animation */
+  :root {
+    /*         --w-urlbar-bg_color: #75ffafa1, #2d63b4a2, #75ffafa1; */
+    --url-c1: #ff8b1f67;
+    --url-c2: #e733f85a;
+    /* --url-c1: #33f96b54; */
+    /* --url-c2: #24699a8c; */
+
+    --w-urlbar-bg_color: var(--url-c1), var(--url-c2), var(--url-c1);
+  }
+
+  #urlbar {
+    .urlbar-input-container::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, var(--w-urlbar-bg_color));
+      background-size: 200% 100%;
+      animation: urlbar-loading-gradient 2s linear reverse infinite;
+      animation-play-state: paused;
+      opacity: 0;
+      transition: opacity 512ms;
+      z-index: -1;
+    }
+  }
+
+  #main-window:has(.tabbrowser-tab[selected][busy]) .urlbar-input-container::before {
+    animation-play-state: running;
+    opacity: 1;
+    transition: opacity 512ms;
+  }
+
+  /*   #main-window .urlbar-input-container::before {
+      animation-play-state: running;
+      opacity: 1;
+    } */
+
+  #main-window .urlbar-input {
+    color: white !important;
+  }
+
+  @keyframes urlbar-loading-gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 200% 50%;
+    }
+  }
+}
+
+/* Windows has 1px missing space on top of window, but not when accent colour is
+   * applied to the title bar. */
+@media (-moz-platform: windows) and (not (-moz-windows-accent-color-in-titlebar)) {
+  :root[sizemode="normal"][tabsintitlebar]:not([inFullscreen]) #navigator-toolbox {
+    padding-top: 1px !important;
+  }
+}
+
+/* Add a shadow when the toolbars move over content, eg. in macOS hovering over
+   * the menu bar in fullscreen mode. */
+/* #navigator-toolbox[style*="transform"] {
+    box-shadow: 0 -3px 5px 3px light-dark(rgb(0 0 0 / .3), rgb(0 0 0 / .6)) !important;
+  }
+   */
+/* Rounded Corners Tweak */
+/* @media { */
+/* Since Firefox 120, when the bookmarks bar is set to only open on new tabs,
+    * the bookmarks bar overlaps the #browser element. */
+
+/* Change the element that shifts the browser content to the correct position. */
+#main-window[BookmarksToolbarOverlapsBrowser] .newTabBrowserPanel,
+#main-window[BookmarksToolbarOverlapsBrowser] #sidebar-box {
+  padding-top: 0 !important;
+}
+
+:main-window[BookmarksToolbarOverlapsBrowser] #browser {
+  margin-top: var(--bookmarks-toolbar-overlapping-browser-height);
+}
+
+/* Make sure that the toolbars are not positioned in-front of the browser
+    * element. */
+#main-window[BookmarksToolbarOverlapsBrowser] #navigator-toolbox:not([style*="z-index"]) {
+  z-index: auto !important;
+}
+
+/* Move the browser element in-front of the toolbars when on the new tab page. */
+#main-window:not([BookmarksToolbarOverlapsBrowser]) #browser {
+  z-index: 1 !important;
+}
+
+/* Variables used for the rounded corners. */
+#main-window:not([chromehidden~="toolbar"]) {
+  --uc-tweak-rounded-corners-padding: 2px;
+  --uc-tweak-rounded-corners-radius: 5px;
+  --browser-frame-bgcolor: var(--lwt-accent-color);
+
+  /* Different shadow for higher resolution displays. */
+  @media (resolution > 1.8dppx) {
+    --uc-tweak-rounded-corners-shadow:
+      0 0 0.5px 0.5px rgb(0 0 0 / 0.06),
+      0 0.5px 1.5px rgb(0 0 0 / 0.1);
+  }
+
+  /*     @media {
+        --browser-frame-bgcolor: var(--lwt-accent-color);
+      } */
+}
+
+/* } */
+
+/* Hide border below titlebar on macOS, as its titlebar already has a border. */
+@media (-moz-platform: macos) {
+  :root[chromehidden~="toolbar"][chromehidden~="location"][chromehidden~="directories"] {
+    border-top: none !important;
+  }
+}
+
+/* Remove separator between toolbars and the browser window. */
+#navigator-toolbox {
+  border-bottom: none !important;
+}
+
+/* Disable rounded corners in fullscreen, only if the toolbar is hidden. */
+:root[inFullscreen] #navigator-toolbox[style*="margin-top"]+#browser,
+:root[inDOMFullscreen] #browser {
+  --uc-tweak-rounded-corners-padding: 0;
+  --uc-tweak-rounded-corners-radius: 0;
+  --uc-tweak-rounded-corners-shadow: unset;
+}
+
+/* Apply rounded corners to the browser container. */
+#tabbrowser-tabbox .browserStack {
+  margin-inline-start: 0px !important;
+  margin-inline-end: var(--uc-tweak-rounded-corners-padding) !important;
+  margin-block-start: 0px !important;
+  margin-block-end: var(--uc-tweak-rounded-corners-padding) !important;
+  border-radius: var(--uc-tweak-rounded-corners-radius) !important;
+  box-shadow: none !important;
+  background-color: var(--tabpanel-background-color) !important;
+  position: relative !important;
+
+  /* Use pseudo element overlay to simulate rounded corners, similar to the
+       * tab corners, fixes bug with backdrop-filter. */
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    /* Draw toolbar background on the negative corner space, then draw the
+         * same from the browser window shadow on top. */
+    /*     box-shadow:
+        var(--uc-tweak-rounded-corners-shadow, 0 0 transparent),
+        0 0 0 16px var(--browser-frame-bgcolor) !important; */
+    clip-path: inset(0);
+    pointer-events: none;
+  }
+}
+
+/* Apply rounded corners to the browser content. */
+#tabbrowser-tabbox .browserStack browser {
+  margin-top: 2px !important;
+  border-radius: var(--uc-tweak-rounded-corners-radius) !important;
+}
+
+/* Prevent status panel corners and shadow from appearing outside the browser. */
+#statuspanel {
+  overflow: hidden;
+}
+
+/* Devtools window when docked to the left or right. */
+.devtools-toolbox-side-iframe {
+  margin-block-end: var(--uc-tweak-rounded-corners-padding) !important;
+  border-radius: var(--uc-tweak-rounded-corners-radius) !important;
+  overflow: hidden !important;
+  box-shadow: var(--uc-tweak-rounded-corners-shadow) !important;
+
+  /* Devtools window when docked to the left. */
+  &:first-child {
+    margin-inline-start: 0px !important;
+    padding-right: var(--uc-tweak-rounded-corners-padding) !important;
+  }
+
+  /* Devtools window when docked to the right. */
+  &:last-child {
+    margin-inline-end: var(--uc-tweak-rounded-corners-padding) !important;
+  }
+}
+
+/* Devtools window when docked to the bottom. */
+.devtools-toolbox-bottom-iframe {
+  margin-right: var(--uc-tweak-rounded-corners-padding) !important;
+  margin-bottom: var(--uc-tweak-rounded-corners-padding) !important;
+  margin-block-start: 0 !important;
+  border-radius: var(--uc-tweak-rounded-corners-radius) !important;
+  overflow: hidden !important;
+  box-shadow: var(--uc-tweak-rounded-corners-shadow) !important;
+}
+
+/* Hide devtools splitter. */
+.devtools-side-splitter,
+.devtools-horizontal-splitter {
+  background-color: transparent !important;
+}
+
+/* Remove sidebar border when not in full screen. */
+:not(:root[inFullscreen] #navigator-toolbox[style*="margin-top"])+#browser #sidebar-splitter {
+  border-inline-width: 0 !important;
+}
+
+:root[sizemode="normal"] #tabbrowser-tabbox .browserStack {
+  margin-inline-end: 8px !important;
+  margin-block-end: 8px !important;
+}
+
+/* Apply colour to the frame around the browser window. */
+#browser {
+  background-color: var(--browser-frame-bgcolor, var(--lwt-accent-color));
+
+  /* Change colour of page when loading */
+  #tabbrowser-tabpanels {
+    background-color: transparent !important;
+  }
+}
+
+.theme-body {
+  background: var(--in-content-page-background) !important;
+}
+
+#urlbar-container {
+  margin-left: 7px !important;
+}
+
+#nav-bar {
+  margin-top: 3px !important;
+  margin-bottom: -1px !important;
+}
+
+#urlbar-background {
+  outline: 2px solid transparent;
+  border-radius: 5px !important;
+}
+
+#main-window:not(:has(.tabbrowser-tab[selected][busy])) {
+
+  #urlbar-background,
+  #searchbar {
+    background: var(--base-background-color-1) !important;
+    transition: var(--duration-faster) var(--motion-swing) !important;
+  }
+
+  #urlbar[focused]>#urlbar-background {
+    outline: var(--focus-outline) !important;
+  }
+
+  #urlbar>#urlbar-background,
+  #urlbar[open]>#urlbar-background {
+    border-color: 0px solid transparent !important;
+    box-shadow: none !important;
+  }
+
+  #urlbar[breakout][breakout-extend]>#urlbar-background {
+    animation-name: urlbar-grow;
+    animation-duration: var(--duration-faster) !important;
+    animation-timing-function: var(--motion-swing) !important;
+  }
+}
+
+@keyframes urlbar-grow {
+  0% {
+    transform: scaleX(.99) scaleY(.98);
+  }
+
+  100% {
+    transform: scale(1.0);
+  }
+}
+
+
+
+/* .urlbar-page-action[id="star-button-box"] {
+  display: none !important;
+} */
+
+.urlbar-icon.urlbar-go-button {
+  display: none !important;
+}
+
+/* remove excess spacer in toolbar */
+
+toolbar.browser-toolbar toolbarspring#vertical-spacer.chromeclass-toolbar-additional.titlebar-spacer[removable="false"] {
+  display: none !important;
+}
+
+.browserStack {
+  padding: 0 6px 6px 0;
+  mix-blend-mode: screen !important;
+}

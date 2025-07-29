@@ -1,0 +1,111 @@
+:root {
+    --base-background-color-1: #0E1017;
+    --base-background-color-2: var(--base-background-color-1);
+    --base-background-color-3: #1F2430;
+    --base-background-color-4: #15171F;
+    --accent-color: #FBB153;
+    --background-color-statusbar: var(--base-background-color-2);
+    --text-color-statusbar: #3CCAFF;
+    --border-color-statusbar: #3CCAFF;
+    --text-color-normal: white;
+  }
+
+:root {
+    --in-content-page-background: var(--base-background-color-4) !important;
+}
+
+:root {
+    /* --tabpanel-background-color matches $in-content-page-background in newtab
+       (browser/components/newtab/content-src/styles/_variables.scss) */
+    --tabpanel-background-color: var(--in-content-page-background) !important;
+
+    @media (-moz-content-prefers-color-scheme: dark) {--tabpanel-background-color: var(--in-content-page-background) !important;}
+
+    &[privatebrowsingmode=temporary] {
+        /* Value for --in-content-page-background in aboutPrivateBrowsing.css.
+         !important overrides the direct setting of this variable in
+         ThemeVariableMap.sys.mjs when the user has a theme that defines
+         ntp_background. */
+        --tabpanel-background-color: var(--in-content-page-background) !important;
+
+        /* stylelint-disable-next-line media-query-no-invalid */
+        @media (-moz-bool-pref: "browser.privatebrowsing.felt-privacy-v1") {
+            --tabpanel-background-color: linear-gradient(45deg, #722291 0%, #45278D 50%, #393473 100%) !important;
+        }
+    }
+}
+
+
+html {
+    background: var(--in-content-page-background) !important;
+}
+
+/* PDF Viewer */
+
+:root {
+    --dir-factor: 1;
+
+    --sidebar-width: 200px;
+    --sidebar-transition-duration: 200ms;
+    --sidebar-transition-timing-function: ease;
+
+    --toolbar-height: 32px;
+    --toolbar-horizontal-padding: 1px;
+    --toolbar-vertical-padding: 2px;
+    --icon-size: 16px;
+
+    --toolbar-icon-opacity: 0.7;
+    --doorhanger-icon-opacity: 0.9;
+    --doorhanger-height: 8px;
+
+    --main-color: rgb(208, 202, 202) !important;
+    --body-bg-color: var(--base-background-color-1) !important;
+    --progressBar-color: rgb(10, 132, 255);
+    --progressBar-bg-color: rgb(221, 221, 222);
+    --progressBar-blend-color: rgb(116, 177, 239);
+    --scrollbar-color: auto;
+    --scrollbar-bg-color: auto;
+    --toolbar-icon-bg-color: rgb(208, 202, 202) !important;
+    --toolbar-icon-hover-bg-color: rgb(255, 196, 196) !important;
+
+    --sidebar-narrow-bg-color: rgb(212, 212, 215 / 0.9);
+    --sidebar-toolbar-bg-color: #15171F !important;
+    --toolbar-bg-color: #1F2430 !important;
+    --toolbar-border-color: #1F2430 !important;
+    --toolbar-box-shadow: none;
+    --toolbar-border-bottom: none;
+    --toolbarSidebar-box-shadow: inset calc(-1px * var(--dir-factor)) 0 0 rgb(0, 0, 0 / 0.25), 0 1px 0 rgb(0, 0, 0 / 0.15), 0 0 1px rgb(0, 0, 0 / 0.1);
+    --toolbarSidebar-border-bottom: none;
+    --button-hover-color: color-mix(in srgb, currentColor 17%, transparent);
+    --toggled-btn-color: #519ABA !important;
+    --toggled-btn-bg-color: rgb(0, 0, 0 / 0.3);
+    --toggled-hover-active-btn-color: rgb(0, 0, 0 / 0.4);
+    --toggled-hover-btn-outline: none;
+    --dropdown-btn-bg-color: #15171F !important;
+    --dropdown-btn-border: none;
+    --separator-color: rgb(0, 0, 0 / 0.3);
+    --field-color: var(--main-color) !important;
+    --field-bg-color: var(--base-background-color-1) !important;
+    --field-border-color: var(--base-background-color-1) !important;
+    /* --treeitem-color: rgb(0, 0, 0 / 0.8); */
+    --treeitem-color: rgb(208, 202, 202) !important;
+    --treeitem-bg-color: rgb(0, 0, 0 / 0.15);
+    /* --treeitem-hover-color: rgb(0, 0, 0 / 0.9); */
+    --treeitem-hover-color: rgb(255, 196, 196) !important;
+    --treeitem-selected-color: rgb(255, 198, 112) !important;
+    --treeitem-selected-bg-color: rgb(0, 0, 0 / 0.25);
+    --thumbnail-hover-color: rgb(0, 0, 0 / 0.1);
+    --thumbnail-selected-color: rgb(0, 0, 0 / 0.2);
+    --doorhanger-bg-color: rgb(255, 255, 255);
+    --doorhanger-border-color: rgb(12, 12, 13 / 0.2);
+    --doorhanger-hover-color: rgb(12, 12, 13);
+    --doorhanger-separator-color: rgb(222, 222, 222);
+    --dialog-button-border: none;
+    --dialog-button-bg-color: rgb(12, 12, 13 / 0.1);
+    --dialog-button-hover-bg-color: rgb(12, 12, 13 / 0.3);
+}
+
+.pdfViewer {
+    filter: invert(1) hue-rotate(180deg) !important;
+}
+
