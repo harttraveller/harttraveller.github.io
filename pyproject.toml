@@ -13,6 +13,8 @@ dependencies = [
 
 [dependency-groups]
 dev = [
+    "matplotlib>=3.10.3",
     "mkdocs-roamlinks-plugin>=0.3.2",
     "mkdocstrings-python>=1.16.12",
+    "numpy>=2.3.2",
 ]
