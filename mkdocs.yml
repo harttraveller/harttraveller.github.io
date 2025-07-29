@@ -35,13 +35,13 @@ plugins:
 - privacy
 - markdown-exec
 - awesome-nav
+# - roamlinks
 - blog:
     blog_dir: .
 # - callouts
 # - embed_file:
 #     callouts: true
 # - autorefs
-# - roamlinks
 # - rss:
 #     match_path: blog/posts/.*
 #     date_from_meta:
