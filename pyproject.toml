@@ -8,6 +8,7 @@ dependencies = [
     "markdown-exec>=1.11.0",
     "mkdocs-awesome-nav>=3.1.2",
     "mkdocs-material>=9.6.16",
+    "mkdocs-roamlinks-plugin>=0.3.2",
     "mkdocs-rss-plugin>=1.17.3",
 ]
 
