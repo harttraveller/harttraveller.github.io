@@ -50,6 +50,9 @@ markdown_extensions:
 - pymdownx.snippets
 - pymdownx.superfences
 - pymdownx.tilde
+- toc:
+    permalink: "#"
+    title: Go To
 
 extra:
   generator: false
