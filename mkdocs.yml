@@ -53,6 +53,8 @@ markdown_extensions:
 - toc:
     permalink: "#"
     title: Go To
+- pymdownx.arithmatex:
+    generic: true
 
 extra:
   generator: false
