@@ -24,6 +24,8 @@ plugins:
 - blog
 - tags
 - offline
+- markdown-exec
+- awesome-nav
 
 extra:
   generator: false
