@@ -35,6 +35,11 @@ plugins:
 - privacy
 - markdown-exec
 - awesome-nav
+# - callouts
+# - embed_file:
+#     callouts: true
+# - autorefs
+# - roamlinks
 
 markdown_extensions:
 - admonition
