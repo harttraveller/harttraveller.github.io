@@ -14,6 +14,7 @@ dependencies = [
 
 [dependency-groups]
 dev = [
+    "lark>=1.2.2",
     "matplotlib>=3.10.3",
     "mkdocstrings-python>=1.16.12",
     "numpy>=2.3.2",
