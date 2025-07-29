@@ -534,11 +534,16 @@ details[open] summary {
 // post background
 
 .md-post--excerpt {
-  margin-bottom: 3.2rem;
-  background: $bg-2;
-  margin: 1rem 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 0.2rem;
+    margin-bottom: 3.2rem;
+    background: $bg-2;
+    margin: 0.5rem 1rem 1rem 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.2rem;
+    border: 1px solid transparent;
+}
+.md-post--excerpt:hover {
+    border: 1px solid $accent-a4;
+    transition: $transition-normal !important;
 }
 
 // width == max
