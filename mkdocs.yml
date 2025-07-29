@@ -1,5 +1,6 @@
 site_name: Hart Traveller
 docs_dir: pages
+site_url: harttraveller.com
 
 theme:
   name: material
