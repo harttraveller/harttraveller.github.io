@@ -36,9 +36,6 @@ plugins:
 - markdown-exec
 - awesome-nav
 
-extra:
-  generator: false
-
 markdown_extensions:
 - admonition
 - attr_list
@@ -53,3 +50,6 @@ markdown_extensions:
 - pymdownx.snippets
 - pymdownx.superfences
 - pymdownx.tilde
+
+extra:
+  generator: false
