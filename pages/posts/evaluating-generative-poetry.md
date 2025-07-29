@@ -10,9 +10,11 @@ Random experiments with generative poetry and attempting to write executable poe
 
 <!-- more -->
 
-I recently watched the video: [The Hellish Landscape of Published AI Poetry](https://www.youtube.com/watch?v=zJ6xor2SLNU). The author's point that AI generated poetry falls short of human poetry (or at least the really good human poetry) seems reasonable to me. Of course, if the value of poetry is derived in part by it's nature as a human created entity, then by definition AI generated poetry will always fall short. That said, even though the video was published yesterday, most of the models criticized in the video were fairly old, so I thought it would be fair to test some of the newer models, and ended up trying to write an executable poem. I loved the results so much that I felt compelled to publish them somewhere - hence, this post.
+I recently watched the video: [The Hellish Landscape of Published AI Poetry](https://www.youtube.com/watch?v=zJ6xor2SLNU). The author asserts that AI generated poetry falls short of human poetry. If the value of poetry is derived in part by its nature as a human created entity, then by definition AI generated poetry will always fall short, no matter how beautiful? Perhaps, however, the generative poetry showcased in the video does unambiguously suck.
 
-## Claude 3 Samples
+In fairness, most of the models criticized in the video were fairly old, so I thought it would be fair to test some of the newer models, and ended up trying to write an executable poem. I loved the results so much that I felt compelled to publish them somewhere - hence, this post.
+
+## Proompt Engineering
 
 I started with the following:
 
@@ -20,7 +22,7 @@ I started with the following:
 
 Which resulted in:
 
-??? quote "The Endless Inquiry"
+!!! quote "The Endless Inquiry"
 
     I set about to find the truth, to answer every query.
 
@@ -42,11 +44,11 @@ Which resulted in:
 
     Though answers bring no sure mindset, the journey is what matters.
 
-The result is a little bit cliche of course, but I found it to be substantially better and more interesting than the examples in the original video. As with all such models, generating interesting variants is straightforward.
+The result is a little bit cliche of course, but I found it to be substantially better and more interesting than the examples in the original video. As with all such models, generating interesting variants is straightforward. Several variants are included below.
 
-> Can you modify this poem, keeping the style of mark twain, but also mix in some of the existential terror that might be embodied in a beksinski painting?
+??? quote "Variant 1: The Endless Abyss"
 
-??? quote "The Endless Abyss"
+    > Can you modify this poem, keeping the style of mark twain, but also mix in some of the existential terror that might be embodied in a beksinski painting?
 
     I sought the truth, a noble quest, but answers brought no peace.
 
@@ -72,9 +74,10 @@ The result is a little bit cliche of course, but I found it to be substantially 
 
     Though answers lead to certain doom, I stay the morbid course.
 
-> Great, now can you modify it, again keeping the style of mark twain, but instead of beksinski, try to embody the feeling given by a painting by pascal campion, and the humanistic optimism of carl rogers, abraham maslow, and viktor frankl?
 
-??? quote "The Endless Exploration"
+??? quote "Variant 2: The Endless Exploration"
+    
+    > Great, now can you modify it, again keeping the style of mark twain, but instead of beksinski, try to embody the feeling given by a painting by pascal campion, and the humanistic optimism of carl rogers, abraham maslow, and viktor frankl?
 
     I ventured forth, a seeker true, in search of wisdom's light.
 
@@ -100,53 +103,53 @@ The result is a little bit cliche of course, but I found it to be substantially 
 
     For in this quest, I've found my home, where joy and peace abide.
 
-## Code as Poetry
+## An Executable Poem?
 
-These were pretty good, and got me thinking about how you could write a python script that functions both as an executable script, and is itself a poem or work of art. I tried to get claude to write something, with mixed results:
+These were pretty good, and got me thinking about how you could write a python script that functions both as an executable script, and is itself a poem or work of art. I tried to get claude to write something, with mixed results.
 
-> OK. I'm having a great time and really enjoying reading your poems. For context, I'm a machine learning engineer. Here's a fun creative challenge I'm curious to explore with you: do you think you can write a poem in valid python code, that explores this idea of seeking truth a la mark twain poems you wrote - but in a way such that the meaning of the poem is implied by the code - which when executed, provides some output/answer that completes the poem, referencing itself, and elucidating the underlying structure of this neverending search for truth?
+??? code "Meh Script"
 
-This yielded the following result:
+    > OK. I'm having a great time and really enjoying reading your poems. For context, I'm a machine learning engineer. Here's a fun creative challenge I'm curious to explore with you: do you think you can write a poem in valid python code, that explores this idea of seeking truth a la mark twain poems you wrote - but in a way such that the meaning of the poem is implied by the code - which when executed, provides some output/answer that completes the poem, referencing itself, and elucidating the underlying structure of this neverending search for truth?
 
-```python
-def seek_truth(questions, answers=None):
-    """
-    A quest for truth, in code enshrined,
-    Where questions lead and answers hide.
-    """
-    if answers is None:
-        answers = {}
+    ```python
+    def seek_truth(questions, answers=None):
+        """
+        A quest for truth, in code enshrined,
+        Where questions lead and answers hide.
+        """
+        if answers is None:
+            answers = {}
 
-    for question in questions:
-        if question not in answers:
-            answers[question] = seek_truth(generate_questions(question), answers)
+        for question in questions:
+            if question not in answers:
+                answers[question] = seek_truth(generate_questions(question), answers)
 
-    return answers
+        return answers
 
-def generate_questions(answer):
-    """
-    From each answer, new questions spring,
-    A fractal growth, a curious thing.
-    """
-    return [f"What if {answer}?", f"Why {answer}?", f"How {answer}?"]
+    def generate_questions(answer):
+        """
+        From each answer, new questions spring,
+        A fractal growth, a curious thing.
+        """
+        return [f"What if {answer}?", f"Why {answer}?", f"How {answer}?"]
 
-if __name__ == "__main__":
-    initial_question = "What is truth?"
-    truth_quest = seek_truth([initial_question])
+    if __name__ == "__main__":
+        initial_question = "What is truth?"
+        truth_quest = seek_truth([initial_question])
 
-    print("In seeking truth, a journey starts,")
-    print("With questions posed, like hopeful darts.")
-    print("Each answer found, a brief respite,")
-    print("Before new queries come to light.")
-    print()
-    print("The search goes on, forever more,")
-    print("A recursive quest, a code-borne lore.")
-    print("For in this self-referential game,")
-    print("The truth and code are one and same.")
-    print()
-    print(f"The answers found, a nested maze:")
-    print(truth_quest)
-```
+        print("In seeking truth, a journey starts,")
+        print("With questions posed, like hopeful darts.")
+        print("Each answer found, a brief respite,")
+        print("Before new queries come to light.")
+        print()
+        print("The search goes on, forever more,")
+        print("A recursive quest, a code-borne lore.")
+        print("For in this self-referential game,")
+        print("The truth and code are one and same.")
+        print()
+        print(f"The answers found, a nested maze:")
+        print(truth_quest)
+    ```
 
 This is a neat idea, but doesn't actually create very meaningful outputs. After a few other unsatisfying variants, I decided to just copy the code and manually adapt it myself using langchain and the OpenAI API.
 
@@ -160,99 +163,101 @@ The general idea is that script - having no stopping condition or ending point -
 
 That said, the perfect is the enemy of the good, and I'd rather just publish this and then let others make of it what they will than sit on it indefinitely.
 
-```python
-import os
-from dotenv import load_dotenv
-from langchain_openai import ChatOpenAI
-from langchain_core.prompts import ChatPromptTemplate
+??? code "Executable 'Poem'"
 
-load_dotenv()
+    ```python
+    import os
+    from dotenv import load_dotenv
+    from langchain_openai import ChatOpenAI
+    from langchain_core.prompts import ChatPromptTemplate
 
-llm = ChatOpenAI(openai_api_key=os.getenv("OPENAI_API_KEY"), model="gpt-4-1106-preview")
+    load_dotenv()
+
+    llm = ChatOpenAI(openai_api_key=os.getenv("OPENAI_API_KEY"), model="gpt-4-1106-preview")
 
 
-entity_extraction_prompt = ChatPromptTemplate.from_messages(
-    [
-        (
-            "system",
+    entity_extraction_prompt = ChatPromptTemplate.from_messages(
+        [
             (
-                "Your task is to extract a random entity/word from the user input text. "
-                "Be sure to quote the entity verbatim, but only keep alphanumeric characters."
-                "Also ensure you do not return the word or words in the list of excluded words."
-                "Finally, only include the token or tokens of the extracted entity in your response."
+                "system",
+                (
+                    "Your task is to extract a random entity/word from the user input text. "
+                    "Be sure to quote the entity verbatim, but only keep alphanumeric characters."
+                    "Also ensure you do not return the word or words in the list of excluded words."
+                    "Finally, only include the token or tokens of the extracted entity in your response."
+                ),
             ),
-        ),
-        ("user", "Input text: {text}. Excluded words: {exclude}"),
-    ]
-)
+            ("user", "Input text: {text}. Excluded words: {exclude}"),
+        ]
+    )
 
-poetic_answer_prompt = ChatPromptTemplate.from_messages(
-    [
-        (
-            "system",
+    poetic_answer_prompt = ChatPromptTemplate.from_messages(
+        [
             (
-                "Please provide an answer to the following question in the poetic style of the named poet, author, or artist."
-                "Your answer must be one sentence."
+                "system",
+                (
+                    "Please provide an answer to the following question in the poetic style of the named poet, author, or artist."
+                    "Your answer must be one sentence."
+                ),
             ),
-        ),
-        ("user", "Style: {poet}. Question: What is {entity}?"),
-    ]
-)
+            ("user", "Style: {poet}. Question: What is {entity}?"),
+        ]
+    )
 
-ee_chain = entity_extraction_prompt | llm
+    ee_chain = entity_extraction_prompt | llm
 
-pa_chain = poetic_answer_prompt | llm
-
-
-def extract_entity(text: str, exclude: list[str] | None = None) -> str:
-    return ee_chain.invoke({"text": text, "exclude": str(exclude)}).content
+    pa_chain = poetic_answer_prompt | llm
 
 
-def get_poet(exclude: list[str]) -> str:
-    return llm.invoke(
-        (
-            "What is the name of a well known poet, writer, author, or artist? "
-            "Only respond with their first and last name."
-            f"Note that your answer cannot include any of: {str(exclude)}"
-        )
-    ).content
+    def extract_entity(text: str, exclude: list[str] | None = None) -> str:
+        return ee_chain.invoke({"text": text, "exclude": str(exclude)}).content
 
 
-def get_answer(entity: str, poet: str) -> str:
-    return pa_chain.invoke({"poet": poet, "entity": entity}).content
+    def get_poet(exclude: list[str]) -> str:
+        return llm.invoke(
+            (
+                "What is the name of a well known poet, writer, author, or artist? "
+                "Only respond with their first and last name."
+                f"Note that your answer cannot include any of: {str(exclude)}"
+            )
+        ).content
 
 
-def seek_truth(
-    entity: str = "reality",
-    poet: str = "Mark Twain",
-    prev_entities: list[str] = list(),
-    prev_poets: list[str] = list(),
-):
-    """
-    In this eternal quest for truth,
-    We dive into recursive loops.
-    """
-    print(f"What is {entity}?")
-    answer = get_answer(entity, poet)
-    print(answer)
-    print()
-    new_entity = extract_entity(answer, prev_entities)
-    prev_entities.append(new_entity)
-    new_poet = get_poet(prev_poets)
-    prev_poets.append(new_poet)
-    if new_entity:
-        seek_truth(new_entity, new_poet, prev_entities, prev_poets)
-    else:
-        # this line never actually executes
-        print("The search goes on, a never-ending dance,")
-        print("As questions bloom with each new glance.")
+    def get_answer(entity: str, poet: str) -> str:
+        return pa_chain.invoke({"poet": poet, "entity": entity}).content
 
 
-if __name__ == "__main__":
-    seek_truth()
-```
+    def seek_truth(
+        entity: str = "reality",
+        poet: str = "Mark Twain",
+        prev_entities: list[str] = list(),
+        prev_poets: list[str] = list(),
+    ):
+        """
+        In this eternal quest for truth,
+        We dive into recursive loops.
+        """
+        print(f"What is {entity}?")
+        answer = get_answer(entity, poet)
+        print(answer)
+        print()
+        new_entity = extract_entity(answer, prev_entities)
+        prev_entities.append(new_entity)
+        new_poet = get_poet(prev_poets)
+        prev_poets.append(new_poet)
+        if new_entity:
+            seek_truth(new_entity, new_poet, prev_entities, prev_poets)
+        else:
+            # this line never actually executes
+            print("The search goes on, a never-ending dance,")
+            print("As questions bloom with each new glance.")
 
-Even though it didn't work perfectly, I have to say that I'm quite satisfied with the results! I've included the full logs before I terminated the program. I was in a rush and forgot to log which author's style was being invoked, but in retrospect now that information is lost, perhaps it makes it more interesting to try and guess. Many of the styles are ambiguous, but some are obvious.
+
+    if __name__ == "__main__":
+        seek_truth()
+    ```
+
+Even though it didn't work perfectly, I'm quite satisfied with the results! I've included the full logs before I terminated the program. I was in a rush and forgot to log which author's style was being invoked, but in retrospect now that information is lost, perhaps it makes it more interesting to try and guess. Many of the styles are ambiguous, but some are obvious.
 
 ## Program Logs
 
@@ -263,8 +268,7 @@ Again, it didn't work perfectly. The reader is free to adapt use/adapt the scrip
 
 I've included some of my favorites below, though honestly it was hard to choose. So many of these ended up great. I'm not sure why there is such a heavy focus on "threads", "weaving", and "labyrinths" - but it strangely fits as these are objects I personally invoke in a metaphorical sense all the time. There are also some ones I found funny/very easy to identify which author was the stylistic foundation for the quote - a few of these are marked too.
 
-
-### Favorite Results
+### Decent Results
 
 !!! quote "Humanity"
     Humanity, a quilt of myriad souls stitched with the thread of desires and dreams, frayed by sorrows, yet ever-expanding in the grasp of our shared, unyielding hope.
@@ -308,8 +312,7 @@ I've included some of my favorites below, though honestly it was hard to choose.
 !!! quote "Truth"
     In the labyrinth of human existence, truths are the slender threads we clutch at, hoping to find our way out, only to discover they are part of the maze itself.
 
-
-### Humorous/Identifiable Results
+### Identifiable Results
 
 !!! quote "Morality"
     A complex tapestry, woven with threads of right and wrong, that guides us through life's twisting corridors, much like the ever-shifting staircases of Hogwarts.
@@ -328,8 +331,6 @@ I've included some of my favorites below, though honestly it was hard to choose.
 
 !!! quote "Bob"
     Bob's the name that echoes in the vast and vestigial void, borne on the wind of forgotten realms and etched into the very marrow of the world, a moniker as old as time and as enigmatic as the silence between stars.
-
-
 
 ### Full Logs
 
