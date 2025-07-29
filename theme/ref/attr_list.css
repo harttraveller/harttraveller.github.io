@@ -1,0 +1,21 @@
+/* CSS util classes usable via attr_list markdown extension */
+
+/*
+invert anything that has a white background (eg: images) - just add this attribute as class to the item, see:
+https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#attribute-lists
+*/
+
+/* Invert .invert images of *text or diagrams* */
+.invert,
+img[src*=".invert.png"],
+img[src*=".invert.jpg"],
+img[src*=".invert.jpeg"],
+img[src*=".invert.pdf"],
+img[src*=".invert.svg"] {
+    filter: invert(97%) sepia(14%) saturate(1800%) hue-rotate(195deg) brightness(115%) contrast(95%) !important;
+}
+
+
+.accent.text {
+    color: var(--accent) !important;
+}

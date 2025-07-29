@@ -1,7 +1,11 @@
 ---
 title: Test Page
+draft: false
 tags: [test, page, test/page, test-page]
 categories: [cat1, cat2]
+date:
+  created: 2023-12-31
+  updated: 2024-01-02
 ---
 
 ## Heading 2
@@ -93,7 +97,7 @@ class SizedBuffer(Sized, Buffer, Protocol): ...
 
 ```
 
-#### Heading 4
+#### H4: Table
 
 | Item              | In Stock | Price |
 | :---------------- | :------: | ----: |

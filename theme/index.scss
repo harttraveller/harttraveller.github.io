@@ -2,12 +2,73 @@
 
 $page-width: 100%; // set the width of the page
 
-$accent: #cd4e81;
+$debug-border: 1px solid red !important;
 
-$bg-1: #0E1017;
+$bg-1: #0e1017;
 $bg-2: hsl(228, 26%, 12%);
 $bg-3: hsl(220, 18%, 17%);
 $bg-4: hsl(222, 16%, 25%);
+
+$silver: hsl(219, 12%, 46%);
+
+$light-1: #d7d7d7;
+$light-2: #c1bebe;
+$light-2: #afabab;
+
+$accent: hsl(30, 100%, 57%);
+$accent-a1: hsla(30, 100%, 57%, 0.1);
+$accent-a4: hsla(30, 100%, 57%, 0.4);
+$accent-a7: hsla(30, 100%, 57%, 0.7);
+
+$external-link: rgb(131, 147, 248);
+$external-link-hover: rgb(184, 211, 251);
+
+$border-width-normal: 0.075rem;
+$border-width-slim: 0.05rem;
+$border-width-slimmer: 0.025rem;
+$border-radius: 0.2rem;
+
+$border-light: $border-width-normal solid $light-1;
+$border-transparent: $border-width-normal solid transparent;
+
+$border-secondary: $border-width-normal solid $accent-a4;
+$border-secondary-active: $border-width-normal solid $accent;
+
+$border-faint: $border-width-normal solid $silver;
+
+$duration-faster: 128ms;
+$duration-normal: 256ms;
+$duration-slower: 500ms;
+
+$motion-function: cubic-bezier(0, 0.55, 0.45, 1);
+
+$transition-faster: $duration-faster $motion-function;
+$transition-normal: $duration-normal $motion-function;
+$transition-slower: $duration-slower $motion-function;
+
+$h1-weight: bold !important;
+$h1-size: 1.8rem !important;
+$h1-color: $light-1;
+
+$h2-weight: normal !important;
+$h2-size: 1.5rem;
+$h2-color: $light-2;
+
+$h3-weight: normal !important;
+$h3-size: 1.3rem;
+$h3-color: $light-2;
+
+$h4-weight: normal !important;
+$h4-size: 1.2rem;
+$h4-color: $light-2;
+
+$h5-weight: normal !important;
+$h5-size: 1.1rem;
+$h5-color: $light-2;
+
+$h6-weight: normal !important;
+$h6-size: 1rem;
+$h6-color: $light-2;
 
 // ASSETS
 
@@ -18,24 +79,20 @@ $svg-h4: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" wi
 $svg-h5: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heading-5"><path d="M4 12h8"/><path d="M4 18V6"/><path d="M12 18V6"/><path d="M17 13v-3h4"/><path d="M17 17.7c.4.2.8.3 1.3.3 1.5 0 2.7-1.1 2.7-2.5S19.8 13 18.3 13H17"/></svg>');
 $svg-h6: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heading-6"><path d="M4 12h8"/><path d="M4 18V6"/><path d="M12 18V6"/><circle cx="19" cy="16" r="2"/><path d="M20 10c-2 2-3 3.5-3 6"/></svg>');
 
-// STYLES / customizable
+// STYLES
 
 // set page width
 .md-grid {
     max-width: $page-width;
 }
 
-// STYLES / constant
-
-// remove header shadow and make header transparent
 .md-header.md-header--shadow {
-    box-shadow: none;
-    background: transparent;
+    box-shadow: none; // remove header shadow
+    background: transparent; // make header transparent
 }
 
-// remove meta footer
 .md-footer-meta.md-typeset {
-    display: none;
+    display: none; // remove meta footer
 }
 
 // set primary background
@@ -48,9 +105,565 @@ body,
     background: $bg-1;
 }
 
-.moz-custom-content-container {
-    background: red !important;
-    
-}
-// WIDTHS
+// tables
+.md-typeset {
+    table:not([class]) {
+        background-color: $bg-2;
+        border: $border-width-slim solid $silver;
+        border-radius: $border-radius;
+    }
 
+    table:not([class]) .doc-section-item {
+        transition: $transition-faster !important;
+    }
+
+    table:not([class]) .doc-section-item:hover {
+        background-color: $bg-1 !important;
+    }
+
+    table:not([class]) td {
+        border-top: $border-width-slimmer solid $silver;
+        padding: 0.9375em 1.25em;
+        vertical-align: top;
+    }
+}
+
+// sidebar headers
+.md-nav__title[for="__drawer"] {
+    display: none;
+}
+.md-nav__link,
+.md-nav__title {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+// image and video border radius
+img,
+video {
+    border-radius: $border-radius;
+}
+
+// various transitions
+a,
+.md-clipboard,
+.md-dialog,
+.md-content__inner,
+.md-nav__item,
+.md-nav__item .md-nav__link,
+.md-nav__item .md-nav__link .md-ellipsis {
+    transition: $transition-normal !important;
+}
+
+// clipboard copy message
+.md-dialog {
+    z-index: 100000;
+    border-radius: $border-radius;
+}
+
+// external links
+
+.md-content__inner a[href*="http"]:not(.md-content__button):not(.headerlink) {
+    color: $external-link !important;
+    text-decoration: none !important;
+    border-bottom: 1px dotted currentcolor;
+}
+
+.md-content__inner a[href*="http"]:hover:not(.md-content__button):not(.headerlink) {
+    color: $external-link-hover !important;
+}
+
+.md-content__inner a[href*="http"]:active:not(.md-content__button):not(.headerlink) {
+    color: $external-link-hover !important;
+}
+
+// internal links
+.md-content__inner a:not([href*="http"]):not(.md-content__button):not(.headerlink) {
+    color: $accent-a7 !important;
+    border-bottom: 1px dotted currentcolor;
+}
+
+.md-content__inner a:not([href*="http"]):hover:not(.md-content__button):not(.headerlink) {
+    color: $accent !important;
+}
+
+.md-content__inner a:not([href*="http"]):active:not(.md-content__button):not(.headerlink) {
+    color: $accent !important;
+}
+
+// code
+p code:not(.highlight) {
+    color: $accent;
+    background: $bg-3;
+    padding: 0.08rem 0.12rem;
+}
+
+.md-typeset .highlight pre {
+    background-color: $bg-2 !important;
+    border-radius: $border-radius !important;
+    border: none;
+}
+
+.md-typeset .highlight pre code {
+    color: inherit !important;
+}
+
+.md-typeset code {
+    background-color: transparent;
+    box-shadow: none !important;
+    padding: 0rem;
+}
+
+// line numbers
+.md-typeset .highlight:has(td.linenos) pre {
+    border: none;
+}
+
+.md-typeset .highlight:has(td.linenos) table.highlighttable {
+    background: $bg-2;
+}
+
+.md-typeset .highlight:has(td.linenos) tr {
+    border-radius: $border-radius;
+    border: none;
+}
+
+.md-typeset .highlight td.linenos .linenodiv span.normal {
+    background: $bg-2;
+}
+
+// fix line highlight
+
+.md-typeset .highlight .hll {
+    background-color: $accent-a1;
+    box-shadow: 1px 0 0 0 $accent inset;
+}
+
+// code with title
+
+.md-typeset .highlight th.filename {
+    background: transparent !important;
+}
+
+.md-typeset .highlight span.filename {
+    background: $bg-2 !important;
+    border-top-left-radius: $border-radius !important;
+    border-top-right-radius: $border-radius !important;
+}
+
+.md-typeset .highlight table.highlighttable:has(span.filename) {
+    border-radius: $border-radius !important;
+}
+
+// fix auto quoted source code
+
+.doc.doc-contents details[open]:has(.highlight) {
+    background-color: $bg-2 !important;
+    border-color: $accent !important;
+}
+
+.doc.doc-contents details[open] .highlight {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.doc.doc-contents details[open] .highlight tr {
+    border: none !important;
+}
+
+.doc.doc-contents details.quote {
+    padding: 0 !important;
+}
+
+.doc.doc-contents details.quote summary {
+    background-color: $bg-2 !important;
+    margin-left: 0rem !important;
+    margin-right: 0rem !important;
+}
+
+.md-typeset .highlight td.linenos {
+    background: transparent !important;
+}
+
+// sidebar navigation links
+
+.md-nav__item .md-nav__link:not(.md-nav__link--active):hover {
+    color: $accent !important;
+}
+
+.md-nav__item .md-nav__link--active {
+    color: $accent !important;
+}
+
+.md-nav.md-nav--primary .md-nav__item {
+    padding-left: 5px;
+}
+
+.md-nav.md-nav--primary .md-nav__item .md-nav__link:hover .md-ellipsis {
+    transform: translateX(2px) !important;
+}
+
+.md-nav.md-nav--primary .md-nav__item .md-nav__link--active .md-ellipsis {
+    transform: translateX(2px) !important;
+}
+
+.md-nav.md-nav--primary .md-nav__item:has(.md-nav__link--active) {
+    border-left: $border-width-slim solid $accent !important;
+}
+
+.md-nav__list[data-md-component="toc"] .md-nav__item {
+    padding-left: 4px;
+}
+
+.md-nav__list[data-md-component="toc"] .md-nav__item {
+    border-left: $border-width-slim solid transparent !important;
+}
+
+.md-nav__list[data-md-component="toc"] .md-nav__item .md-nav__link:hover .md-ellipsis {
+    transform: translateX(1px) !important;
+}
+
+.md-nav__list[data-md-component="toc"] .md-nav__item .md-nav__link--active .md-ellipsis {
+    transform: translateX(1px) !important;
+}
+
+.md-nav__list[data-md-component="toc"] .md-nav__item:has(.md-nav__link--active) {
+    border-left: $border-width-slim solid $accent !important;
+}
+
+// headings
+
+.md-content h1 {
+    margin-bottom: 0.5rem;
+}
+
+.md-content h1,
+.md-content h2,
+.md-content h3,
+.md-content h4,
+.md-content h5,
+.md-content h6 {
+    padding-bottom: 0em !important;
+    transition: $transition-normal !important;
+    color: $light-1;
+}
+
+// active heading
+
+h1:target,
+h1:target,
+h2:target,
+h3:target,
+h4:target,
+h5:target,
+h6:target {
+    color: $accent !important;
+}
+
+// other heading styles
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: none !important;
+    margin-top: 0rem !important;
+    margin-bottom: -0.2rem !important;
+}
+
+.md-content h1 {
+    font-weight: $h1-weight;
+    font-size: $h1-size;
+    color: $h1-color;
+}
+
+.md-content h2 {
+    font-weight: $h2-weight;
+    font-size: $h2-size;
+    color: $h2-color;
+}
+
+.md-content h3 {
+    font-weight: $h3-weight;
+    font-size: $h3-size;
+    color: $h3-color;
+}
+
+.md-content h4 {
+    font-weight: $h4-weight;
+    font-size: $h4-size;
+    color: $h4-color;
+}
+
+.md-content h5 {
+    font-weight: $h5-weight;
+    font-size: $h5-size;
+    color: $h5-color;
+}
+
+.md-content h6 {
+    font-weight: $h6-weight;
+    font-size: $h6-size;
+    color: $h6-color;
+}
+
+// heading links
+h1 .headerlink {
+    display: none !important;
+}
+
+.headerlink {
+    transform-origin: center !important;
+    transition: $transition-normal;
+}
+
+.headerlink:focus,
+.headerlink:hover {
+    color: $accent !important;
+    transform: scale(1.1) !important;
+}
+
+.headerlink:active {
+    transform: scale(1.05) !important;
+}
+
+:target > .headerlink {
+    color: $accent !important;
+    transform: scale(1.1) !important;
+}
+
+// mermaid
+
+.mermaid {
+    text-align: center;
+}
+
+// go to top
+
+.md-top {
+    background-color: $bg-2;
+    border: $border-light;
+    color: $light-1;
+    border-radius: $border-radius;
+    transition: $transition-normal !important;
+    z-index: 1000;
+    box-shadow: none;
+    padding: 0.4rem 0.8rem 0.4rem 0.5rem;
+    top: 20px !important;
+}
+
+.md-top:hover {
+    background-color: $light-1;
+    color: $bg-1;
+    border: $border-transparent;
+}
+
+// logo
+.md-header__button.md-logo {
+    transition: $transition-slower !important;
+}
+
+// clipboard
+
+.md-clipboard {
+    color: $light-2 !important;
+}
+.md-clipboard:hover {
+    color: $accent !important;
+}
+.md-clipboard:active {
+    transform: scale(0.9) !important;
+}
+
+// mathjax
+div[id="MathJax_Message"] {
+    display: none !important;
+}
+
+// search
+.md-search__inner,
+.md-search__inner [class^="md-search"] {
+    transition: $transition-faster !important;
+}
+.md-search-result__list {
+    background-color: $bg-2 !important;
+}
+.md-search__scrollwrap {
+    background-color: $bg-2 !important;
+}
+.md-search__form {
+    background-color: $bg-2;
+}
+
+// admonition
+.admonition-title,
+summary {
+    background: $bg-1 !important;
+}
+details {
+    transition: $transition-normal !important;
+}
+details[open] summary {
+    background: $bg-1 !important;
+}
+.admonition-title {
+    background: $bg-1 !important;
+}
+.md-typeset details:not([open]) {
+    border: $border-faint !important;
+}
+.md-typeset details {
+    box-shadow: none !important;
+}
+.admonition {
+    border: $border-faint !important;
+    background: $bg-1 !important;
+}
+.md-typeset .admonition,
+.md-typeset details {
+    background: $bg-1 !important;
+}
+
+// admonition in search
+.md-search details,
+.md-search .admonition {
+    border: none !important;
+}
+
+// width == max
+
+@media screen and (min-width: 76.25em) {
+    // header
+
+    header {
+        background: transparent !important;
+    }
+
+    header .md-header__title > .md-header__ellipsis {
+        left: -0.5vw;
+        width: 14vw;
+        top: 0.25rem;
+    }
+
+    .md-header__button.md-logo {
+        top: 0.2rem;
+        left: -0.2rem;
+        margin-right: -0.5rem;
+    }
+
+    // search
+
+    .md-search {
+        top: 0.4rem;
+        right: 0.35rem;
+    }
+
+    [data-md-toggle="search"]:checked ~ .md-header .md-search__inner {
+        width: 50vw;
+    }
+
+    [data-md-toggle="search"]:checked ~ .md-header .md-search__scrollwrap {
+        width: 50vw;
+    }
+
+    // content
+
+    .md-main__inner.md-grid .md-content {
+        margin-top: -4.7rem;
+    }
+
+    // sidebar
+
+    .md-sidebar.md-sidebar--primary {
+        margin-top: -80px !important;
+    }
+    .md-sidebar.md-sidebar--secondary {
+        margin-top: -100px !important;
+        top: 30px !important;
+    }
+
+    .md-sidebar.md-sidebar--primary {
+        top: 25px !important;
+    }
+
+    .md-sidebar.md-sidebar--secondary .md-sidebar__scrollwrap {
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
+    }
+    .md-sidebar.md-sidebar--secondary .md-nav__title {
+        display: none;
+    }
+
+    .md-sidebar.md-sidebar--primary .md-sidebar__scrollwrap {
+        margin-left: 0rem;
+    }
+    .md-sidebar.md-sidebar--primary .md-sidebar__scrollwrap .md-sidebar__inner {
+        padding-right: calc(100% - 12rem);
+    }
+}
+
+// width >= medium
+
+@media screen and (min-width: 60em) {
+    [data-md-toggle="search"]:checked ~ .md-header .md-search__overlay {
+        transition:
+            width 0ms,
+            height 0ms,
+            opacity duration-normal !important;
+    }
+
+    .md-search__form {
+        background: $bg-2 !important;
+        border-radius: $border-radius;
+        transition: $transition-slower !important;
+    }
+
+    .md-search__form .md-search__input {
+        border: $border-transparent;
+        border-radius: $border-radius;
+        transition: $transition-slower !important;
+    }
+
+    [data-md-toggle="search"]:not(:checked) ~ .md-header .md-search__form:hover .md-search__input {
+        border: $border-secondary;
+    }
+
+    [data-md-toggle="search"]:checked ~ .md-header .md-search__form,
+    [data-md-toggle="search"]:checked ~ .md-header .md-search__input {
+        border-radius: $border-radius;
+    }
+
+    [data-md-toggle="search"]:checked ~ .md-header .md-search__input {
+        border: $border-secondary-active;
+    }
+
+    .md-search-result__meta {
+        background-color: $bg-2;
+    }
+
+    [data-md-toggle="search"]:checked ~ .md-header .md-search__input + .md-search__icon {
+        color: $accent;
+    }
+
+    [data-md-toggle="search"]:checked ~ .md-header .md-search__output {
+        margin-top: 6px !important;
+        border-radius: $border-radius;
+        border: $border-faint;
+    }
+}
+
+// width == medium
+@media screen and (min-width: 60em) and (max-width: 76.25em) {
+}
+
+// width == minimum
+@media screen and (max-width: 60em) {
+}
+
+// width <= medium
+@media screen and (max-width: 76.25em) {
+    .md-header {
+        background: $bg-2;
+    }
+}

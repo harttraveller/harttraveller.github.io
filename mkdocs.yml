@@ -25,21 +25,30 @@ theme:
   - navigation.top
   - navigation.tracking
   - navigation.indexes
-  # - navigation.footer # enables 'next/previous' page footer
+  - navigation.expand
+  - navigation.footer
 
 plugins:
 - search
-- blog
 - tags
 - offline
 - privacy
 - markdown-exec
 - awesome-nav
+- blog:
+    blog_dir: .
 # - callouts
 # - embed_file:
 #     callouts: true
 # - autorefs
 # - roamlinks
+# - rss:
+#     match_path: blog/posts/.*
+#     date_from_meta:
+#       as_creation: date
+#     categories:
+#     - categories
+#     - tags
 
 markdown_extensions:
 - admonition

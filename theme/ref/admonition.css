@@ -1,0 +1,22 @@
+/* key */
+
+.md-typeset .admonition.key,
+.md-typeset details.key {
+    border-color: rgb(255, 170, 33);
+}
+
+.md-typeset .key>.admonition-title,
+.md-typeset .key>summary {
+    background-color: transparent;
+}
+
+.md-typeset .key>.admonition-title::before,
+.md-typeset .key>summary::before {
+    background-color: rgb(255, 172, 48);
+    -webkit-mask-image: var(--icon-lucide-key);
+    mask-image: var(--icon-lucide-key);
+}
+
+.md-typeset .key>summary::after {
+    background-color: rgb(255, 172, 48);
+}

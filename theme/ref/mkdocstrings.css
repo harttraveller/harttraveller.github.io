@@ -1,0 +1,43 @@
+/* Indentation. */
+div.doc-contents:not(.first) {
+    padding-left: 25px;
+    border-left: .05rem solid var(--silver);
+}
+
+/* Mark external links as such. */
+a.external::after,
+a.autorefs-external::after {
+    mask-image: var(--icon-octicon-arrow-up-right);
+    -webkit-mask-image: var(--icon-octicon-arrow-up-right);
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    height: 1em;
+    width: 1em;
+    background-color: currentColor;
+}
+
+.doc-symbol-parameter::after {
+    content: "parameter" !important;
+}
+
+.doc-symbol-attribute::after {
+    content: "attribute" !important;
+}
+
+.doc-symbol-function::after {
+    content: "function" !important;
+}
+
+.doc-symbol-method::after {
+    content: "method" !important;
+}
+
+.doc-symbol-class::after {
+    content: "class" !important;
+}
+
+.doc-symbol-module::after {
+    content: "module" !important;
+}
