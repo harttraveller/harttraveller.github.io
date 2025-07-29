@@ -531,6 +531,16 @@ details[open] summary {
     border: none !important;
 }
 
+// post background
+
+.md-post--excerpt {
+  margin-bottom: 3.2rem;
+  background: $bg-2;
+  margin: 1rem 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+}
+
 // width == max
 
 @media screen and (min-width: 76.25em) {

@@ -418,6 +418,14 @@ details[open] summary {
   border: none !important;
 }
 
+.md-post--excerpt {
+  margin-bottom: 3.2rem;
+  background: hsl(228, 26%, 12%);
+  margin: 1rem 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+}
+
 @media screen and (min-width: 76.25em) {
   header {
     background: transparent !important;
