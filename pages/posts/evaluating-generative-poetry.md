@@ -1,5 +1,5 @@
 ---
-title: "Evaluating Generative Poetry"
+title: Evaluating generative poetry
 draft: false
 date:
     created: 2024-03-24
