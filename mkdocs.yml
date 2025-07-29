@@ -55,6 +55,10 @@ markdown_extensions:
     title: Go To
 - pymdownx.arithmatex:
     generic: true
+- pymdownx.tabbed:
+    alternate_style: true
+- pymdownx.tasklist:
+    custom_checkbox: true
 
 extra:
   generator: false
