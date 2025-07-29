@@ -1,1 +1,2 @@
 - [ ] set blog dir to index and link separate projects github pages subdomains
+- [ ] add latex js to static
