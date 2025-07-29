@@ -6,6 +6,12 @@ date:
   created: 1800-12-31
 ---
 
+## Executed
+
+```python exec="on" source="above"
+print("hello world")
+```
+
 ## Heading 2
 
 Lorem ipsum...
