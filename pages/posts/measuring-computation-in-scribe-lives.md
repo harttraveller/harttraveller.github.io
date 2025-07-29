@@ -1,5 +1,5 @@
 ---
-title: Measuring Computation in Scribe Lives
+title: Measuring computation in scribe lives
 draft: false
 date:
     created: 2023-11-11
