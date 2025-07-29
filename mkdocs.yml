@@ -35,7 +35,7 @@ plugins:
 - privacy
 - markdown-exec
 - awesome-nav
-# - roamlinks
+- roamlinks
 - blog:
     blog_dir: .
 # - callouts
@@ -61,9 +61,10 @@ markdown_extensions:
 - pymdownx.inlinehilite
 - pymdownx.keys
 - pymdownx.mark
-- pymdownx.snippets
 - pymdownx.superfences
 - pymdownx.tilde
+- pymdownx.snippets:
+    base_path: [ "pages/snippets" ]
 - toc:
     permalink: "#"
     title: Go To

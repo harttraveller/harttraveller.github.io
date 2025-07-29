@@ -9,12 +9,14 @@ dependencies = [
     "mkdocs-awesome-nav>=3.1.2",
     "mkdocs-material>=9.6.16",
     "mkdocs-rss-plugin>=1.17.3",
+    "mkdocs-roamlinks-plugin>=0.3.2",
 ]
 
 [dependency-groups]
 dev = [
     "matplotlib>=3.10.3",
-    "mkdocs-roamlinks-plugin>=0.3.2",
     "mkdocstrings-python>=1.16.12",
     "numpy>=2.3.2",
+    "pandas>=2.3.1",
+    "plotly>=6.2.0",
 ]

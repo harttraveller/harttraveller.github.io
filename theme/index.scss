@@ -667,3 +667,18 @@ details[open] summary {
         background: $bg-2;
     }
 }
+
+
+.invert,
+img[src*=".invert.png"],
+img[src*=".invert.jpg"],
+img[src*=".invert.jpeg"],
+img[src*=".invert.pdf"],
+img[src*=".invert.svg"] {
+    filter: invert(96%) saturate(100%) hue-rotate(200deg) brightness(115%) contrast(100%) !important;
+}
+
+
+.accent.text {
+    color: var(--accent) !important;
+}
