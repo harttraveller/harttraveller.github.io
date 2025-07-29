@@ -7,10 +7,15 @@ theme:
   palette:
     scheme: slate
   features:
-  - navigation.instant
+  - toc.follow
+  - search.suggest
+  - content.code.annotate
+  - content.tabs.link
+  - content.code.copy
+  - navigation.top
+  - navigation.footer
   - navigation.tracking
-  - navigation.tabs
-  - navigation.tabs.sticky
+  - navigation.indexes
 
 plugins:
 - search
