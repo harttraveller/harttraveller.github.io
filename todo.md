@@ -1,2 +1,3 @@
 - [ ] set blog dir to index and link separate projects github pages subdomains
 - [ ] add latex js to static
+- [ ] fix broken: https://pypi.org/project/mkdocs-video/
