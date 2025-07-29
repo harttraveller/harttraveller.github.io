@@ -9,3 +9,8 @@ dependencies = [
     "mkdocs-awesome-nav>=3.1.2",
     "mkdocs-material>=9.6.16",
 ]
+
+[dependency-groups]
+dev = [
+    "mkdocstrings-python>=1.16.12",
+]
