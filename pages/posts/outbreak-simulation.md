@@ -21,7 +21,7 @@ This is an old disease outbreak simulation I wrote sometime around the beginning
 ## Python Script
 
 ```python
---8<-- "obsim.py"
+--8<-- "outbreak_simulation.py"
 ```
 
 ## Original Docs
