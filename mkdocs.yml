@@ -23,9 +23,9 @@ theme:
   - content.tabs.link
   - content.code.copy
   - navigation.top
-  - navigation.footer
   - navigation.tracking
   - navigation.indexes
+  # - navigation.footer # enables 'next/previous' page footer
 
 plugins:
 - search
