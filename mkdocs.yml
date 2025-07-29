@@ -66,5 +66,8 @@ extra:
 extra_css:
 - assets/theme.css
 
-# extra_javascript: ...
+# extra_javascript:
+#   - assets/javascripts/mathjax.js
+#   - assets/javascripts/tex-mml-chtml.js
+
 # hooks: ...
