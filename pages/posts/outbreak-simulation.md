@@ -3,6 +3,7 @@ title: Outbreak simulation
 draft: true
 date:
   created: 2020-02-01
+  updated: 2025-07-29
 categories: [epidemiology, project, python]
 ---
 
