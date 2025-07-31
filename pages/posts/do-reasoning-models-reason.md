@@ -6,7 +6,7 @@ date:
 categories: [llm, reasoning, ai, experiment]
 ---
 
-No. At least not yet. This article includes a quantitative experiment to test this assertion, and a (conceptual) model that attempts to explain why (language) models that are trained to mimic what reasoning looks like outperform models that are not. *I've done my best to make this article as concise and approachable as possible - assuming no prior background in machine learning. More details and links can be found in footnotes for the curious.*
+No. At least not yet. This article includes a quantitative experiment to test this assertion, and a (conceptual) model that attempts to explain why (language) models that are trained to mimic what reasoning looks still like outperform models that are not (even if they aren't actually reasoning). *I've done my best to make this article as concise and approachable as possible - assuming no prior background in machine learning. More details and links can be found in footnotes for the curious.*
 
 <!-- more -->
 
@@ -25,10 +25,7 @@ No. At least not yet. This article covers a (conceptual) model for understanding
 
 !!! quote "*[All models are wrong, but some are useful.](https://en.wikipedia.org/wiki/All_models_are_wrong)*"
 
-We'll start with the conceptual model before 
-As the quote above suggests, the conceptual model for understanding language models I am about to present is not meant to be correct, only correct enough that it conveys why reasoning models are not reasoning. Before delving into the model, however, we should cover several prerequisite concepts.
-
-### Words as numbers
+We'll start with the conceptual model before reviewing the experiment. As the quote above suggests, the conceptual model for understanding language models I am about to present is not meant to be correct, only correct enough that it conveys why reasoning models are not truly reasoning. Before delving into the model, however, we should cover several prerequisite concepts.
 
 The key algorithm that facilitated modern language models was [word2vec](https://en.wikipedia.org/wiki/Word2vec). I'll skip the technical details[^1]; the only two truly important things to understand are the following.
 
@@ -36,9 +33,20 @@ The key algorithm that facilitated modern language models was [word2vec](https:/
 
 **First: We can turn words into numbers.**[^2]
 
+[^2]: Specifically, we can turn tokens into vectors - points in high dimensional space. The exact vector associated with a given word doesn't actually matter, instead, it's the relative position of the different vectors in that space that encodes meaning.
+
+This means (see the footnotes for details) that we can take a word like:
 
 
-Specifically, we can turn tokens into vectors - points in high dimensional space. The exact vector associated with a given word doesn't actually matter, instead, it's the relative position of the different vectors in that space that encodes meaning.
+## So why do they outperform?
+
+
+## Experimental test
+
+!!! note "This experiment doesn't actually test whether or not the model I've presented is correct."
+    The (conceptual) model presented earlier is my speculative (and probably quite lossy)[^3] explanation as to why we get the results we see in this test. Nonetheless, all this test actually shows is that purportedly reasoning models fail on multiplication tests even after reasoning through the algorithm that would lead to the correct result. Whether it follows that because of this they are not reasoning, let alone that the (conceptual) model presented earlier is a valid explanation for this is up to you to decide.
+
+[^3]: "Lossy" is perhaps a weird word choice here, but I'm assuming that there is a true and valid explanation that can be encoded in some sequence of symbols, and that the explanation I've given is an incomplete, innaccurate, and compressed representation of that sequence of symbols that nonetheless shares some 'signal'(?) and thus is kind of lossy compression/representation. I'm not sure if that makes sense, I'd probably need to think through it a bit more to make sure it does.
 
 <!-- 
 
@@ -49,9 +57,14 @@ Yes.
 
 ## What is reasoning anyways?
 
-## When will AGI arrive?
+## What would a true reasoning model look like?
+
+Right now, an actual reasoning model would probably look less like a model and more like a broad reasoning system that uses models as one component. In the future, new algorithms/model architectures may change this.
 
 ## What is AGI?
+
+
+## When will AGI arrive?
 
 The possibilities in order of most to least difficul, are (I'm guessing) as follows. Each scenario has a two subjective estimations, (1) of temporal horizon and (2) of estimated probability.
 
