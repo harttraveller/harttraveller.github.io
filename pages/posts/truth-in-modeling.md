@@ -14,7 +14,7 @@ Random thoughts on the nature of truth when building models of reality.
 !!! note
     This was originally a forward for some internal documentation I was writing for work. After writing it, however, I realized it doesn't make a ton of sense to scatter personal philosophical opinions throughout what is ostensibly technically documentation, so I ended up deleting it. I've been sitting on it for a while now though, and I figured I might as well put it somewhere instead of just letting it die on an old hard drive.
 
-    *Also I replaced references to the thing I was documenting with *[thing]* for reasons.*
+    Also I replaced references to the thing I was documenting with *[thing]* for reasons.
         
 !!! quote "[All models are wrong, but some are useful.](https://www.wikiwand.com/en/All_models_are_wrong)"
 
