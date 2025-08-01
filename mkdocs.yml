@@ -36,6 +36,7 @@ plugins:
 - markdown-exec
 - awesome-nav
 - roamlinks
+- plotly
 - blog:
     blog_dir: .
 # - callouts
@@ -61,7 +62,6 @@ markdown_extensions:
 - pymdownx.inlinehilite
 - pymdownx.keys
 - pymdownx.mark
-- pymdownx.superfences
 - pymdownx.tilde
 - pymdownx.snippets:
     base_path: [ "pages/scripts" ]
@@ -74,7 +74,11 @@ markdown_extensions:
     alternate_style: true
 - pymdownx.tasklist:
     custom_checkbox: true
-
+- pymdownx.superfences:
+    custom_fences:
+    - name: plotly
+      class: mkdocs-plotly
+      format: !!python/name:mkdocs_plotly_plugin.fences.fence_plotly
 extra:
   generator: false
 
