@@ -1,6 +1,6 @@
 ---
 title: Escaping the heat death of the universe
-draft: true
+draft: false
 date:
   created: 2023-02-01
   updated: 2025-07-31
