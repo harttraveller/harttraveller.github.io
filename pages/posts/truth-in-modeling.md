@@ -13,12 +13,14 @@ Random thoughts on the nature of truth when building models of reality.
 
 !!! note
     This was originally a forward for some internal documentation I was writing for work. After writing it, however, I realized it doesn't make a ton of sense to scatter personal philosophical opinions throughout what is ostensibly technically documentation, so I ended up deleting it. I've been sitting on it for a while now though, and I figured I might as well put it somewhere instead of just letting it die on an old hard drive.
+
+    *Also I replaced references to the thing I was documenting with *[thing]* for reasons.*
         
 !!! quote "[All models are wrong, but some are useful.](https://www.wikiwand.com/en/All_models_are_wrong)"
 
 ## On Truth
 
-Before actually using [redacted], it is important to understand the nature of truth *in the context of developing models of reality* - precisely because while [redacted] allows us to build models that attempt to capture truth, being aware of its limitations is necessary to reach your objectives. Arguably, these are not actually limitations of [redacted], but limitations of reality, our perception of reality, and our capacity to develop symbolic representations of our perceived reality.
+Before actually using *[thing]*, it is important to understand the nature of truth *in the context of developing models of reality* - precisely because while *[thing]* allows us to build models that attempt to capture truth, being aware of its limitations is necessary to reach your objectives. Arguably, these are not actually limitations of *[thing]*, but limitations of reality, our perception of reality, and our capacity to develop symbolic representations of our perceived reality.
 
 Let's start with three seemingly contradictory claims:
 
@@ -86,7 +88,7 @@ So when we say: "Truth is what is useful to us, once we have decided what we wan
 ## Key Points
 
 !!! key "Always be aware that while the model models reality, it is not reality."
-    Insofar as this philosophizing may appear to lack pragmatic utility for the development of [redacted] models, many historical mishaps had their roots in the perception of absolute truth - in the perception that the representation of reality we create is truly the same as the underlying reality itself. The danger therein lies in the fact that when we have decided what we want reality to be, we often supress evidence that conflicts with our preconceived notions (only to be blindsided by catastrophe when the incongruencies become too great to bear). Yet, paradoxically, we are also forced to select the reality that is useful to us based on the context we operate in - necessarily ignoring evidence that conflicts with our chosen reality in order to make any progress at all...
+    Insofar as this philosophizing may appear to lack pragmatic utility for the development of *[thing]* models, many historical mishaps had their roots in the perception of absolute truth - in the perception that the representation of reality we create is truly the same as the underlying reality itself. The danger therein lies in the fact that when we have decided what we want reality to be, we often supress evidence that conflicts with our preconceived notions (only to be blindsided by catastrophe when the incongruencies become too great to bear). Yet, paradoxically, we are also forced to select the reality that is useful to us based on the context we operate in - necessarily ignoring evidence that conflicts with our chosen reality in order to make any progress at all...
 
 !!! key "The value of a model should be measured on the basis of how useful it is as a tool for achieving a greater objective."
     When you are building a model of something in reality, your objective should not be to "build a model". The model *must* serve a greater purpose, and it must be clear how that purpose is realized by way of the model.
