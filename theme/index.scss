@@ -1,6 +1,6 @@
 // VARIABLES
 
-$page-width: 100%; // set the width of the page
+$page-width: 99%; // set the width of the page
 
 $debug-border: 1px solid red !important;
 
@@ -36,7 +36,7 @@ $border-secondary-active: $border-width-normal solid $accent;
 
 $border-faint: $border-width-normal solid $silver;
 
-$duration-faster: 128ms;
+$duration-faster: 200ms;
 $duration-normal: 256ms;
 $duration-slower: 500ms;
 
@@ -536,7 +536,7 @@ details[open] summary {
 .md-post--excerpt {
     margin-bottom: 3.2rem;
     background: $bg-2;
-    margin: 0.5rem 1rem 1rem 1rem;
+    margin: 0rem 1rem 1rem 0rem;
     padding: 0.5rem 1rem;
     border-radius: 0.2rem;
     border: 1px solid transparent;
@@ -561,17 +561,24 @@ details[open] summary {
         top: 0.25rem;
     }
 
-    .md-header__button.md-logo {
-        top: 0.2rem;
-        left: -0.2rem;
-        margin-right: -0.5rem;
+    // partial: move search bar to left
+    .md-header__title,
+    .md-header.md-header--shadow {
+        max-width: 0;
+    }
+
+    // partial: remove logo, moves search further left
+    .md-header__button.md-logo,
+    .md-header__ellipsis {
+        display: none;
     }
 
     // search
 
     .md-search {
-        top: 0.4rem;
-        right: 0.35rem;
+        top: 0.2rem;
+        // right: 0.35rem;
+        right: 1.05rem;
     }
 
     [data-md-toggle="search"]:checked ~ .md-header .md-search__inner {
@@ -592,6 +599,7 @@ details[open] summary {
 
     .md-sidebar.md-sidebar--primary {
         margin-top: -80px !important;
+        // top: 100px !important;
     }
     .md-sidebar.md-sidebar--secondary {
         margin-top: -100px !important;
@@ -680,6 +688,11 @@ details[open] summary {
 @media screen and (max-width: 76.25em) {
     .md-header {
         background: $bg-2;
+    }
+    // don't display site title in header when less than medium width,
+    // this fixes the overlap issue
+    .md-header__title > .md-header__ellipsis {
+        display: none;
     }
 }
 
