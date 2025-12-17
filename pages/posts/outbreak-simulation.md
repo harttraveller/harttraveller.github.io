@@ -4,7 +4,7 @@ draft: false
 date:
   created: 2020-02-01
   updated: 2025-07-29
-categories: [epidemiology, project, python]
+# categories: [epidemiology, project, python]
 ---
 
 This is an old disease outbreak simulation I wrote sometime around the beginning of the pandemic. The caveats to this model being (A) I had and have no background in epidemiology, (B) the code sucks. At the time I was in some OSINT-ish amateur-epidemiologist discord channels, and if I remember correctly I created this to quantitatively 'prove' that [[nothing-ever-happens.png|nothing ever happens]]. In retrospect, it's interesting how wrong I was...

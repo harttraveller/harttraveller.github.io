@@ -4,7 +4,7 @@ draft: false
 date:
     created: 2023-11-11
     updated: 2025-07-29
-categories: [information-theory, random]
+# categories: [information-theory, random]
 ---
 
 For any given computational operation, we might ask: "How many ancient Babylonian scribes would I have to pay to work out this operation by hand, for their entire lives, in order to find the result?". Mining one bitcoin is approximately ~184 gigascrives.[^1]

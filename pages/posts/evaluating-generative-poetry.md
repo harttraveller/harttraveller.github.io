@@ -4,7 +4,7 @@ draft: false
 date:
     created: 2024-03-24
     updated: 2025-07-28
-categories: [poetry, python, language-model]
+# categories: [poetry, python, language-model]
 ---
 
 Random experiments with generative poetry and attempting to write executable poem.

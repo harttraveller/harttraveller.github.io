@@ -4,7 +4,7 @@ draft: true
 date:
   created: 2023-01-23
   updated: 2025-07-31
-categories: [game-theory]
+# categories: [game-theory]
 ---
 
 One issue with trying to be honest about everything in public, as nice as the idea is in theory, is that there are almost always bad faith actors who might try and use your honesty to attack you (or at least, you open yourself to this risk). In this article I cover a game theoretical strategy to maintain a policy that seeks to maximize genuine honesty without compromising yourself.

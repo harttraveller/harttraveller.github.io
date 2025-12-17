@@ -4,7 +4,6 @@ draft: false
 date:
   created: 2025-01-01
   updated: 2025-07-31
-categories: []
 ---
 
 Random thoughts on the nature of truth when building models of reality.

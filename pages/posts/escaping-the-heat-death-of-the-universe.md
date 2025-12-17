@@ -4,7 +4,7 @@ draft: true
 date:
   created: 2023-02-01
   updated: 2025-07-31
-categories: [science-fiction, physics]
+# categories: [science-fiction, physics]
 ---
 
 This article covers a speculative system that would allow us to circumvent the heat death of the universe and live for an arbitrarily long time in realities of our own design. (It was was largely motivated by a recent playthrough of [SOMA](https://store.steampowered.com/app/282140/SOMA/) - highly recommended).

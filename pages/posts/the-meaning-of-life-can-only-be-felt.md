@@ -3,7 +3,7 @@ title: The meaning of life can only be felt
 draft: false
 date:
     created: 2022-11-17
-categories: [philosophy, meaning, opinion]
+# categories: [philosophy, meaning, opinion]
 ---
 
 A common issue with people who believe life is meaningless is that they are unwilling to accept that life can be meaningful unless a logical proof of universally objective meaning is provided. This will never materialize, but that does not mean that “meaning” does not exist.

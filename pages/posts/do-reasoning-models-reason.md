@@ -3,16 +3,36 @@ title: Do reasoning models reason?
 draft: true
 date:
   created: 2025-07-31
-categories: [llm, reasoning, ai, experiment]
+# categories: [llm, reasoning, ai, experiment]
 ---
 
-No. At least not yet. This article includes a quantitative experiment to test this assertion, and a (conceptual) model that attempts to explain why (language) models that are trained to mimic what reasoning looks still like outperform 'basic'[^1] LLMs. *I've done my best to make this article as concise and approachable as possible - assuming no prior background in machine learning. More details and links can be found in footnotes for the curious.*
+No. At least not yet. Or at least not in the way we reason. This article includes a quantitative experiment to test this assertion, and a (conceptual) model that attempts to explain why (language) models that are trained to mimic what reasoning looks still like outperform "non-reasoning" LLMs.
 
 <!-- more -->
 
+<!-- 
+structure:
+- word2vec
+- each word is point
+- dimensionality reduction
+- path through space of points, reduce to 2D
+- reduce to 1D (?) for 2d plot with time
+- or reduce to 2d, and create 3D plot with time
+- sequence of words is path through word space
+- each step generates a distribution of probabilities over next (itself an nD point, but should abstract that away)
+- the "shape" of the path so far generates specific probability distribution
+
+ -->
+
+*I've done my best to make this article as concise and approachable as possible - assuming no prior background in machine learning. More details and links can be found in footnotes for the curious.*
+
+Related: [What is reasoning?](./what-is-reasoning.md)
+
 ## Prerequisite concepts
 
-Before delving into the (conceptual) model, however, we should quickly cover several prerequisite concepts which are necessary (or at least useful) for understanding how LLMs work.[^2]
+First, we should quickly cover some prerequisite concepts will be useful later.[^1]
+
+[^1]: There are much better resources created by people much smarter than me explaining how LLMs work... [3Blue1Brown](https://www.youtube.com/@3blue1brown) is a great channel and I'd highly recommend their series on [neural networks](https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) and specifically the videos on [transformer models](https://www.youtube.com/watch?v=wjZofJX0v4M).
 
 ### We can turn words into numbers
 
@@ -140,6 +160,8 @@ Add note on how the notion of tossing stones isn't entirely accurate, because in
 
 [^6]: "Lossy" is perhaps a weird word choice here, but I'm assuming that there is a true and valid explanation that can be encoded in some sequence of symbols, and that the explanation I've given is an incomplete, innaccurate, and compressed representation of that sequence of symbols that nonetheless shares some 'signal'(?) and thus is kind of lossy compression/representation. I'm not sure if that makes sense, I'd probably need to think through it a bit more to make sure it does.
 
+<!-- First test, just multiplication, addition, subtraction. The test works by articulating a specific algorithm for multiplication, then having it follow... -->
+
 <!-- 
 No. At least not yet. This article covers a number of points related to "reasoning" language models, but most notably it includes a (conceptual) model for understanding why they do not reason, and a quantitative experiment meant to test this assertion. The key point to take away from this article is: **reasoning models do not reason, they mimic what reasoning looks like - a paradigm that  highly unlikely to lead to an intelligence explosion**. -->
 <!-- 
@@ -182,11 +204,6 @@ The possibilities in order of most to least difficul, are (I'm guessing) as foll
     - A godlike intelligence is possible, but advances in intelligence are intractable and/or extremely difficult, and a recursive explosion that would result in a fast take-off perceptible within the course of a single human life is impossible. Instead, various S-curves will stack on top of each other over the course of thousands or millions of years, culminating in a post-human super-intelligence way down the line, which will, by nature of the constant of change, likely be so alien to us today that we probably can't comprehend it.
         - 'Non-comprehensibility' by humans also likely holds true for any super-intelligence, this point is more meant to elucidate that a super-intelligence that emerges in our time will probably be at least marginally more comprehensible to us today insofar as we might converse with it, but not be able to understand the physical/mathematical models it provides us, whereas a super-intelligence that emerges in a million years may be similarly comprehensible to the denizens of the earth a million years from now, but completely incomprehensible to us insofar as it communicates in music composed of ultra-high-frequency waves in the medium of some quantum-gravity force that is yet undiscovered and requires an intuitive knowledge of operating in 3 temporal dimensions and 7 spatial dimensions to actual comprehend. Or any other preposturously speculative alien.
 -->
-
-
-[^1]: By 'basic' I mean models that are not trained to mimic reasoning processes. This could probably be phrased better, but you get the idea.
-
-[^2]: There are much better resources created by people much smarter than me explaining how LLMs work... [3Blue1Brown](https://www.youtube.com/@3blue1brown) is a great channel and I'd highly recommend their series on [neural networks](https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) and specifically the videos on [transformer models](https://www.youtube.com/watch?v=wjZofJX0v4M).
 
 [^3]: If I remember correctly from an information retrieval class I took a few years ago, [word2vec](https://en.wikipedia.org/wiki/Word2vec) works by training what is effectively an algorithm (a shallow neural network, or logistic regression algorithm in simpler versions) to predict "words" - or really - tokens, that are dropped from strings of text. The missing tokens are predicted based on their surrounding context. When you've trained a model like this on enough strings of text, you can then extract the weights/parameters associated with a given token, which become the vector representation for that token. Almost as if by magic, these vectors of parameters end up encoding semantic meaning about the words in a given sentence. *Don't quote me on this though, the full technical details can be found in [Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/pdf/1301.3781) and [Distributed Representations of Words and Phrases and their Compositionality](https://arxiv.org/pdf/1310.4546).* If you are interested in the nitty gritty, the article [Word2vec from Scratch](https://jaketae.github.io/study/word2vec/) seems pretty good. I haven't personally read it, but in skimming it, it looks pretty comprehensive.
 
