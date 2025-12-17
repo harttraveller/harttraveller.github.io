@@ -37,7 +37,7 @@ Given some objective, intelligence is the ability to acquire, retrieve, and proc
 
 *Consciousness*
 
-If Mary was locked in a monochrome room since birth and taught everything there was to know about the color blue, and then one day you let her out of the box, the thing that she would get from looking at the sky on a clear day that was never conveyed to her in the room is consciousness; it is something other than descriptive information about phenomena, it is the experience of them.
+If Mary was locked in a monochrome room since birth and taught everything there was to know about the color blue, and then one day you let her out of the room, the thing that she would get from looking at the sky on a clear day that was never conveyed to her in the room is consciousness; it is something other than descriptive information about phenomena, it is the experience of them.
 
 ## Introduction
 
@@ -56,8 +56,7 @@ Here is how we could model a neuron:
 
 Let's assume that this mechanism of action is all that is necessary to model a neuron. It might not be, but that doesn't change the substance of the argument as long as the way it which it isn't can be reduced to a computational process.
 
-
-## Thought Experiments
+## Thought Experiment
 
 Suppose we took your brain (modeled below, other neurons omitted for brevity):
 
@@ -73,11 +72,17 @@ OK, now suppose some type 3 civilization comes down an pushes this experiment to
 
 ![[brain-model-stellar-1.drawio.svg]]
 
-It might take a long time for you to form a thought, but the computational processes and the medium in which they occur are the same. Presumably, you're sitll conscious.
+It might take a long time for you to form a thought, but the computational processes and the medium in which they occur are the same. Presumably, you're still conscious.
 
 <!-- This is where the first flaw in the argument could be. Perhaps in order for something to be conscious, the specific computational steps associated with experience must be performed within a tightly bounded region of space, time, or spacetime - though that would be strange. -->
 
-OK, now let's suppose that the type 3 civ replaces all the kinesin proteins that transport neurotransmitters.
+OK, now let's suppose that the type 3 civ replaces all the kinesin proteins that walk along microtubules transporting neurotransmitters from the soma each neuron down the axon to the synapse with nanobots that do the exact same thing.
+
+(Tangentially related, [check out this video of a kinesin protein walking on a microtubule](https://www.youtube.com/watch?v=y-uuk4Pr2i8) - they're pretty cool).
+
+The same neurotransmitters are released, the neurological structure is preserved, and the exact 
+
+
 
 It may seem like I'm leading up to re-explain the ship of theseus or something, but I'm not. I'm simply making the point that in the field of cognitive science and neuroscience there is broad agreement that:
 
