@@ -141,7 +141,6 @@ A case for why time might be involved - model spatial - pages in book
 
 ---
 
-
 <!-- In a discussion with a friend recently,  -->
 
 <!-- random sequences of information - difference - stretch metaphor by logical steps -->
@@ -149,3 +148,32 @@ A case for why time might be involved - model spatial - pages in book
 <!-- number of computational sequences implies that we would not have fidelity of conscious experience, thus there must be something in us that isn't computation, or shorter durations of specific sequences must be required for consciousness -->
 
 <!-- grabby aliens as probabilistic argument -->
+
+
+## Adam Criticism
+
+> Before it occurs there is a clean separation where the things that are part of the computation and the things which are not are differentiable.
+
+Can you elaborate on what you mean by differentiable?
+
+> You can separate it somewhat cleanly into what is a neuron of adam and what is a hair on his head. vs. if you have the same pattern just randomly imprinted on the sun, you can't separate it before it occurs which atom bouncing around which atom is supposed to be part of a neuron and which isn't. if you're looking at my brain when I stub my toe, you can predict the outputs, and the specific components that will provide the outputs before they do, whereas you can't with random atoms
+> There's two separate things where you have something and it's predefined and stuff happens whereas if stuff happens and you cherrypick from that. It's the essence, I'm trying to think of what the essence is. It's the difference between between shooting an arrow at a target and hitting the bullseye and shooting an arrow and painting a bullseye around.
+
+aren't you implicitly assuming structure? what about all the stuff you ignored around the neurons 
+
+also, the implication here is still very absurd (it's absurd every way) - that there is a predefined output
+
+> there's a difference between computation and random noise - the library of babel has everything, but it has nothing, because the computation is you searching for it
+> what I would say in terms of hamlet is you could take the library of babel and find hamlet, but to get there you have to write hamlet, whereas when shakespeare wrote hamlet there was non-randomness, determinism - it was non-random and it was not a random process, whereas in LoB it could have been in any volume, but with shakespeare you knew it was on his head, it was a confined and orderly process with clear inputs and outputs, vs. the only way to get hamlet out of the lob is to input into the lob
+
+> **with random noise you can only work backwards, with computation, you can work forwards, with computation, you can make predictions, with random noise, you can't**
+
+I think the difference you are suggesting, if I understand correctly, is that when you stub your toe - as in there is a causal event in the vicinity of spacetime we refer to as your toe - we can at that same moment, select another specific and already known region of spacetime known as your brain, and predict with accuracy, that you will feel pain (or any other expected downstream event). Whereas if we have the equivalent sequence of computational operations associated with "toe stubbing" when some atoms randomly bump into each other in the sun, we can't predict which atoms later on in the random noise distributed across the universe and all following spacetime - which atoms will correspond to the same response, it's totally possible that some atoms will, but at the moment of the causal precursor, which atoms will, where they are, and how long it will take are unpredictable.
+
+That is the difference between computation and random noise - BUT - that also implies something really wierd. Because the two processes are the same in terms of causal effects and state changes, it implies that at the moment of any action, some kind of invisible arbiter of computation that generates consciousness steps in, evaluates whether or not some sequence of future actions is predictable, and then somehow sprinkles the magic consciousness juice on the causal event in the present moment.
+
+<!-- I explained metaphor - toe neuron to brain neuron, toe monkey to (traind) monkey levers, random monkeys that just happen to pull the right levers, an infinite warehouse of monkeys, in which some of the monkeys pull the right levers  -->
+> If it is a closed warehouse with trained monkeys there is pain. If there is an infinite warehouse, trained monkeys, pain. If there is a closed warehouse with untrained monkeys, there is pain. If there is an infinite warehouse with untrained monkeys there is no pain.
+
+
+What if it was a closed warehouse of untrained monkeys, but several light years away there was a planet with trillions of other monkeys?
