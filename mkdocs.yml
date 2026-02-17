@@ -36,7 +36,7 @@ plugins:
 - markdown-exec
 - awesome-nav
 - roamlinks
-- plotly
+# - plotly
 - blog:
     blog_dir: .
 # - callouts
