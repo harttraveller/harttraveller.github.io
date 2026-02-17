@@ -52,6 +52,7 @@ video {
   border-radius: 0.2rem;
 }
 
+
 a,
 .md-clipboard,
 .md-dialog,
@@ -421,7 +422,7 @@ details[open] summary {
 .md-post--excerpt {
   margin-bottom: 3.2rem;
   background: hsl(228, 26%, 12%);
-  margin: 0rem 1rem 1rem 0rem;
+  margin: 0.3rem 1rem 1rem 0rem;
   padding: 0.5rem 1rem;
   border-radius: 0.2rem;
   border: 1px solid transparent;
