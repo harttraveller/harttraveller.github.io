@@ -1,5 +1,7 @@
 ---
 title: Intelligence, within reason.
+search:
+  exclude: true
 ---
 
 - we do not yet have "reasoning" artificial intelligence

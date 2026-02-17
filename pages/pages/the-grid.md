@@ -4,6 +4,8 @@ draft: true
 date:
     created: 2025-08-27
 # categories: [concept-of-a-post]
+search:
+  exclude: true
 ---
 
 A random thought that has been circling around in the back of my head for a while relating to the centrality of "the grid" to the dominance of Homo Sapiens on planet earth.

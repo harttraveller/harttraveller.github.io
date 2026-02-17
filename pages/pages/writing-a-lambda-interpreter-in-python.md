@@ -4,6 +4,8 @@ draft: true
 date:
     created: 2025-07-29
 # categories: [python, interpreter]
+search:
+  exclude: true
 ---
 
 This is a tutorial introduction to interpreters, showing how to build a lambda expression interpreter from scratch in python. It's intended to serve as the guide that would've been useful to me a few months ago before I started building an interpreter in a professional context. It assumes the reader has only a basic knowledge of python and aims to be as approachable as possible.

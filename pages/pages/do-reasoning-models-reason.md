@@ -4,6 +4,8 @@ draft: true
 date:
   created: 2025-07-31
 # categories: [llm, reasoning, ai, experiment]
+search:
+  exclude: true
 ---
 
 No. At least not yet. Or at least not in the way we reason. This article includes a quantitative experiment to test this assertion, and a (conceptual) model that attempts to explain why (language) models that are trained to mimic what reasoning looks still like outperform "non-reasoning" LLMs.

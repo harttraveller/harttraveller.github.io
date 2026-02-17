@@ -4,6 +4,8 @@ draft: true
 categories: [test-cat, nested/cat]
 date:
   created: 1800-12-31
+search:
+  exclude: true
 ---
 
 ## Executed

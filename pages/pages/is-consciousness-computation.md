@@ -3,6 +3,8 @@ title: Is consciousness computation?
 draft: true
 date:
   created: 2025-12-16
+  search:
+  exclude: true
 ---
 
 Or rather, does computation "generate" consciousness? For various reasons, I'm inclined to believe that it does, but I also have what I think is a fairly solid mathematical argument for why it can't, and I actively want to find flaws in the logic of this argument to get to the bottom of this.

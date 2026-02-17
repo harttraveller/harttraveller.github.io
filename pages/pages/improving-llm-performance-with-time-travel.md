@@ -1,4 +1,7 @@
-
+---
+search:
+  exclude: true
+---
 
 or, formally, memory rewrites via context modification
 

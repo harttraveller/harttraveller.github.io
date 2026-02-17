@@ -4,6 +4,8 @@ draft: true
 date:
   created: 2025-07-31
 # categories: [yapp]
+search:
+  exclude: true
 ---
 
 Locality of behavior vs. separation of concerns and D(on't) R(epeat) Y(ourself). I don't know if I have much wisdom to offer, but one piece of what might resemble programming wisdom if one squints really hard is that DRY is BS.
