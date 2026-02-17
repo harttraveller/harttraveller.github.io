@@ -1,0 +1,436 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://harttraveller.com/pages/do-reasoning-models-reason.html" rel="canonical">
+<link href="../assets/icon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.16" name="generator"/>
+<title>Do reasoning models reason? - Hart Traveller</title>
+<link href="../assets/stylesheets/main.7e37652d.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M17%2013h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10%2010%200%200%200%202%2012a10%2010%200%200%200%2010%2010%2010%2010%200%200%200%2010-10A10%2010%200%200%200%2012%202%22/%3E%3C/svg%3E');}</style>
+<script src="../assets/external/unpkg.com/iframe-worker/shim.js"></script>
+
+<link href="../assets/external/fonts.googleapis.com/css.77b73785.css" rel="stylesheet">
+<style>:root{--md-text-font:"Inter";--md-code-font:"Consolas"}</style>
+<link href="../assets/_markdown_exec_pyodide.css" rel="stylesheet"/>
+<link href="../assets/theme.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script src="../assets/external/cdn.plot.ly/plotly-latest.min.js"></script></head>
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#prerequisite-concepts">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Hart Traveller" class="md-header__button md-logo" data-md-component="logo" href="../index.html" title="Hart Traveller">
+<img alt="logo" src="../assets/icon.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Hart Traveller
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Do reasoning models reason?
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Hart Traveller" class="md-nav__button md-logo" data-md-component="logo" href="../index.html" title="Hart Traveller">
+<img alt="logo" src="../assets/icon.png"/>
+</a>
+    Hart Traveller
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../index.html">
+<span class="md-ellipsis">
+    Home
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Archive
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../archive/2025.html">
+<span class="md-ellipsis">
+    2025
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../archive/2024.html">
+<span class="md-ellipsis">
+    2024
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../archive/2023.html">
+<span class="md-ellipsis">
+    2023
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../archive/2022.html">
+<span class="md-ellipsis">
+    2022
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Go To" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Go To
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prerequisite-concepts">
+<span class="md-ellipsis">
+      Prerequisite concepts
+    </span>
+</a>
+<nav aria-label="Prerequisite concepts" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#we-can-turn-words-into-numbers">
+<span class="md-ellipsis">
+      We can turn words into numbers
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#these-numbers-are-points">
+<span class="md-ellipsis">
+      These numbers are points
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-relative-position-of-these-points-encode-meaning">
+<span class="md-ellipsis">
+      The relative position of these points encode meaning
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conceptual-model-tossing-stones">
+<span class="md-ellipsis">
+      Conceptual model: tossing stones
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tossing-stones">
+<span class="md-ellipsis">
+      Tossing stones
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#so-why-do-they-outperform">
+<span class="md-ellipsis">
+      So why do they outperform?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#experimental-test">
+<span class="md-ellipsis">
+      Experimental test
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Do reasoning models reason?</h1>
+<p>No. At least not yet. Or at least not in the way we reason. This article includes a quantitative experiment to test this assertion, and a (conceptual) model that attempts to explain why (language) models that are trained to mimic what reasoning looks still like outperform "non-reasoning" LLMs.</p>
+<!-- more -->
+<!-- 
+structure:
+- word2vec
+- each word is point
+- dimensionality reduction
+- path through space of points, reduce to 2D
+- reduce to 1D (?) for 2d plot with time
+- or reduce to 2d, and create 3D plot with time
+- sequence of words is path through word space
+- each step generates a distribution of probabilities over next (itself an nD point, but should abstract that away)
+- the "shape" of the path so far generates specific probability distribution
+
+ -->
+<p><em>I've done my best to make this article as concise and approachable as possible - assuming no prior background in machine learning. More details and links can be found in footnotes for the curious.</em></p>
+<p>Related: <a href="what-is-reasoning.html">What is reasoning?</a></p>
+<h2 id="prerequisite-concepts">Prerequisite concepts<a class="headerlink" href="#prerequisite-concepts" title="Permanent link">#</a></h2>
+<p>First, we should quickly cover some prerequisite concepts will be useful later.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<h3 id="we-can-turn-words-into-numbers">We can turn words into numbers<a class="headerlink" href="#we-can-turn-words-into-numbers" title="Permanent link">#</a></h3>
+<p>We'll gloss over the technical details<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>, but suffice to say we can take a word like "human", and convert it into a list of numbers, which might look something like this<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>. Don't worry about understanding how this works, this article can be understood if you simply accept that it's possible.</p>
+<div class="highlight"><span class="filename">This is what the word 'Human' looks like according to glove-wiki-gigaword-50</span><pre><span></span><code><span class="p">[</span> <span class="mf">0.61854</span> <span class="p">,</span>  <span class="mf">0.11915</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.46786</span> <span class="p">,</span>  <span class="mf">0.31368</span> <span class="p">,</span>  <span class="mf">1.0334</span>  <span class="p">,</span>  <span class="mf">0.95964</span> <span class="p">,</span>
+  <span class="mf">0.87803</span> <span class="p">,</span> <span class="o">-</span><span class="mf">1.0346</span>  <span class="p">,</span>  <span class="mf">1.6322</span>  <span class="p">,</span>  <span class="mf">0.29347</span> <span class="p">,</span>  <span class="mf">0.80844</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.058903</span><span class="p">,</span>
+  <span class="mf">0.021251</span><span class="p">,</span>  <span class="mf">0.40986</span> <span class="p">,</span>  <span class="mf">0.54443</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.33311</span> <span class="p">,</span>  <span class="mf">0.53712</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.35823</span> <span class="p">,</span>
+  <span class="mf">0.29374</span> <span class="p">,</span>  <span class="mf">0.090151</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.92049</span> <span class="p">,</span>  <span class="mf">0.69386</span> <span class="p">,</span>  <span class="mf">0.39098</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.64392</span> <span class="p">,</span>
+  <span class="mf">0.77831</span> <span class="p">,</span> <span class="o">-</span><span class="mf">1.7215</span>  <span class="p">,</span> <span class="o">-</span><span class="mf">0.48393</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.50327</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.22508</span> <span class="p">,</span>  <span class="mf">0.099192</span><span class="p">,</span>
+  <span class="mf">3.2095</span>  <span class="p">,</span> <span class="o">-</span><span class="mf">0.31554</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.71754</span> <span class="p">,</span> <span class="o">-</span><span class="mf">1.6752</span>  <span class="p">,</span> <span class="o">-</span><span class="mf">1.3537</span>  <span class="p">,</span>  <span class="mf">0.15195</span> <span class="p">,</span>
+  <span class="mf">0.054557</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1633</span>  <span class="p">,</span> <span class="o">-</span><span class="mf">0.027993</span><span class="p">,</span>  <span class="mf">0.3917</span>  <span class="p">,</span> <span class="o">-</span><span class="mf">0.55007</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.079205</span><span class="p">,</span>
+  <span class="mf">0.63389</span> <span class="p">,</span>  <span class="mf">0.51446</span> <span class="p">,</span>  <span class="mf">0.70124</span> <span class="p">,</span>  <span class="mf">0.27638</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.53445</span> <span class="p">,</span>  <span class="mf">0.064808</span><span class="p">,</span>
+  <span class="o">-</span><span class="mf">0.21974</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.52048</span> <span class="p">]</span>
+</code></pre></div>
+<h3 id="these-numbers-are-points">These numbers are points<a class="headerlink" href="#these-numbers-are-points" title="Permanent link">#</a></h3>
+<p>Specifically the numbers are points in a high dimensional space. What is a high dimensional space? Suppose the previous list of numbers only had 2 elements instead of 50.</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span> <span class="mf">0.61854</span> <span class="p">,</span> <span class="mf">0.11915</span> <span class="p">]</span>
+</code></pre></div>
+<p>Let's take those numbers and graph them on a 2D scatterplot, where <code>0.61854</code> is on the x-axis, and <code>0.11915</code> is on the y-axis.</p>
+<div class="mkdocs-plotly">{
+    "data": [
+        {
+            "x": [0.61854],
+            "y": [0.11915],
+            "type": "scatter",
+            "mode": "markers+text",
+            "text": ["human"],
+            "textposition": "top center"
+        }
+    ]
+}</div>
+<p>Now what expanded the list to include <code>-0.46786</code>? We'll put this on the z-axis. We still have one point, except now it's in 3D instead of 2D.</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span> <span class="mf">0.61854</span> <span class="p">,</span> <span class="mf">0.11915</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.46786</span> <span class="p">]</span>
+</code></pre></div>
+<div class="mkdocs-plotly">{
+    "data": [
+        {
+            "x": [0.61854],
+            "y": [0.11915],
+            "z": [-0.46786],
+            "type": "scatter3d",
+            "mode": "markers+text",
+            "text": ["human"],
+            "textposition": "top center"
+        }
+    ]
+}</div>
+<p>If we expand the list to include <code>0.31368</code> we get a single point in a 4D space. There aren't great visualization tools for 4D spaces, but it's possible to build an intuitive understanding of them through games like <a href="https://www.youtube.com/watch?v=0t4aKJuKP0Q">4D toys</a>, the inumerable youtube videos, or stuff like <a href="https://youtu.be/avMX-Zft7K4?si=ciHhvsPrQ5va-iAq&amp;t=3770">flatland</a> (I've linked a particularly unhinged scene from the feature length film here. Don't let it disuade you, the movie and original story are both great).</p>
+<p>Spaces with more than four dimensions are hard to intuitively visualize, but we can fix this by simply "translating" the points into a lower dimensional space using fancy math.<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup> I repeat myself, but, you don't need to know how this works to understand this article, only to accept that it's possible. </p>
+<div class="grid">
+<div class="highlight"><span class="filename">High dimensional point corresponding to word 'king'</span><pre><span></span><code><span class="p">[</span> <span class="mf">0.50451</span> <span class="p">,</span>  <span class="mf">0.68607</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.59517</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.022801</span><span class="p">,</span>  <span class="mf">0.60046</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.13498</span> <span class="p">,</span>
+  <span class="o">-</span><span class="mf">0.08813</span> <span class="p">,</span>  <span class="mf">0.47377</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.61798</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.31012</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.076666</span><span class="p">,</span>  <span class="mf">1.493</span>   <span class="p">,</span>
+  <span class="o">-</span><span class="mf">0.034189</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.98173</span> <span class="p">,</span>  <span class="mf">0.68229</span> <span class="p">,</span>  <span class="mf">0.81722</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.51874</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.31503</span> <span class="p">,</span>
+  <span class="o">-</span><span class="mf">0.55809</span> <span class="p">,</span>  <span class="mf">0.66421</span> <span class="p">,</span>  <span class="mf">0.1961</span>  <span class="p">,</span> <span class="o">-</span><span class="mf">0.13495</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.11476</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.30344</span> <span class="p">,</span>
+  <span class="mf">0.41177</span> <span class="p">,</span> <span class="o">-</span><span class="mf">2.223</span>   <span class="p">,</span> <span class="o">-</span><span class="mf">1.0756</span>  <span class="p">,</span> <span class="o">-</span><span class="mf">1.0783</span>  <span class="p">,</span> <span class="o">-</span><span class="mf">0.34354</span> <span class="p">,</span>  <span class="mf">0.33505</span> <span class="p">,</span>
+  <span class="mf">1.9927</span>  <span class="p">,</span> <span class="o">-</span><span class="mf">0.04234</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.64319</span> <span class="p">,</span>  <span class="mf">0.71125</span> <span class="p">,</span>  <span class="mf">0.49159</span> <span class="p">,</span>  <span class="mf">0.16754</span> <span class="p">,</span>
+  <span class="mf">0.34344</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.25663</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.8523</span>  <span class="p">,</span>  <span class="mf">0.1661</span>  <span class="p">,</span>  <span class="mf">0.40102</span> <span class="p">,</span>  <span class="mf">1.1685</span>  <span class="p">,</span>
+  <span class="o">-</span><span class="mf">1.0137</span>  <span class="p">,</span> <span class="o">-</span><span class="mf">0.21585</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.15155</span> <span class="p">,</span>  <span class="mf">0.78321</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.91241</span> <span class="p">,</span> <span class="o">-</span><span class="mf">1.6106</span>  <span class="p">,</span>
+  <span class="o">-</span><span class="mf">0.64426</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.51042</span> <span class="p">]</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Translated low dimensional point corresponding to word 'king'</span><pre><span></span><code>
+</code></pre></div>
+<!-- Let's take some words and the associated lists of numbers (henceforth referred to as 'vectors'), and run them through a dimensionality reduction algorithm.[^6] This what the words and their vectors look like before hand (`...` is used to signify that their are more numbers, which are omitted for brevity): -->
+<p>And after we run them through a dimensionality reduction algorithm, they look like:</p>
+<h3 id="the-relative-position-of-these-points-encode-meaning">The relative position of these points encode meaning<a class="headerlink" href="#the-relative-position-of-these-points-encode-meaning" title="Permanent link">#</a></h3>
+<p>An important but oft overlooked point here is that the numbers themselves don't mean anything. In isolation, the point <code>[ 0.61854  0.11915 -0.46786  0.31368  1.0334  ... ]</code> is meaningless. The meaningful information in this system is encoded in the positions of these points in relation to each other, and not the positions themselves. That is to say that if I use <code>word2vec-google-news-300</code> instead of <code>glove-wiki-gigaword-50</code>, the numbers corresponding to "human" will be totally different.</p>
+<p>be associated with the word human? Actually, it isn't</p>
+<!-- Often you'll hear the term "latent space" thrown around. For the purpose of this article, you can imagine this refers to any n-dimensional space containing a collection of points, wherein the specific location of those points does not matter, but rather the meaning is in encoded in the structure of the points in the space. -->
+<!-- TODO: add caveat about how vectors for individual words differ from vectors for paragraphs, sentences; how these vectors differ from vectors computed after multiple stages in autoregressive transformer models -->
+<h2 id="conceptual-model-tossing-stones">Conceptual model: tossing stones<a class="headerlink" href="#conceptual-model-tossing-stones" title="Permanent link">#</a></h2>
+<div class="admonition quote">
+<p class="admonition-title"><em><a href="https://en.wikipedia.org/wiki/All_models_are_wrong">All models are wrong, but some are useful.</a></em></p>
+</div>
+<p>We'll start with the conceptual model before reviewing the experiment. As the quote above suggests, the conceptual model for understanding language models I am about to present is not meant to be correct, only correct enough that it conveys why reasoning models are not truly reasoning.</p>
+<h2 id="tossing-stones">Tossing stones<a class="headerlink" href="#tossing-stones" title="Permanent link">#</a></h2>
+<!-- TODO
+Add note on how the notion of tossing stones isn't entirely accurate, because in this metaphor sometimes a stone would be tossed quite far away. Instead of tossing a stone around a particular position, there is instead a kind of meta-manifold over the entire latent space that encodes the distribution of probability density of a consecutive word in that latent space, which is realized when we get a literal probability distribution of following tokens. I'm trying to make this an approachable article, but may end up twisting the truth a little. If I screwed up really bad and you want to let me know email me at [] and I'll ammend whatever it is and credit you.
+ -->
+<h2 id="so-why-do-they-outperform">So why do they outperform?<a class="headerlink" href="#so-why-do-they-outperform" title="Permanent link">#</a></h2>
+<h2 id="experimental-test">Experimental test<a class="headerlink" href="#experimental-test" title="Permanent link">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">This experiment doesn't actually test whether or not the model I've presented is correct.</p>
+<p>The (conceptual) model presented earlier is my speculative (and probably quite lossy)<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">2</a></sup> explanation as to why we get the results we see in this test. Nonetheless, all this test actually shows is that purportedly reasoning models fail on multiplication tests even after reasoning through the algorithm that would lead to the correct result. Whether it follows that because of this they are not reasoning, let alone that the (conceptual) model presented earlier is a valid explanation for this is up to you to decide.</p>
+</div>
+<!-- First test, just multiplication, addition, subtraction. The test works by articulating a specific algorithm for multiplication, then having it follow... -->
+<!-- 
+No. At least not yet. This article covers a number of points related to "reasoning" language models, but most notably it includes a (conceptual) model for understanding why they do not reason, and a quantitative experiment meant to test this assertion. The key point to take away from this article is: **reasoning models do not reason, they mimic what reasoning looks like - a paradigm that  highly unlikely to lead to an intelligence explosion**. -->
+<!-- 
+No. At least not yet. This article covers a (conceptual) model for understanding why they do not reason, but why they nonetheless *do* work better than non-reasoning (language) models. In addition, I explore (A) what reasoning models *might* look like (B) a conditional forecast for when we can actually expect AGI, and (C) **a quantitative experiment meant to test the assertion that current reasoning models are in fact, not reasoning at all**. Finally, there are some policy notes, speculation on why there is a trend of referring to reasoning models as 'reasoning' (hint: it helps drive the hype train), and a personal remark on why, in fact, it's a good thing that current approaches in AI will not lead to AGI, as well as some pushback against my own assertion that it's bad that models trained to mimic reasoning are being marketed as reasoning models.[^1]
+
+
+[^1]: TLDR: If AGI is approaching, then we want to be as prepared as possible, and over-hyping the risk now may increase awareness of the risk. If, after all, there is a 0.1% chance of a demonic god that can manifest indefinite hell-on-earth for all beings arriving in the next 100 years, the negative utility is unfathomably large, so even a small probability justifies extreme caution. The flip side is that if too many Yudkowsky's cry "wolf" before it actually arrives, people might not take it very seriously when it does - which it will absent global thermonuclear war or rapid runaway climate change that results in global technological regression to the middle ages, or human extinction.
+
+-->
+<!-- 
+
+### Is Yann Lecun right?
+
+Yes.
+
+
+## What is reasoning anyways?
+
+## What would a true reasoning model look like?
+
+Right now, an actual reasoning model would probably look less like a model and more like a broad reasoning system that uses models as one component. In the future, new algorithms/model architectures may change this.
+
+## What is AGI?
+
+
+## When will AGI arrive?
+
+The possibilities in order of most to least difficul, are (I'm guessing) as follows. Each scenario has a two subjective estimations, (1) of temporal horizon and (2) of estimated probability.
+
+@todo convert these to table
+
+1. It's way harder than we thought in some fundamental way, ... [> 1000 years, P(~40%)]
+2. It's harder than we thought, and requires a fundamentally new algorithm or paradigm for computational intelligence, but that algorithm or paradigm can be understood by us and is within reach, though it has not yet been discovered/thoroughly explored. In this scenario, whether or not we get an intelligence explosion in the near future is a coin flip, and depends entirely on whether the right researcher/engineer has the right dream, goes on the right date and has the right conversation, or some other unpredictable scenario.
+2. It about as hard as we thought, but involves the 'encoding' of physical knowledge; brute force approaches will work but we need to brute force the training of various deep learning architectures within simulated physical environments. 
+2. It isn't way harder than we thought, but we just don't have the right algorithm yet.
+3. We keep scaling up LLMs and then all of a sudden they're generally 
+- An 'intelligence explosion' is simply not possible. We're misunderstanding intelligence, and at best we will be able to create machines of similar intelligence to ourselves, but a feedback loop that results in the sudden arrival of a godlike entity on earth is not actually reasonable to expect. Sub-scenarios here include:
+    - A godlike intelligence is possible, but advances in intelligence are intractable and/or extremely difficult, and a recursive explosion that would result in a fast take-off perceptible within the course of a single human life is impossible. Instead, various S-curves will stack on top of each other over the course of thousands or millions of years, culminating in a post-human super-intelligence way down the line, which will, by nature of the constant of change, likely be so alien to us today that we probably can't comprehend it.
+        - 'Non-comprehensibility' by humans also likely holds true for any super-intelligence, this point is more meant to elucidate that a super-intelligence that emerges in our time will probably be at least marginally more comprehensible to us today insofar as we might converse with it, but not be able to understand the physical/mathematical models it provides us, whereas a super-intelligence that emerges in a million years may be similarly comprehensible to the denizens of the earth a million years from now, but completely incomprehensible to us insofar as it communicates in music composed of ultra-high-frequency waves in the medium of some quantum-gravity force that is yet undiscovered and requires an intuitive knowledge of operating in 3 temporal dimensions and 7 spatial dimensions to actual comprehend. Or any other preposturously speculative alien.
+-->
+</div>
+<div class="footnote">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>There are much better resources created by people much smarter than me explaining how LLMs work... <a href="https://www.youtube.com/@3blue1brown">3Blue1Brown</a> is a great channel and I'd highly recommend their series on <a href="https://www.youtube.com/watch?v=aircAruvnKk&amp;list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi">neural networks</a> and specifically the videos on <a href="https://www.youtube.com/watch?v=wjZofJX0v4M">transformer models</a>. <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn:6">
+<p>"Lossy" is perhaps a weird word choice here, but I'm assuming that there is a true and valid explanation that can be encoded in some sequence of symbols, and that the explanation I've given is an incomplete, innaccurate, and compressed representation of that sequence of symbols that nonetheless shares some 'signal'(?) and thus is kind of lossy compression/representation. I'm not sure if that makes sense, I'd probably need to think through it a bit more to make sure it does. <a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+<li id="fn:3">
+<p>If I remember correctly from an information retrieval class I took a few years ago, <a href="https://en.wikipedia.org/wiki/Word2vec">word2vec</a> works by training what is effectively an algorithm (a shallow neural network, or logistic regression algorithm in simpler versions) to predict "words" - or really - tokens, that are dropped from strings of text. The missing tokens are predicted based on their surrounding context. When you've trained a model like this on enough strings of text, you can then extract the weights/parameters associated with a given token, which become the vector representation for that token. Almost as if by magic, these vectors of parameters end up encoding semantic meaning about the words in a given sentence. <em>Don't quote me on this though, the full technical details can be found in <a href="https://arxiv.org/pdf/1301.3781">Efficient Estimation of Word Representations in Vector Space</a> and <a href="https://arxiv.org/pdf/1310.4546">Distributed Representations of Words and Phrases and their Compositionality</a>.</em> If you are interested in the nitty gritty, the article <a href="https://jaketae.github.io/study/word2vec/">Word2vec from Scratch</a> seems pretty good. I haven't personally read it, but in skimming it, it looks pretty comprehensive. <a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">↩</a></p>
+</li>
+<li id="fn:4">
+<p>This specific vector for "human" is from <a href="https://huggingface.co/fse/glove-wiki-gigaword-50">glove-wiki-gigaword-50</a>. Also I say <code>This is what the word 'Human' looks like according to glove-wiki-gigaword-50</code> but it doesn't really "look" like anything as far as we know. Delving into philosophy of mind is out of scope for this article though. <a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">↩</a></p>
+</li>
+<li id="fn:5">
+<p>This is an simplified half-truth but the detail didn't seem too important here, and I'm wary of <a href="https://www.youtube.com/watch?v=k0qmkQGqpM8">writing a bunch of stuff that folks will read as gibberish</a>. If we have a bunch of points in a high dimensional space that have some inherent <em>structure</em> or pattern to them, there's some statistical tricks one can use to create a new dataset of points in a lower dimensional space, such that the lower dimensional points maintain the relational structure of the higher dimensional points. "Maintaining the relational structure" here means that points that were far away in high dimensional space are still far away, and points that were close together in high dimensional space are still close together. This is done using a <a href="https://en.wikipedia.org/wiki/Dimensionality_reduction">dimensionality reduction</a> algorithm. In this article I use <a href="https://umap-learn.readthedocs.io/en/latest/">UMAP</a>. The oldest dimensionality reduction algorithm I know of is <a href="https://en.wikipedia.org/wiki/Principal_component_analysis">PCA</a>, from 1901 (it doesn't work great for this task), but more recently <a href="https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding">TSNE</a> also emerged. <a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">↩</a></p>
+</li>
+</ol>
+</div>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["toc.follow", "search.suggest", "content.code.annotate", "content.tabs.link", "content.code.copy", "navigation.top", "navigation.tracking", "navigation.indexes", "navigation.expand", "navigation.footer"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../assets/javascripts/bundle.50899def.min.js"></script>
+<script src="../assets/_markdown_exec_pyodide.js"></script>
+<script src="../assets/javascripts/mathjax.js"></script>
+<script src="../assets/javascripts/tex-mml-chtml.js"></script>
+<span hidden="True" id="default-template-settings">{"font.color": "#2a3f5f", "paper_bgcolor": "rgba(0,0,0,0)", "plot_bgcolor": "#E5ECF6", "polar.bgcolor": "#E5ECF6", "polar.angularaxis.gridcolor": "white", "polar.angularaxis.linecolor": "white", "polar.radialaxis.gridcolor": "white", "polar.radialaxis.linecolor": "white", "ternary.bgcolor": "#E5ECF6", "ternary.aaxis.gridcolor": "white", "ternary.aaxis.linecolor": "white", "ternary.baxis.gridcolor": "white", "ternary.baxis.linecolor": "white", "ternary.caxis.gridcolor": "white", "ternary.caxis.linecolor": "white", "xaxis.gridcolor": "white", "xaxis.linecolor": "white", "xaxis.zerolinecolor": "white", "yaxis.gridcolor": "white", "yaxis.linecolor": "white", "yaxis.zerolinecolor": "white", "scene.xaxis.backgroundcolor": "#E5ECF6", "scene.xaxis.gridcolor": "white", "scene.xaxis.linecolor": "white", "scene.xaxis.zerolinecolor": "white", "scene.yaxis.backgroundcolor": "#E5ECF6", "scene.yaxis.gridcolor": "white", "scene.yaxis.linecolor": "white", "scene.yaxis.zerolinecolor": "white", "scene.zaxis.backgroundcolor": "#E5ECF6", "scene.zaxis.gridcolor": "white", "scene.zaxis.linecolor": "white", "scene.zaxis.zerolinecolor": "white", "shapedefaults.line.color": "#2a3f5f", "annotationdefaults.arrowcolor": "#2a3f5f", "geo.bgcolor": "white", "geo.landcolor": "#E5ECF6", "geo.subunitcolor": "white", "geo.lakecolor": "white", "mapbox.style": "light"}</span><span hidden="True" id="slate-template-settings">{"font.color": "#f2f5fa", "paper_bgcolor": "rgba(0,0,0,0)", "plot_bgcolor": "rgb(17,17,17)", "polar.bgcolor": "rgb(17,17,17)", "polar.angularaxis.gridcolor": "#506784", "polar.angularaxis.linecolor": "#506784", "polar.radialaxis.gridcolor": "#506784", "polar.radialaxis.linecolor": "#506784", "ternary.bgcolor": "rgb(17,17,17)", "ternary.aaxis.gridcolor": "#506784", "ternary.aaxis.linecolor": "#506784", "ternary.baxis.gridcolor": "#506784", "ternary.baxis.linecolor": "#506784", "ternary.caxis.gridcolor": "#506784", "ternary.caxis.linecolor": "#506784", "xaxis.gridcolor": "#283442", "xaxis.linecolor": "#506784", "xaxis.zerolinecolor": "#283442", "yaxis.gridcolor": "#283442", "yaxis.linecolor": "#506784", "yaxis.zerolinecolor": "#283442", "scene.xaxis.backgroundcolor": "rgb(17,17,17)", "scene.xaxis.gridcolor": "#506784", "scene.xaxis.linecolor": "#506784", "scene.xaxis.zerolinecolor": "#C8D4E3", "scene.yaxis.backgroundcolor": "rgb(17,17,17)", "scene.yaxis.gridcolor": "#506784", "scene.yaxis.linecolor": "#506784", "scene.yaxis.zerolinecolor": "#C8D4E3", "scene.zaxis.backgroundcolor": "rgb(17,17,17)", "scene.zaxis.gridcolor": "#506784", "scene.zaxis.linecolor": "#506784", "scene.zaxis.zerolinecolor": "#C8D4E3", "shapedefaults.line.color": "#f2f5fa", "annotationdefaults.arrowcolor": "#f2f5fa", "geo.bgcolor": "rgb(17,17,17)", "geo.landcolor": "rgb(17,17,17)", "geo.subunitcolor": "#506784", "geo.lakecolor": "rgb(17,17,17)", "mapbox.style": "dark"}</span><script src="../assets/javascripts/mkdocs-plotly-plugin.js"></script></body>
+</html>

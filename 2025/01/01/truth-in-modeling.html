@@ -1,0 +1,723 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://harttraveller.com/2025/01/01/truth-in-modeling.html">
+      
+      
+        <link rel="prev" href="../../../2024/03/24/evaluating-generative-poetry.html">
+      
+      
+      
+      <link rel="icon" href="../../../assets/icon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>Truth in modeling - Hart Traveller</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M17%2013h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10%2010%200%200%200%202%2012a10%2010%200%200%200%2010%2010%2010%2010%200%200%200%2010-10A10%2010%200%200%200%2012%202%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+        <script src="../../../assets/external/unpkg.com/iframe-worker/shim.js"></script>
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="../../../assets/external/fonts.googleapis.com/css.77b73785.css">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Consolas"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/_markdown_exec_pyodide.css">
+    
+      <link rel="stylesheet" href="../../../assets/theme.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#on-truth" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../index.html" title="Hart Traveller" class="md-header__button md-logo" aria-label="Hart Traveller" data-md-component="logo">
+      
+  <img src="../../../assets/icon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hart Traveller
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Truth in modeling
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../index.html" title="Hart Traveller" class="md-nav__button md-logo" aria-label="Hart Traveller" data-md-component="logo">
+      
+  <img src="../../../assets/icon.png" alt="logo">
+
+    </a>
+    Hart Traveller
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Archive
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../archive/2025.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2025
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../archive/2024.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2024
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../archive/2023.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2023
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../archive/2022.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2022
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Go To">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Go To
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#on-truth" class="md-nav__link">
+    <span class="md-ellipsis">
+      On Truth
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="On Truth">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#claim-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Claim 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#claim-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Claim 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#claim-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Claim 3
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Points
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../index.html" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2025-01-01 00:00:00+00:00" class="md-ellipsis">January 1, 2025</time>
+                      </div>
+                    </li>
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 13h1.5v2.82l2.44 1.41-.75 1.3L15 16.69zm4-5H5v11h4.67c-.43-.91-.67-1.93-.67-3a7 7 0 0 1 7-7c1.07 0 2.09.24 3 .67zM5 21a2 2 0 0 1-2-2V5c0-1.11.89-2 2-2h1V1h2v2h8V1h2v2h1a2 2 0 0 1 2 2v6.1c1.24 1.26 2 2.99 2 4.9a7 7 0 0 1-7 7c-1.91 0-3.64-.76-4.9-2zm11-9.85A4.85 4.85 0 0 0 11.15 16c0 2.68 2.17 4.85 4.85 4.85A4.85 4.85 0 0 0 20.85 16c0-2.68-2.17-4.85-4.85-4.85"/></svg>
+                          <time datetime="2025-07-31 00:00:00+00:00" class="md-ellipsis">July 31, 2025</time>
+                        </div>
+                      </li>
+                    
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              6 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+
+
+
+
+  <h1>Truth in modeling</h1>
+
+<p>Random thoughts on the nature of truth when building models of reality.</p>
+<!-- more -->
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This was originally a forward for some internal documentation I was writing for work. After writing it, however, I realized it doesn't make a ton of sense to scatter personal philosophical opinions throughout what is ostensibly technically documentation, so I ended up deleting it. I've been sitting on it for a while now though, and I figured I might as well put it somewhere instead of just letting it die on an old hard drive.</p>
+<p>Also I replaced references to the thing I was documenting with <em>[thing]</em> for reasons.</p>
+</div>
+<div class="admonition quote">
+<p class="admonition-title"><a href="https://www.wikiwand.com/en/All_models_are_wrong">All models are wrong, but some are useful.</a></p>
+</div>
+<h2 id="on-truth">On Truth<a class="headerlink" href="#on-truth" title="Permanent link">#</a></h2>
+<p>Before actually using <em>[thing]</em>, it is important to understand the nature of truth <em>in the context of developing models of reality</em> - precisely because while <em>[thing]</em> allows us to build models that attempt to capture truth, being aware of its limitations is necessary to reach your objectives. Arguably, these are not actually limitations of <em>[thing]</em>, but limitations of reality, our perception of reality, and our capacity to develop symbolic representations of our perceived reality.</p>
+<p>Let's start with three seemingly contradictory claims:</p>
+<ol>
+<li><strong>If your model of reality diverges from the truth, you are less likely to reach your objective.</strong></li>
+<li><strong>If your model of reality is too close to the truth, you are less likely to reach your objective.</strong></li>
+<li><strong>Truth is what is useful to us, once we have decided what we want to do.</strong></li>
+</ol>
+<!-- Of course, we might better decide what we want to do if "our truth" aligns with the "real truth", but that is an ontological paradox we'll leave for another day. -->
+<p>Is it possible that all these claims are simultaneously true?</p>
+<h3 id="claim-1">Claim 1<a class="headerlink" href="#claim-1" title="Permanent link">#</a></h3>
+<p>Starting with first statement, let's consider a hypothetical thought experiment: you are trying to develop, deploy, and sustain a GPS constellation. Specifically, your objective is to create a system that allows anyone to find their coordinate position, no matter where they are on Earth. As you begin this project, you will have to choose what premises you do and do not hold to be true - this will inform your approach and determine whether you succeed or fail.</p>
+<p>Let's consider one possible premise you could accept:</p>
+<p><em>The Earth is flat.</em></p>
+<p>If you try to build a satellite constellation using this premise, you're going to have a bad time. Alternatively, you could instead operate under the following premise:</p>
+<p><em>The Earth is a globe.</em></p>
+<p>Or perhaps, if you prefer even more precision:</p>
+<p><em>The Earth is an <a href="https://www.wikiwand.com/simple/Oblate_spheroid">oblate spheroid</a>.</em></p>
+<p>If either of the last two premises are assumed, you are far more likely to succeed. Why is this the case though? One possible explanation is that each of those statements, as simple as they are, represent "models" of reality. This line of reasoning might then conclude that the latter "models" work better because they are closer to the "truth". Phrased differently: the smaller the gap between our model of reality and reality itself, the better we will be able to achieve our objective.</p>
+<p>Hence: <strong>If your model of reality diverges from the truth, you are far less likely to reach your objective.</strong></p>
+<h3 id="claim-2">Claim 2<a class="headerlink" href="#claim-2" title="Permanent link">#</a></h3>
+<p>Suppose we treat the latter claim as a hard rule, and in pursuit of an even truer model, we create a simulation of the Earth in its totality - capturing everything from the widest mountain ranges to the ocean currents at the bottom of the Mariana Trench. It seems self evident that this model (whatever we might call it) is a more truthful representation of reality than the lone statement: "The Earth is a globe".</p>
+<p>Does it actually help us achieve our objective though? Probably not. Creating such a simulation would require such an inordinate amount of capital, energy, and time, that we will probably expend our limited resources far before a single satellite has been deployed.</p>
+<p>Hence: <strong>If your model of reality is too close to the truth, you are far less likely to reach your objective</strong> (because you probably are misusing your limited resources building that model).</p>
+<p>The key notion hidden in the juxtaposition between these two claims is that it is crucial to find the balance of relevant truth for any given model. You can, after all, <a href="https://www.wikiwand.com/en/Turtles_all_the_way_down">scale any model arbitrarily in complexity</a> in the name of truth, but if one is not judicious about the selection of complexity, it runs the risk of being useless (or even counterproductive) to your aims.</p>
+<details class="note">
+<summary>On finding the 'balance of relevant truth' via natural selection</summary>
+<p>We admit that having the predictive intelligence (or perhaps intuition) to know what will actually be relevant or important down the line is easier said than done; arguably it is more art than science. Nonetheless, one excellent rule of thumb to use (if one is in a situation where using such a rule is permissible), is to let "nature" itself tell you what to do. To phrase this another way: instead of creating a perfect model, create a feedback mechanism to quickly identify and resolve issues with your model, then create a terrible model and let that feedback mechanism guide you. This will help ensure that as your model evolves, any additional added complexity is <em>useful</em>.</p>
+</details>
+<h3 id="claim-3">Claim 3<a class="headerlink" href="#claim-3" title="Permanent link">#</a></h3>
+<p>This brings us to the third claim: <strong>Truth is what is useful to us, once we have decided what we want to do.</strong></p>
+<p>To elucidate what is meant by this claim, let's consider the Holographic Principle.</p>
+<div class="admonition quote">
+<p class="admonition-title"><a href="https://www.wikiwand.com/en/Holographic_principle">Holographic Principle</a></p>
+<blockquote>
+<p>First proposed by Gerard 't Hooft, it was given a precise string theoretic interpretation by Leonard Susskind, who combined his ideas with previous ones of 't Hooft and Charles Thorn. Leonard Susskind said, "The three-dimensional world of ordinary experience––the universe filled with galaxies, stars, planets, houses, boulders, and people––is a hologram, an image of reality coded on a distant two-dimensional surface."</p>
+</blockquote>
+</div>
+<p>In essence, if you are trying to get a payload into orbit, a model of reality in which the Earth is a globe (or oblate spheroid) may be more useful than a model of reality in which it is flat. If, however, you are attempting to build a quantum computer that relies on the (currently purely theoretical) Holographic principle, then you may need to assume that reality itself is a flat 2D surface with rules of interaction that result in our emergent perception of a 3D spatial medium - even when none exists.</p>
+<!--
+If you're interested in diving deeper into this point - not the holographic principle, but how our perception of reality may be a phenomena emerging from an underlying reality with a fundamentally different structure than our perceived reality - you might enjoy the following:
+
+- Video: [What if space and time are not real? - PBS Space Time](https://www.youtube.com/watch?v=SN8nTQiWOYY)
+- Book: [The Case Against Reality - Donald Hoffman](https://www.amazon.com/Case-Against-Reality-Evolution-Truth/dp/0393254690)
+-->
+<p>So when we say: "Truth is what is useful to us, once we have decided what we want to do", we do <em>not</em> mean to suggest that we can simply decide what to believe and have it be so. It means that when we are trying to launch a satellite, the truth that is useful is that of a globe Earth, but that in other contexts the truth that may be useful is that of a flat reality (and incidentally by implication, a flat Earth as well).</p>
+<h2 id="key-points">Key Points<a class="headerlink" href="#key-points" title="Permanent link">#</a></h2>
+<div class="admonition key">
+<p class="admonition-title">Always be aware that while the model models reality, it is not reality.</p>
+<p>Insofar as this philosophizing may appear to lack pragmatic utility for the development of <em>[thing]</em> models, many historical mishaps had their roots in the perception of absolute truth - in the perception that the representation of reality we create is truly the same as the underlying reality itself. The danger therein lies in the fact that when we have decided what we want reality to be, we often supress evidence that conflicts with our preconceived notions (only to be blindsided by catastrophe when the incongruencies become too great to bear). Yet, paradoxically, we are also forced to select the reality that is useful to us based on the context we operate in - necessarily ignoring evidence that conflicts with our chosen reality in order to make any progress at all...</p>
+</div>
+<div class="admonition key">
+<p class="admonition-title">The value of a model should be measured on the basis of how useful it is as a tool for achieving a greater objective.</p>
+<p>When you are building a model of something in reality, your objective should not be to "build a model". The model <em>must</em> serve a greater purpose, and it must be clear how that purpose is realized by way of the model.</p>
+</div>
+<div class="admonition key">
+<p class="admonition-title">If your objectives are bad, it doesn't matter how good your model is.</p>
+<p>Initial development of scientific forestry practices assumed that forestry ought to solely maximize yield. Accordingly, early models of forests were conceived of processes with a singular output: lumber. Of course, this is not the only valuable output of a forest. Though more difficult to quantify, there is a clear utilitarian value associated with scientific data gathered from biodiverse ecosystems, and a clear benefit to cultural identity (and thus national cohesion) associated with shared collective experiences - like those found in Yosemite. Thankfully, Teddy Roosevelt understood this. The broader point this is meant to illustrate is simply that choosing your objectives wisely (and perhaps also not becoming too attached to them once chosen) is just as important as building the models and/or processes to realize those objectives.</p>
+</div>
+<div class="admonition eye">
+<p class="admonition-title">Seeing as you made it this far on the page, you might also enjoy this video: <a href="https://www.youtube.com/watch?v=fXW-QjBsruE">Do Chairs Exist?</a></p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../../2024/03/24/evaluating-generative-poetry.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Evaluating generative poetry">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Evaluating generative poetry
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["toc.follow", "search.suggest", "content.code.annotate", "content.tabs.link", "content.code.copy", "navigation.top", "navigation.tracking", "navigation.indexes", "navigation.expand", "navigation.footer"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+        <script src="../../../assets/_markdown_exec_pyodide.js"></script>
+      
+        <script src="../../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="../../../assets/javascripts/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
